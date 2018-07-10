@@ -4,7 +4,9 @@
 
 ##Why Though? 
 
-Bioinformaticians should be friendly with the command line, since it is the fastest way to deal with their XXL sized files and much of the software in the field has no GUI. 
+Quoting the Bioinformatics professor whose lab I work with: "ja, true, you need that shit."
+
+It is the fastest way to deal with XXL sized files, much of the software in Bionformatics has no GUI, and any programmer should have a healthy relationship with their system. 
 
 ##What is this?
 
