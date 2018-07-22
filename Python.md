@@ -40,15 +40,19 @@ python Hello.py
 
 Because the "print" statement in Python outputs whatever follows it to the command line, you'll see your program saying "Hello world". That was boring... let's try something more interesting. Skim through the following program:
 ```python
-# This is a comment in Python! Anything after a "#" in Python is ignored when executing.
+# This is a comment in Python! Anything on a line after a "#" in Python is ignored when executing.
 
-# Here are two common data structures. They just store data together:
+# Here are three common data structures. They just store data together:
 
 # 1. A list. This is a simple collection of items that's very similar to an array.
 #    The first item ("Cool") is at index 0.
 myList = ["Cool", "is", "Bioinformatics"]
 
-# 2. A dictionary. This is a data structure that assigns a "key" to each "value".
+# 2. A string. This is the most common type of data structure. Think of it as an array
+#    of characters. The first character ('H') is at index 0.
+myString = "Hello Mars!"
+
+# 3. A dictionary. This is a data structure that assigns a "key" to each "value".
 #    The "key" here is before the colon, and the "value" comes after it.
 myDictionary = {
     "first student": "Mary",
@@ -59,6 +63,9 @@ myDictionary = {
 
 # Now, let's use our list to print "Bioinformatics is Cool".
 print myList[2], myList[1], myList[0]
+
+# How about printing "Hello" from our string?
+print myString[0:5]
 
 # Great! Let's print out the dictionary. 
 # print myDictionary
@@ -73,7 +80,7 @@ Is this what you expected? Probably not! Your dictionary is out of order! This i
 myDictionary["first student"]
 ```
 
-What do you expect this will print? Run the program to check your answer. (Hint: It's "Mary").  
+What do you expect this will print? Run the program to check your answer. (Answer: "Mary").  
 
 One last thing: indentation in Python **matters**. You'll have to apply this in the next exercise, so keep that in mind. Now, it's time for some bioinformatics.
 
@@ -86,7 +93,7 @@ Say I have a fasta file that has some number of reads (make sure you remember fa
   -if it starts with a ">"-
     -print the line-
 ```
-This is one simple representation of how you could achieve this task. The real implementation, as we shall see, uses a loop.
+This is one simple representation of how you could achieve this task. The implementation, as we shall see, uses a loop.
 
 First, however, we need to get our fasta file. Use the following command to get a sample fasta file in your working directory:
 
@@ -120,9 +127,13 @@ Pay close attention to the indentation here.
 
 ## Your turn! (Part I)
 
-
+Here's a warm up. We're going to print your name using the alphabet. Declare a variable that holds a string containing
+all 26 letters of the alphabet (just use uppercase letters for simplicity). Then, on the next line use one print statement
+that accesses letters in the alphabet to print our your name.
 
 ## Your turn! (Part II)
+
+That was easy, let's try something harder (and more bioinformatic). [finding good task]
 
 ## What You've Learned
 
