@@ -6,9 +6,9 @@
 
 Quoting the Bioinformatics professor whose lab I work with: "ja, true, you need that shit."
 
-Quoting the linux book I read recently: "GUIs make easy tasks easy, while command line interfaces make difficult tasks possible"
+Quoting the Linux book I read recently: "GUIs make easy tasks easy, while command line interfaces make difficult tasks possible"
 
-Other reasons: It is the fastest way to deal with XXL sized files, much of the software in bionformatics has no GUI, and any programmer should have a healthy relationship with their system. 
+Other reasons: It is the fastest way to deal with XXL sized files, much of the software in bioinformatics has no GUI, and any programmer should have a healthy relationship with their system. 
 
 ## What is this?
 
