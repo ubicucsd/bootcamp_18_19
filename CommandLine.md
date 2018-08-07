@@ -2,15 +2,15 @@
 
 #### Skill: Command Line Use
 
-## Why Though? 
+## Why? 
 
-Quoting the Bioinformatics professor whose lab I work with: "ja, true, you need that shit."
+Quoting the Bioinformatics professor I work with: "ja, true, you need that shit."
 
 Quoting the Linux book I read recently: "GUIs make easy tasks easy, while command line interfaces make difficult tasks possible"
 
 Other reasons: It is the fastest way to deal with XXL sized files, much of the software in bioinformatics has no GUI, and any programmer should have a healthy relationship with their system. 
 
-## What is this?
+## What?
 
 Anytime you need a refresh on what a command does, type the command line with the --help option like so: ```ls --help```. 
 
@@ -32,6 +32,8 @@ Anytime you need a refresh on what a command does, type the command line with th
 
 ## Execution
 
-**/bin**(binaries) contains your executable files and shells. The computer has a list of folders it searches through to find executables when you type a command and the /bin directory is one of them. When you download software, you should place the executable file or a symbolic link into the /bin directory. 
+**/bin**(binaries) contains your executable files and shells. The computer has a list of folders it searches through to find executables when you type a command and the /bin directory is one of them. When you download software, you should place the executable file or a symbolic link into the /bin directory.
+
+
 
 
