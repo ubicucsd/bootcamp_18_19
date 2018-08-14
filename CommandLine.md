@@ -4,7 +4,7 @@
 
 ## Why? 
 
-Quoting the Bioinformatics professor I work with: "ja, true, you need that shit."
+Quoting my PI: "ja, true, you need that shit."
 
 Quoting the Linux book I read recently: "GUIs make easy tasks easy, while command line interfaces make difficult tasks possible"
 
