@@ -5,7 +5,7 @@
 
 ## The Big Picture
 
-These activities are designed for people with zero to some programming experience and zero to some Bioinformatics experience. The idea is to give a quick introduction to Bioinformatics is all about(otherwiser you are probably going to wait two years until CSE 185). We want to give Bioinformatics freshmen some of the confidence, skills, and resources needed to apply to labs/internships and to give non-Bioinformaticians a handle on how the field works. 
+These activities are designed for people with zero to some programming experience and zero to some Bioinformatics experience. We want to give Bioinformatics freshmen some of the confidence, skills, and resources needed to apply to labs/internships and to give non-Bioinformaticians a handle on how the field works. 
 
 ## Getting Started
 
