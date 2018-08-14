@@ -17,7 +17,7 @@ going to use in bioinformatics.
 This (might be) your first time using a Linux device. Don't worry, they'e
 super easy to use (expecially for what we're doing!).
 
-In order to make sure everyone is on the same page at all times, we are going to have everyone use the same computer. It is a giant computer in the sky, called the Amazon Elastic Cloud (EC2). Click [here](https://portal.aws.amazon.com/billing/signup?nc2=h_ct&redirect_url=https%3A%2F%2Faws.amazon.com%2Fregistration-confirmation#/start) and fill out the form to create your very own AWS account using your @ucsd.edu email. 
+In order to make sure everyone is on the same page at all times, we are going to have everyone use the same computer: a giant computer in the sky, called the Amazon Elastic Cloud (EC2). Click [here](https://portal.aws.amazon.com/billing/signup?nc2=h_ct&redirect_url=https%3A%2F%2Faws.amazon.com%2Fregistration-confirmation#/start) and fill out the form to create your own AWS account using your @ucsd.edu email. Once you have confirmed your email, sign into your AWS account and look at all the great resources at your fingertips. Click on All Services->Compute->EC2 and notice that it will give you a page asking you to wait. EC2 accounts take some time to set up(mine took 4 hours). Unfortunately, it looks like we'll have to come back to setting up our computers next time :'( . Trust me, this is the most time consuming step.
 
 ## Task 2
 
