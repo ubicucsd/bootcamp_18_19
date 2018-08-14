@@ -30,7 +30,7 @@ Anytime you need a refresh on what a command does, type the command line with th
 
 **wc**(word count) counts things like lines, words, and characters
 
-**chmod** In order to execute files, you need permissin to do so. When looking at the output of ```ls -lah``` , you will see something on the order of ```-rwxrw-r--```. This indicates that the owner has read, write, and execute permissions. The next three characters are group permissions, and the last three are permissions for everyone else. Change permissions with ```chmod XXX filename``` where each X is a number 1 through 7(first for owner, second for group, third for everyone else). 
+**chmod** In order to execute files, you need permission to do so. When looking at the output of ```ls -lah``` , you will see something on the order of ```-rwxrw-r--```. This indicates that the owner has read, write, and execute permissions. The next three characters are group permissions, and the last three are permissions for everyone else. Change permissions with ```chmod XXX filename``` where each X is a number 1 through 7(first for owner, second for group, third for everyone else). 
 
 ***Permission	rwx	Binary***
 7	read, write and execute	rwx	111
