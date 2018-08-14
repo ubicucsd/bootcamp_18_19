@@ -9,17 +9,15 @@ These activities are designed for people with zero to some programming experienc
 
 ## Getting Started
 
-# TODO: 
-Figure out how to utilize EC2 and create a disk image
-
-
 Fire up that computer! If you're asked *Windows* or *Linux*, choose **LINUX**. Linux based systems are usually what you're 
 going to use in bioinformatics.
 
-## Task 1
+## Task 1: Make EC2 do your work!
 
-Log in with your ???????????TODO????????? account. This (might be) your first time using a Linux device. Don't worry, they'e
+This (might be) your first time using a Linux device. Don't worry, they'e
 super easy to use (expecially for what we're doing!).
+
+In order to make sure everyone is on the same page at all times, we are going to have everyone use the same computer. It is a giant computer in the sky, called the Amazon Elastic Cloud (EC2). Click [here](https://portal.aws.amazon.com/billing/signup?nc2=h_ct&redirect_url=https%3A%2F%2Faws.amazon.com%2Fregistration-confirmation#/start) and fill out the form to create your very own AWS account using your @ucsd.edu email. 
 
 ## Task 2
 
