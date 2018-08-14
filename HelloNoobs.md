@@ -1,7 +1,7 @@
 # Well Hello There
 #### Skills: How to: Not be a noob
 
-### By: Sabeel Mansuri and Mark Chernyshev
+#### By: Sabeel Mansuri and Mark Chernyshev
 
 ## The Big Picture
 
