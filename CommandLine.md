@@ -32,8 +32,7 @@ Anytime you need a refresh on what a command does, type the command line with th
 
 **chmod** In order to execute files, you need permissin to do so. When looking at the output of ```ls -lah``` , you will see something on the order of ```-rwxrw-r--```. This indicates that the owner has read, write, and execute permissions. The next three characters are group permissions, and the last three are permissions for everyone else. Change permissions with ```chmod XXX filename``` where each X is a number 1 through 7(first for owner, second for group, third for everyone else). 
 
-Here's a little chart:
-#	Permission	rwx	Binary
+***Permission	rwx	Binary***
 7	read, write and execute	rwx	111
 6	read and write	rw-	110
 5	read and execute	r-x	101
@@ -45,11 +44,26 @@ Here's a little chart:
 
 ## Compilation
 
+**shell scripts and python files** do not need compilation.
+
+**java** compiles by ```javac filename.java```
+
+**C** ```gcc -c filename.c``` to compile and assemble. 
 
 
 ## Execution
 
 **/bin**(binaries) contains your executable files and shells. The computer has a list of folders it searches through to find executables when you type a command and the /bin directory is one of them. When you download software, you should place the executable file or a symbolic link into the /bin directory.
+
+**shell script** a simple ```./executable``` will suffice to execute a script. 
+
+**python** will automatically compile for you before executing with the command ```python filename.py```. 
+
+**java** can be executed with ```java compiledfilename```
+
+**C** is executed like a shell script ```./out```
+
+
 
 
 
