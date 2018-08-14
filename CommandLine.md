@@ -42,6 +42,13 @@ Anytime you need a refresh on what a command does, type the command line with th
 1	execute only	--x	001
 0	none	---	000
 
+### Let's Get Some Random Software Working for us...
+
+## Downloading 
+
+
+
+
 ## Compilation
 
 **shell scripts and python files** do not need compilation.
@@ -62,6 +69,7 @@ Anytime you need a refresh on what a command does, type the command line with th
 **java** can be executed with ```java compiledfilename```
 
 **C** is executed like a shell script ```./out```
+
 
 
 
