@@ -1,11 +1,17 @@
 # Well Hello There
 #### Skills: How to: Not be a noob
 
+### By: Sabeel Mansuri and Mark Chernyshev
+
 ## The Big Picture
 
-To gain a working knowledge of bioinformatics. To be better prepared to interview for/work in a lab.
+These activities are designed for people with zero to some programming experience and zero to some Bioinformatics experience. The idea is to give a quick introduction to Bioinformatics is all about(otherwiser you are probably going to wait two years until CSE 185). We want to give Bioinformatics freshmen some of the confidence, skills, and resources needed to apply to labs/internships and to give non-Bioinformaticians a handle on how the field works. 
 
 ## Getting Started
+
+# TODO: 
+Figure out how to utilize EC2 and create a disk image
+
 
 Fire up that computer! If you're asked *Windows* or *Linux*, choose **LINUX**. Linux based systems are usually what you're 
 going to use in bioinformatics.
