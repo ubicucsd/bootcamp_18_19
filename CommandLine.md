@@ -46,8 +46,10 @@ Anytime you need a refresh on what a command does, type the command line with th
 
 ## Downloading 
 
+# TODO: 
+wait for EC2 to load in order to figure out which OS we're going to use. Based on that, go through the downloading utilities (curl/wget/apt-get). 
 
-
+find an easy to install software package for bioinfo to make an example of. 
 
 ## Compilation
 
