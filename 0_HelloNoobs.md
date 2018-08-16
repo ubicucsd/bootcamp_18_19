@@ -29,7 +29,16 @@ Putty is a file transfer application we will use to connect to EC2. Since EC2 do
 
 **Linux:** Congrats, you are already on Linux! However, we need you to get the Linux image containing all of our software onto EC2 so you will have to get Putty anyways. If you are using Ubuntu or Debian, copy ```apt-get install putty``` into the terminal and press enter. For RedHat, CentOS, or Fedora use ```yum install putty```. If you are still not sure, ask us and we will Google it together. 
 
-## Task 3
+
+## Task 3: Setting Up Your EC2 Instance
+
+Now that the account is set up, let's get to work. Go to Services->Compute->EC2, press Launch Instance. 
+
+- go thru tutorial, select default security grp
+
+- change security grp to accept all IP's. 
+
+- copy paste remote ssh line given by amazon 
 
 Discover your identity. Type `whoami` into the window that just opened up and hit `enter`. And just like that you're talking
 with your computer, you bioinformatician, you.
