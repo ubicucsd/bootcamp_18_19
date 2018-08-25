@@ -75,7 +75,7 @@ Woah! That's a lot to take in. Make sure you really understand what's happening 
 
 At this point, you can remove the "#" from the start of the last line (this is called uncommenting). Your Python senses should tell you that this line will now print out myDictionary. Take a look at how myDictionary is defined above and make a guess about what should be printed when you run the program. Once you're ready, run the program.
 
-Is this what you expected? Probably not! Your dictionary is out of order! This is because dictionaries in Python are unordered, so you can't access elements by doing `myDictionary[0]` like we did with myList. Instead, we need to use the name of the "key" inside the square brackets. Let's try this. On the line after `print myDicitonary` add:
+Is this what you expected? Probably not! Your dictionary is out of order! This is because dictionaries in Python are unordered, meaning you can't access elements by doing `myDictionary[0]` like we did with myList. Instead, we need to use the name of the "key" inside the square brackets. Let's try this. On the line after `print myDicitonary` add:
 ```python
 myDictionary["first student"]
 ```
@@ -93,12 +93,12 @@ Say I have a fasta file that has some number of reads (make sure you remember fa
   -if it starts with a ">"-
     -print the line-
 ```
-This is one simple representation of how you could achieve this task. The implementation, as we shall see, uses a loop.
+This is one simple **representation** of how you could achieve this task. The **implementation**, as we shall see, uses a loop.
 
 First, however, we need to get our fasta file. Use the following command to get a sample fasta file in your working directory:
 
 ```shell
-
+wget [TODO]
 ```
 
 You'll notice this file is called "test.fasta". We can use this information to tell our Python program to read from the file. Let's do that: create a file called "Loop.py" and add this as the first line:
@@ -121,19 +121,43 @@ for line in file:
   if line[0] == ">":
 ```
 
-Pay close attention to the indentation here.
+Pay close attention to the indentation here. You can thin of everything that's indented after the `for` as being "inside" of the for loop (it looks a bit like that too!). In our example, that means the `if` code is executed for every line in the file).
 
-... more to come ...
+Finally, we just specify that we want the line printed if the line does start with ">" (by indenting the next line!), and...
+
+```
+file = open("test.fasta", "r")
+
+for line in file:
+  if line[0] == ">":
+    print line
+```
+
+Run Loop.py and see what happens. Voila
 
 ## Your turn! (Part I)
 
 Here's a warm up. We're going to print your name using the alphabet. Declare a variable that holds a string containing
 all 26 letters of the alphabet (just use uppercase letters for simplicity). Then, on the next line use one print statement
-that accesses letters in the alphabet to print our your name.
+that accesses letters in the alphabet to print out your name.
+
+#### Challenge
+
+Try doing this using just one print statement.
 
 ## Your turn! (Part II)
 
-That was easy, let's try something harder (and more bioinformatic). [finding good task]
+That was easy, let's try something a little more challenging. Grab a sample fastq file using
+
+```shell
+wget [TODO]
+```
+
+Now, write a program that outputs **ONLY** the lines containing actual genetic sequences (remember loops!). There are many ways to implement this, pick any that works for you.
+
+#### Challenge
+
+Try finding the total number of bases (A/T/C/G) that are in this file. Again, many implementations are possible--pick any that works for you.
 
 ## What You've Learned
 
