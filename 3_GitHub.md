@@ -95,6 +95,10 @@ Alright, every member of your team is now able to access your project, which has
 
 -what task can they perform-
 
+It's time to see how well your team remembers Python from the last lesson! You'll see three empty python files: `XXX`, `XXX`, and `XXX`. **If you are in a group of 2, ignore `XXX` (or do it for extra practice!).
+
+You and your team will need to implement all of the tasks detailed in these three files. Each member will be responsible for implementing one of the tasks (in one of the files). There's just one catch: after you're done, another member must comment what *every* line does. Of course, you'll need to do all of your file sharing and management via GitHub.
+
 ## What You've Learned
 
 Skills developed + next steps. Applications.
