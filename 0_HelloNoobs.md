@@ -17,28 +17,23 @@ going to use in bioinformatics.
 This (might be) your first time using a Linux device. Don't worry, they'e
 super easy to use (expecially for what we're doing!). Trust us, you do not want to have everyone in the room using their own computers. It gets messy. 
 
-In order to make sure everyone is on the same page at all times, we are going to have everyone use the same computer: a giant computer in the sky, called the Amazon Elastic Cloud (EC2). Click [here](https://portal.aws.amazon.com/billing/signup?nc2=h_ct&redirect_url=https%3A%2F%2Faws.amazon.com%2Fregistration-confirmation#/start) and fill out the form to create your own AWS account using your @ucsd.edu email. Once you have confirmed your email, sign into your AWS account and look at all the great resources at your fingertips. Click on All Services->Compute->EC2 and notice that it will give you a page asking you to wait. EC2 accounts take some time to set up(mine took 4 hours). Unfortunately, it looks like we'll have to come back to setting up our computers next time :'( . Trust me, this is the most time consuming step.
+In order to make sure everyone is on the same page at all times, we are going to have everyone use the same computer: a giant computer in the sky, called the Amazon Elastic Cloud (EC2). We have an Ubuntu instance large enough to handle everyone's activities running in EC2, now we just need to have everyone make accounts. Please click here[] and enter your name and UCSD user name. I will create an account for everyone - your username will be your UCSD username. 
 
-## Task 2: Putty
+***Secure Shell(ssh):*** a protocol which creates a secure channel for two computers to communicate even over an unsecured network. This is how we will connect to EC2. 
 
-Putty is a file transfer application we will use to connect to EC2. Since EC2 does not work yet, we might as well get everything else up. 
+**How to prepare for ssh:**
+
 
 **Windows:** I do not like Windows terminals, you do not like Windows terminals, no one likes Windows terminals. Go to [this](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) website and download Putty. A GUI should appear to guide you through the installation. 
 
-**Mac:** Right click and press the option to open a terminal. Dowload Homebrew: ```ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"``` and use homebrew to get Putty: ```brew install putty```
+**Mac or Linux:** No preparation necessary, since you already have a native ssh client. 
 
-**Linux:** Congrats, you are already on Linux! However, we need you to get the Linux image containing all of our software onto EC2 so you will have to get Putty anyways. If you are using Ubuntu or Debian, copy ```apt-get install putty``` into the terminal and press enter. For RedHat, CentOS, or Fedora use ```yum install putty```. If you are still not sure, ask us and we will Google it together. 
+While I am busy creating your accounts, my partner will introduce some biology you should know in order to do bioinformatics.
+
+## Task 2: Learn some biology
 
 
-## Task 3: Setting Up Your EC2 Instance
-
-Now that the account is set up, let's get to work. Go to Services->Compute->EC2, press Launch Instance. 
-
-- go thru tutorial, select default security grp
-
-- change security grp to accept all IP's. 
-
-- copy paste remote ssh line given by amazon 
+## Task 3: Explore your EC2
 
 Discover your identity. Type `whoami` into the window that just opened up and hit `enter`. And just like that you're talking
 with your computer, you bioinformatician, you.
