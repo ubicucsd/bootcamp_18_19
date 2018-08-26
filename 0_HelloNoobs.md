@@ -39,7 +39,7 @@ While I am busy creating your accounts, my partner will introduce some biology y
 
 In your email, you should have a .pem file named after your username. Download this file and place it into your Desktop folder. Now, open your account on the EC2 instance: 
 
-**Windows:** Open putty, paste ```ec2-18-191-97-249.us-east-2.compute.amazonaws.com``` into the Host Name section and select port 22 and SSH on that same page. Now go to Connection->SSH->Auth and click Browse. Find your .ppk file and select it. Go back your home page, type a name under Saved Sessions and click the Save icon to the left. Now, press Open and type your username when prompted. 
+**Windows:** Open putty, paste ```ec2-18-191-97-249.us-east-2.compute.amazonaws.com``` into the Host Name section and select port 22 and SSH on that same page. Now go to Connection->SSH->Auth and click Browse. Find your .ppk file and select it. Go back your home page, type a name under Saved Sessions and click the Save icon on the right. Now, press Open and type your username when prompted. 
 
 **Mac or Linux:** Right click anywhere and click open terminal. You should see a prompt that looks something like  ```mchernys@mchernys-ThinkPad-T430:~/Desktop$```. If you do not have Desktop at the end, go [here]() and learn about ls and cd. Or just ask me to do it. Next, copy paste this command into the terminal and press enter ```ssh -i "your-usernamekeypair.pem" your-username@ec2-18-191-97-249.us-east-2.compute.amazonaws.com```. Note: use Ctrl-shift-V to paste into terminal. Please replace "your-username" with your actual username. Save the command you used somewhere so you can copy paste it in the future. 
 
