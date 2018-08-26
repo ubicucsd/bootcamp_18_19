@@ -67,18 +67,33 @@ You deleted all your files! No worries, Git to the rescue! You can "checkout" a 
 git checkout *
 ```
 
-Git did the best it could. You get `file1` and `file2` back because you committed versions of them to Git. `file3` is gone forever :-(. Moral of the story: track, track, track!
+Git did the best it could. You get `file1` and `file2` back because you committed versions of them to Git. `file3` is gone forever :-(. Moral of the story: track early, track often!
 
-This is the basic flow of keeping track of edits in Git. Edit, add, commit, edit, add, commit, ed...
+What we've just seen is the basic flow of keeping track of edits in Git: Edit, add, commit, edit, add, commit, ed...
 
 
 ## The Hub in GitHub
 
 So, then, what's GitHub?
 
-## Subsection for tasks
+GitHub upgrades Git in two major ways:  
+1. Collaboration - allowing more than one person to safely contribute to a project
+2. Visualization - allowing project changes and versions to be easily looked at
 
--- 
+Think of GitHub as holding a "master" copy of your project. Anyone who wants to make changes can grab a local copy of the project, make edits locally, and update the "master" copy once they're done.
+
+The best way to see this is in action. Make sure you've signed up for GitHub (see instructions above), get into groups of 2-3 people, and move on to the tasks.
+
+
+## Collaborative Coding I
+
+-set up github repo to be cloned containing blank task files- 
+
+## Collaborative Coding II
+
+Alright, every member of your team is now able to access your project, which has its master copy stored on GitHub.
+
+-what task can they perform-
 
 ## What You've Learned
 
