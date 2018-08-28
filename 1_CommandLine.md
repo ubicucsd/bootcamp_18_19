@@ -1,8 +1,8 @@
-# Your Favorite Rectangle
+# Your favorite rectangle: the terminal
 
-#### Skill: Command Line Use
+#### Skill: Command line use
 
-## Why? 
+## Why should I learn this?
 
 Quoting my PI: "ja, true, you need that shit."
 
@@ -10,27 +10,33 @@ Quoting the Linux book I read recently: "GUIs make easy tasks easy, while comman
 
 Other reasons: It is the fastest way to deal with XXL sized files, much of the software in bioinformatics has no GUI, and any programmer should have a healthy relationship with their system. 
 
-## What?
+## How do I see what a command does?
 
-Anytime you need a refresh on what a command does, type the command line with the --help option like so: ```ls --help```. 
+Anytime you need a refresh on what a command does, type the command line with the --help option like so: ```ls --help```. If that does not work, try ```man ls```. I will go over why different commands have different help syntax in a bit. 
 
-## Navigation, Manipulation, and Permission
+## Navigation, manipulation, and permission
 
-**cd**(change directory) hopefully this is familiar. Type cd followed by the directory's path to navigate a terminal to that directory. ```.``` is current directory and ```..``` is the parent of the current directory. 
+In order to get started, we need to be able to do the same thing we do in a file explorer in the command line. You may find it inconvenient at first, but with time these commands become faster and more versatile than the file explorer's interface. 
 
-**ls**(list files) prints out the contents of a directory. There are tons of options for this command - my favorite is ```ls -lah``` , since it prints the directory contents in list format(```-l```), includes hidden files/folders(```-a```), and makes the storage sizes more readable for humans(```-h```). 
+The forward slashes in a terminal console represent directories, with the home directory being a ```~```. Your default folder on EC2 is your user folder, which is ```~/username```. This means the folder named after your username is a subfolder of the home folder, which is represented by ```~```. 
 
-**cp**(copy) copies the file in the first argument to the directory in the second argument
+```mkdir```(make directory
 
-**rm**(remove) deletes a file. 
+```cd```(change directory) Type cd followed by the directory's path to navigate a terminal to that directory. ```.``` is current directory and ```..``` is the parent of the current directory. 
 
-**mv**(move) like copy, but the original file disappears. 
+```ls```list files) prints out the contents of a directory. There are tons of options for this command - my favorite is ```ls -lah``` , since it prints the directory contents in list format(```-l```), includes hidden files/folders(```-a```), and makes the storage sizes more readable for humans(```-h```). 
 
-**grep** looks for patterns in the text you feed it and returns the matches it finds. It can look through text files, the list of files in a repository and much much more. 
+```cp```copy) copies the file in the first argument to the directory in the second argument
 
-**wc**(word count) counts things like lines, words, and characters
+```rm```remove) deletes a file. 
 
-**chmod** In order to execute files, you need permission to do so. When looking at the output of ```ls -lah``` , you will see something on the order of ```-rwxrw-r--```. This indicates that the owner has read, write, and execute permissions. The next three characters are group permissions, and the last three are permissions for everyone else. Change permissions with ```chmod XXX filename``` where each X is a number 1 through 7(first for owner, second for group, third for everyone else). 
+```mv```move) like copy, but the original file disappears. 
+
+```grep``` looks for patterns in the text you feed it and returns the matches it finds. It can look through text files, the list of files in a repository and much much more. 
+
+```wc```word count) counts things like lines, words, and characters
+
+```chmod``` In order to execute files, you need permission to do so. When looking at the output of ```ls -lah``` , you will see something on the order of ```-rwxrw-r--```. This indicates that the owner has read, write, and execute permissions. The next three characters are group permissions, and the last three are permissions for everyone else. Change permissions with ```chmod XXX filename``` where each X is a number 1 through 7(first for owner, second for group, third for everyone else). 
 
 ***Permission	rwx	Binary***
 7	read, write and execute	rwx	111
