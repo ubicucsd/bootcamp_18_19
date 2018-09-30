@@ -29,7 +29,11 @@ While I am busy creating your accounts, my partner will introduce some biology y
 
 ## Task 2: Learn some biology
 
-### I need some time to set up accounts, so maybe introduce sequencing here? Or do icebreakers? idk
+### The Alignment Problem
+
+There are several very common and difficult problems in bioinformatics worth knowing, one of which is the problem of alignment. In order to understand why alignment is a problem, we need to undestand sequencing. 
+
+**Illumina Sequencing:**
 
 
 ## Task 3: Explore your EC2
@@ -40,7 +44,7 @@ In your email, you should have a password from me.
 
 **Mac or Linux:** Right click anywhere and click open terminal. You should see a prompt that looks something like  ```mchernys@mchernys-ThinkPad-T430:~/Desktop$```. Next, copy paste this command into the terminal and press enter ```ssh your-username@ec2-18-191-97-249.us-east-2.compute.amazonaws.com```. Note: use Ctrl-shift-V to paste into terminal. Please replace "your-username" with your actual username. Save the command you used somewhere so you can copy paste it in the future. 
 
-
+You probably have your own password in mind for your account, so make it! Type ```passwd username``` and follow the prompts to set your own password. 
 
 Discover your identity. Type `whoami` into the window that just opened up and hit `enter`. And just like that you're talking
 with your computer, you bioinformatician, you.
