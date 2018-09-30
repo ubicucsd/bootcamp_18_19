@@ -14,10 +14,7 @@ going to use in bioinformatics.
 
 ## Task 1: Make EC2 do your work!
 
-This (might be) your first time using a Linux device. Don't worry, they'e
-super easy to use (expecially for what we're doing!). Trust us, you do not want to have everyone in the room using their own computers. It gets messy. 
-
-In order to make sure everyone is on the same page at all times, we are going to have everyone use the same computer: a giant computer in the sky, called the Amazon Elastic Cloud (EC2). We have an Ubuntu instance large enough to handle everyone's activities running in EC2, now we just need to have everyone make accounts. Please click [here]() and enter your name and UCSD user name. I will create an account for everyone - your username will be your UCSD username. 
+In order to make sure everyone is on the same page at all times, we are going to have everyone use the same computer: a giant computer in the sky, called the Amazon Elastic Cloud (EC2). We have an Ubuntu instance large enough to handle everyone's activities running in EC2, now we just need to have everyone make accounts. Please click [here](https://docs.google.com/spreadsheets/d/1M4S22RieI7GnJqGJZo_4flSU3FzP7ypCqrNSjZ-rf9w/edit?usp=sharing) and enter your name and UCSD user name. If you cannot open the link, make sure you are logged into your UCSD email account! I will create an EC2 account for everyone - your username will be your UCSD username. 
 
 ***Secure Shell(ssh):*** a protocol which creates a secure channel for two computers to communicate even over an unsecured network. This is how we will connect to EC2. 
 
