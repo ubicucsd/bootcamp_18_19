@@ -33,6 +33,9 @@ While I am busy creating your accounts, my partner will introduce some biology y
 
 There are several very common and difficult problems in bioinformatics worth knowing, one of which is the problem of alignment. In order to understand why alignment is a problem, we need to undestand sequencing. 
 
+- clustering stuff from my lab
+
+
 **Illumina Sequencing:**
 
 
@@ -48,3 +51,4 @@ You probably have your own password in mind for your account, so make it! Type `
 
 Discover your identity. Type `whoami` into the window that just opened up and hit `enter`. And just like that you're talking
 with your computer, you bioinformatician, you.
+
