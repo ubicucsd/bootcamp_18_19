@@ -8,7 +8,7 @@ These activities are designed for people with zero to some programming experienc
 
 ## Getting a Computer Set Up
 
-Open up your laptops and go [here](www.awseducate.com/registration?refid=xr0Lxh7HpxP72qFKW8ygIpfSP6vTXyof). If you do not have an AWS account, please fill out that form with your UCSD account - it is free for you and I get free money. Thanks!
+Open up your laptops and go [here](https://www.awseducate.com/registration?refid=xr0Lxh7HpxP72qFKW8ygIpfSP6vTXyof). If you do not have an AWS account, please fill out that form with your UCSD account - it is free for you and I get free money. Thanks!
 
 ## Task 1: Make EC2 do your work
 
