@@ -26,7 +26,7 @@ In order to make sure everyone is on the same page at all times, we are going to
 
 ### The Alignment Problem
 
-There are several very common and difficult problems in bioinformatics worth knowing, one of which is the problem of alignment. In order to understand why alignment is a problem, we need to undestand sequencing. You will have plenty of chances to memorize the steps of sequence. Since this is supposed to be about bioinformatics, I'll try to focus your attention on the problems that arise from sequencing(since that is where we step in). 
+There are several very common and difficult problems in bioinformatics worth knowing, one of which is the problem of alignment. In order to understand why alignment is a problem, we need to undestand sequencing. You will have plenty of chances to memorize the steps of sequencing, and this is supposed to be about bioinformatics, so don't feel like you need to memorize them. I'll try to focus your attention on the problems that arise from sequencing(since that is where we step in). 
 
 #### **Sanger Sequencing** 
 
