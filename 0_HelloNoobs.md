@@ -10,7 +10,7 @@ These activities are designed for people with zero to some programming experienc
 
 Open up your laptops and go [here](https://www.awseducate.com/registration?refid=xr0Lxh7HpxP72qFKW8ygIpfSP6vTXyof). If you do not have an AWS account, please fill out that form with your UCSD account - it is free for you and I get free money. Thanks!
 
-## Task 1: Make EC2 do your work
+## Task 1: Make Accounts
 
 In order to make sure everyone is on the same page at all times, we are going to have everyone use the same computer: a giant computer in the sky, EC2. We have an Ubuntu instance large enough to handle everyone's activities running in EC2, now we just need to have everyone make accounts. Please click [here](https://docs.google.com/spreadsheets/d/1M4S22RieI7GnJqGJZo_4flSU3FzP7ypCqrNSjZ-rf9w/edit?usp=sharing) and enter your name and UCSD user name. If you cannot open the link, make sure you are logged into your UCSD email account. I will create an EC2 account for everyone - your username will be your UCSD username. 
 
