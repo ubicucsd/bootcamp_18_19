@@ -4,11 +4,11 @@
 
 ## The Big Picture
 
-These activities are designed for people with zero to some programming experience and zero to some Bioinformatics experience. We want to give Bioinformatics freshmen some of the confidence, skills, and resources needed to apply to labs/internships and to give non-Bioinformaticians a handle on how the field works. You guys are the trial group, since we have never approached UBIC classes this way. We ask for everyone to be patient and tell us when we are screwing up. Thanks! 
+These activities are designed for people with zero to some programming experience and zero to some Bioinformatics experience. We want to give Bioinformatics novices some of the confidence, skills, and resources needed to apply to labs/internships and to give non-Bioinformaticians a handle on how the field works. You guys are the trial group, since we have never approached UBIC classes this way. We ask for everyone to be patient and tell us when we are screwing up. Thanks! 
 
 ## Getting a Computer Set Up
 
-Open up your laptops and go [here](https://www.awseducate.com/registration?refid=xr0Lxh7HpxP72qFKW8ygIpfSP6vTXyof). If you do not have an AWS account, please fill out that form with your UCSD account - it is free for you and I get free money. Thanks!
+Open up your laptops and go [here](https://www.awseducate.com/registration?refid=xr0Lxh7HpxP72qFKW8ygIpfSP6vTXyof). If you do not have an AWS account, please fill out that form with your UCSD account - it is free for you, and I get free money. Thanks!
 
 ## Task 1: Make Accounts
 
@@ -26,7 +26,7 @@ In order to make sure everyone is on the same page at all times, we are going to
 
 ### The Alignment Problem
 
-There are several very common and difficult problems in bioinformatics worth knowing, one of which is the problem of alignment. In order to understand why alignment is a problem, we need to undestand sequencing. You will have plenty of chances to memorize the steps of sequencing, and this is supposed to be about bioinformatics, so don't feel like you need to memorize them. I'll try to focus your attention on the problems that arise from sequencing(since that is where we step in). 
+There are several very common and difficult problems in bioinformatics worth knowing, one of which is the problem of alignment. In order to understand why alignment is a problem, we need to undestand sequencing. You will have plenty of chances to memorize the steps of sequencing, and this is supposed to be about bioinformatics, so don't feel like you need to memorize them. I'll try to focus your attention on the problems that arise from sequencing (since that is where we, as bioinformaticists, step in). 
 
 **Sanger Sequencing** 
 
@@ -40,7 +40,7 @@ This one is widely taught and known, but a little outdated.
 
 **4.** DNA is negatively charged. Heat the DNA to separate it and put through a gel from pos->neg side, which separates fragments with a resolution of 1 nucleotide. 
 
-**5.** The trick is that the ddNTPs are flourescent! Tou now have many many fragments whose lengths you know down to the nucleotide. Expose an x-ray film to the gel, and now you have 4 rows representing the 4 nucleotides and dark bands where each of the 4 nucleotides terminated a fragment. Here's a picture to clarify: 
+**5.** The trick is that the ddNTPs are flourescent! You now have many many fragments whose lengths you know down to the nucleotide. Expose an x-ray film to the gel, and now you have 4 rows representing the 4 nucleotides and dark bands where each of the 4 nucleotides terminated a fragment. Here's a picture to clarify: 
 
 ![image of sanger gel](https://upload.wikimedia.org/wikipedia/commons/c/cb/Sequencing.jpg)
 
