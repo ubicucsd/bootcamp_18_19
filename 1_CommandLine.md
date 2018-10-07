@@ -27,9 +27,13 @@ The forward slashes in a terminal console represent directories, with the home d
 
 ```mkdir```(make directory) Creates a directory with the same name as the argument you give it. 
 
+---
+
 ### TODO: Make a Software Folder
 
 Navigate your terminal to your home directory(the directory named after your UCSD username) using ```cd```. Type ```mkdir software``` and press enter. Type ```ls``` to see the changes you have made. The reason for a software folder is to keep your software in it, oddly enough. Usually, you would place executables in the /bin system folder, but you are not the admin so you cannot access that folder :( . This is often the case when you ssh into a system, so get used to having a dedicated software folder.  
+
+---
 
 ```cp```(copy) copies the file in the first argument to the directory in the second argument. ```cp file1.txt file2.txt``` makes a copy of file1.txt called file2.txt in the same location. ```cp file1.txt ..``` places a copy of file1.txt (called file1.txt) into the parent directory. 
 
@@ -59,10 +63,13 @@ Navigate your terminal to your home directory(the directory named after your UCS
 
 ```apt-get```Handles packages from the apt library for Debian based systems. However, this installs packages system-wide so you are not going to be able to use it on EC2. The mac equivalent is homebrew. ```sudo apt-get install google-chrome-stable``` will install chrome. 
 
+---
 
 ### TODO: Get Mafft
 
 One of the gold standard alignment programs available today is called mafft. Let's download it into your software directory. First, you will need to find the download page online. Google search for mafft (any profession nowadays has plenty of googling, I am sure you are used to it). Right click on the download link and press "copy link address." Next, use the format presented in the curl example to download the contents of that link. 
+
+---
 
 ## Unpackaging
 
@@ -70,7 +77,11 @@ Much of the data people want to download is large, but they want it fast. That's
 
 ```tar```(tape archive) Is the command linux uses to package and unpackage stuff. This command has an incomprehensible amount of confusing options, so let me just copy paste the ones you should care about. ```tar -xvf file.tar.gz -C .``` unpacks a .tar.gz file into the current directory and ```tar -xvf -C .``` unpacks a .tar file into the current directory. The -C option indicates the files' destination.
 
+---
+
 ### TODO: Unpackage and explore your Mafft software
+
+---
 
 ## Compilation
 
