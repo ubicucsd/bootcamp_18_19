@@ -2,13 +2,13 @@
 
 #### Skill: Command line use
 
-The previuos doc we went over included some information on alignment. This lesson will teach command line skills which will allow us to utilize alignment software. In order to do 
+The previuos doc we went over included some information on alignment. This lesson will teach command line skills which will allow us to utilize alignment software. There are an endless number of commands, each with a ridiculous amount of options so  do NOT attempt to memorize on the first try. I included a ton of commands so that you guys could have a reference to look at. In my experience, actually learning the commands comes from repeated use of the terminal. Same goes for the tool installation process we will go through. This course is supposed to be all about these tools, so we will have much more practice with handling them. Think of this as an introduction and a reference sheet. 
 
 ## Why should I learn this?
 
 Quoting my PI: "ja, true, you need that shit."
 
-Other reasons: It is the fastest way to deal with XXL sized files, much of the software in bioinformatics has no GUI, and any programmer should have a healthy relationship with their system. 
+Other reasons: It is the fastest way to deal with XXL sized files, much of the software in bioinformatics has no GUI, and any programmer should have a healthy relationship with their system.  
 
 ## How do I see what a command does?
 
@@ -18,23 +18,26 @@ Anytime you need a refresh on what a command does, type the command line with th
 
 In order to get started, we need to be able to do the same thing we do in a file explorer in the command line. You may find it inconvenient at first, but with time these commands become faster and more versatile than the file explorer's interface. 
 
-The forward slashes in a terminal console represent directories, with the home directory being a ```~```. Your default folder on EC2 is your user folder, which is ```~/username```. This means the folder named after your username is a subfolder of the home folder, which is represented by ```~```. 
-
-```mkdir```(make directory
+The forward slashes in a terminal console represent directories, with the home directory being a ```~```. Your default folder on EC2 is your use folder, which is ```~/username```. This means the folder named after your username is a subfolder of the home folder, which is represented by ```~```. 
 
 ```cd```(change directory) Type cd followed by the directory's path to navigate a terminal to that directory. ```.``` is current directory and ```..``` is the parent of the current directory. 
 
 ```ls```(list files) prints out the contents of a directory. There are tons of options for this command - my favorite is ```ls -lah``` , since it prints the directory contents in list format(```-l```), includes hidden files/folders(```-a```), and makes the storage sizes more readable for humans(```-h```). 
 
-```cp```(copy) copies the file in the first argument to the directory in the second argument
 
-```rm```(remove) deletes a file. 
+```mkdir```(make directory) Creates a directory with the same name as the argument you give it. 
+
+### TODO: Make a Software Folder
+
+Navigate your terminal to your home directory(the directory named after your UCSD username) using ```cd```. Type ```mkdir software``` and press enter. Type ```ls``` to see the changes you have made. The reason for a software folder is to keep your software in it, oddly enough. Usually, you would place executables in the /bin system folder, but you are not the admin so you cannot access that folder :( . This is often the case when you ssh into a system, so get used to having a dedicated software folder.  
+
+```cp```(copy) copies the file in the first argument to the directory in the second argument. ```cp file1.txt file2.txt``` makes a copy of file1.txt called file2.txt in the same location. ```cp file1.txt ..``` places a copy of file1.txt (called file1.txt) into the parent directory. 
+
+```rm```(remove) deletes a file. Careful with this one, there is no convenient command to remove files from the trash on linux. Once deleted, gone forever. ```rm file.txt```
 
 ```mv```(move) like copy, but the original file disappears. 
 
-```grep``` looks for patterns in the text you feed it and returns the matches it finds. It can look through text files, the list of files in a repository and much much more. 
-
-```wc```(word count) counts things like lines, words, and characters
+```wc```(word count) counts things like lines, words, and characters. ```wc -l file.txt``` prints the number of lines in file.txt. 
 
 ```chmod``` In order to execute files, you need permission to do so. When looking at the output of ```ls -lah``` , you will see something on the order of ```-rwxrw-r--```. This indicates that the owner has read, write, and execute permissions. The next three characters are group permissions, and the last three are permissions for everyone else. Change permissions with ```chmod XXX filename``` where each X is a number 1 through 7(first for owner, second for group, third for everyone else).
 
@@ -48,15 +51,30 @@ The forward slashes in a terminal console represent directories, with the home d
 1	execute only	--x	001
 0	none	---	000
 
-```scp``` 
-
-### Let's get our first 
+```scp```(secure copy) is a command used to copy files from one machine to another. The first argument is the source location, while the second argument is the destination. 
 
 ## Downloading
 
+```curl``` Will download stuff for you. The most simple and relevant combination of options is ```curl -L https://examplelink.com -outdir .``` which will download from https://examplelink.com into the current directory(indicated by the dot). 
 
+```apt-get```Handles packages from the apt library for Debian based systems. However, this installs packages system-wide so you are not going to be able to use it on EC2. The mac equivalent is homebrew. ```sudo apt-get install google-chrome-stable``` will install chrome. 
+
+
+### TODO: Get Mafft
+
+One of the gold standard alignment programs available today is called mafft. Let's download it into your software directory. First, you will need to find the download page online. Google search for mafft (any profession nowadays has plenty of googling, I am sure you are used to it). Right click on the download link and press "copy link address." Next, use the format presented in the curl example to download the contents of that link. 
+
+## Unpackaging
+
+Much of the data people want to download is large, but they want it fast. That's why things like .zip, .tar, .gz and such exist. Those are the file extensions of compressed data. In order to make software work, it must be unpackaged.
+
+```tar```(tape archive) Is the command linux uses to package and unpackage stuff. This command has an incomprehensible amount of confusing options, so let me just copy paste the ones you should care about. ```tar -xvf file.tar.gz -C .``` unpacks a .tar.gz file into the current directory and ```tar -xvf -C .``` unpacks a .tar file into the current directory. The -C option indicates the files' destination.
+
+### TODO: Unpackage and explore your Mafft software
 
 ## Compilation
+
+What is compilation? It is the conversion of one programming language into another. Typically, it is a conversion of what's known as a high level languag(C, Java, Python, etc) to a low level language (binary, assembly). CPUs understand only very very very basic logic, so a super smart program called a compiler has to convert your convoluted and messy code into the simple delicious porridge that the CPU can eat(execute).
 
 **shell scripts and python files** do not need compilation.
 
@@ -64,6 +82,7 @@ The forward slashes in a terminal console represent directories, with the home d
 
 **C** ```gcc -c filename.c``` to compile and assemble. 
 
+Note: Much of the time, software you download online is alread in binary form so there is no need to compile. This is not always the case!
 
 ## Execution
 
@@ -76,6 +95,10 @@ The forward slashes in a terminal console represent directories, with the home d
 **java** can be executed with ```java compiledfilename```
 
 **C** is executed like a shell script ```./out```
+
+## Tying It All Together 
+
+### Piping 
 
 
 
