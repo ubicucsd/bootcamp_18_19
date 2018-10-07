@@ -3,9 +3,9 @@
 
 ## The Big Picture
 
-The command line can only take you so far when you're working with bioinformatic data. You'll often want to do more than the command line easily allows you to, which means it's time to write some code. This week, we're going to be doing that via a popular scripting language called Python. Let's get started.
+The command line can only take you so far when you're working with bioinformatic data. You'll often want to do more than the command line easily allows you to, which means it's time to write some code. This week, we're going to be doing that using a popular scripting language called Python. Let's get started.
 
-(Side note: If you know a bit about Python, you'll know that there are two commonly used versions: python2 and python3. **They are VERY similar.** If you spend enough time doing bioinformatics, you're going to run into programs written for both versions, so being familiar with both is important. For this lesson, however, we're going to be using python2 because... well... we are.)
+(Side note: If you know a bit about Python, you'll know that there are two commonly used versions: python2 and python3. **They are VERY similar.** If you spend enough time doing bioinformatics, you're going to run into programs written for/in both versions, so being familiar with both is important. For this lesson, however, we're going to be using python2 because... well... we are.)
 
 ## Getting Started
 
@@ -15,7 +15,7 @@ Python *should* already be installed on your workstations. Let's make sure: Type
 ```shell
 python
 ```
-You should see something that looks like this (note that this was done on a Mac, so your output might differ slightly):
+You should see something that looks like this (note that this lesson was created on a Mac, so your output might differ slightly):
 ```shell
 Python 2.7.10 (default, Oct  6 2017, 22:29:07) 
 [GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.31)] on darwin
@@ -23,12 +23,12 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> 
 ```
 
-If you do not see this, let one of us know.   
+If you do not see something similar to this, let one of us know.   
 If you do, you're ready to roll. Type exit(), and move on to the next section.
 
 ## How to Python
 
-Before we get into the bioinformatics of Python, we're going to take a quick look at how Python code is written. Create a file called Hello.py. The ".py" extension signals that you will be writing in python. Inside the file put:
+We're going to start by taking a quick look at how Python code is written. Create a file called Hello.py. The ".py" extension signals that you will be writing in python. Inside the file put:
 ```python
 print "Hello World"
 ```
@@ -38,51 +38,48 @@ Great! Now save + close the file, and run your newly-written program by typing t
 python Hello.py
 ```
 
-Because the "print" statement in Python outputs whatever follows it to the command line, you'll see your program saying "Hello world". That was boring... let's try something more interesting. Skim through the following program:
+Because the "print" statement in Python outputs whatever follows it to the command line, you'll see your program print "Hello World". That was boring... let's try something more interesting. Skim through the following program:
 ```python
 # This is a comment in Python! Anything on a line after a "#" in Python is ignored when executing.
 
-# Here are three common data structures. They just store data together:
+# Here are two common data structures. They just store data together:
 
-# 1. A list. This is a simple collection of items that's very similar to an array.
+# 1. A list. This is a simple collection of items that's similar to an array in other languages.
 #    The first item ("Cool") is at index 0.
 myList = ["Cool", "is", "Bioinformatics"]
 
-# 2. A string. This is the most common type of data structure. Think of it as an array
+# 2. A string. This is the most common type of data structure. Think of it as a list
 #    of characters. The first character ('H') is at index 0.
 myString = "Hello Mars!"
-
-# 3. A dictionary. This is a data structure that assigns a "key" to each "value".
-#    The "key" here is before the colon, and the "value" comes after it.
-myDictionary = {
-    "first student": "Mary",
-    "second student": "James",
-    "third student": "Phil",
-    "student count": 3
-}
 
 # Now, let's use our list to print "Bioinformatics is Cool".
 print myList[2], myList[1], myList[0]
 
-# How about printing "Hello" from our string?
+# How about printing from our string?
+# print myString
+```
+
+Woah! That's a lot to take in. Make sure you really understand what's happening here. Follow the comments closely, and ask one of us if you have any questions. Copy-paste this code into a new file called "Data.py" and run the code the same way we ran "Hello.py". You should see "Bioinformatics is Cool". Can you edit line 14 to make the program print: "is Bioinformatics Cool"?
+
+At this point, you can remove the "#" from the start of the last line (this is called uncommenting). Your Python senses should tell you that this line will now print out myString. Take a look at how myString is defined above and take a guess about what should be printed when you run the program. Once you're ready, run the program.
+
+What if you only wanted to print *part* of your string, not the whole thing? Remember that a string is like a list (with the first character at index 0). So, what if we wanted to print just "Hello"? We can use specify a range of indexes to print from like so:
+
+``` python
 print myString[0:5]
-
-# Great! Let's print out the dictionary. 
-# print myDictionary
 ```
 
-Woah! That's a lot to take in. Make sure you really understand what's happening here. Follow the comments closely, and ask one of us if you have any questions. Copy-paste this code into a new file called "Data.py" and run the code the same way we ran "Hello.py". You should see "Bioinformatics is Cool".
+Note that the first number is the position of the first character printed (0 = 'H'), while the second number is **PAST** the last character printed (5 = ' ', but we only print up to index 4).
 
-At this point, you can remove the "#" from the start of the last line (this is called uncommenting). Your Python senses should tell you that this line will now print out myDictionary. Take a look at how myDictionary is defined above and make a guess about what should be printed when you run the program. Once you're ready, run the program.
+## Indentation 
 
-Is this what you expected? Probably not! Your dictionary is out of order! This is because dictionaries in Python are unordered, meaning you can't access elements by doing `myDictionary[0]` like we did with myList. Instead, we need to use the name of the "key" inside the square brackets. Let's try this. On the line after `print myDicitonary` add:
-```python
-myDictionary["first student"]
+Indentation in Python **matters**. Try adding a second print statement your Hello.py file so it looks like this:
+``` python
+print "Hello World"
+    print "Indented line"
 ```
 
-What do you expect this will print? Run the program to check your answer. (Answer: "Mary").  
-
-One last thing: indentation in Python **matters**. You'll have to apply this in the next exercise, so keep that in mind. Now, it's time for some bioinformatics.
+You'll have to apply this in the next section. Speaking of which, it's time for some bioinformatics.
 
 ## Loops, Loops, Loops
 
