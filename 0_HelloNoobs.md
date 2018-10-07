@@ -28,11 +28,9 @@ In order to make sure everyone is on the same page at all times, we are going to
 
 There are several very common and difficult problems in bioinformatics worth knowing, one of which is the problem of alignment. In order to understand why alignment is a problem, we need to undestand sequencing. You will have plenty of chances to memorize the steps of sequencing, and this is supposed to be about bioinformatics, so don't feel like you need to memorize them. I'll try to focus your attention on the problems that arise from sequencing(since that is where we step in). 
 
-#### **Sanger Sequencing** 
+**Sanger Sequencing** 
 
 This one is widely taught and known, but a little outdated. 
-
-**Steps:**
 
 **1.** Lyse the cells and extract DNA. The DNA itself is fragmented and copied many many times over. 
 
@@ -46,16 +44,24 @@ This one is widely taught and known, but a little outdated.
 
 ![image of sanger gel](https://upload.wikimedia.org/wikipedia/commons/c/cb/Sequencing.jpg)
 
-####**Illumina Sequencing:** 
+**Illumina Sequencing:** 
 
 The most widely used method. This one is a bit harder to explain, so I recommend clicking [here](https://www.youtube.com/watch?v=fCd6B5HRaZ8) to watch a concise video on this topic. 
 
 ![graphic explaining illumina](http://www.3402bioinformaticsgroup.com/wp-content/uploads/2016/07/NGS.png)
 
-#### So, what does it matter? 
+***So, what does it matter?***
 
-What do Sanger and Illumina sequencing have in common? Both produce ridiculous quantities of small DNA fragments. Illumina produces  300 million to 4 billion reads per run, with a selection of read lengths ranging from 50 base pairs to 300 base pairs. Meanwhile, Sanger produces 50000 sequences at lengths varying from 800 to 1000 base pairs. To give some perspective, the typical animal of interest is a human and those have 3.0×10^9 base pairs. Individual human genes range from 1148 to 37.7 kb (average length = 8446 bp,s.d. = 7124). n
+What do Sanger and Illumina sequencing have in common? Both produce ridiculous quantities of small DNA fragments. Illumina produces  300 million to 4 billion reads per run, with a selection of read lengths ranging from 50 base pairs to 300 base pairs. Meanwhile, Sanger produces 50000 sequences at lengths varying from 800 to 1000 base pairs. To give some perspective, the typical animal of interest is a human and those have 3.0×10^9 base pairs. Individual human genes range from 1148 to 37.7 kb (average length = 8446 bp,s.d. = 7124). 
 
+These tiny reads overlap all over the place. If you imagine the true sequence these reads came from and place the reads where they came from, you will get many reads piled up over every base pair in the true sequence. The more reads pile up, the more accurately you can be about the actual sequence. A common measure that rates the robustness of an alignment is coverage:
+
+![coverage](https://slideplayer.com/slide/5083621/16/images/4/Definition+of+Coverage.jpg)
+
+- compare dumb approach (linear alignment) to what is actually done (kmers). Link some example tools for alignment. 
+- Alignment is what helps us find de novo sequences, which means that it helps us derive unkown sequences. When trying to figure out the difference between a bacteria weak to antibiotics and another bacteria resistant to them, you usually have the standard non-resistant genome and you must align the reads from a resistant bacteria back to the non resistant bacteria's template. After alignment, you can see where the differences are.
+
+TLDR: There are numerous complex applications of bioinformatics algorithms, from functional structure predictions to ancestral reconstructions. Alignment serves as the foundation for many of these algorithms, making basic sense of the incomprehensible mass of DNA that sequencing gives us. 
 
 ## Task 3: Explore your EC2
 
@@ -65,7 +71,7 @@ In your email, you should have a password from me.
 
 **Mac or Linux:** Right click anywhere and click open terminal. You should see a prompt that looks something like  ```mchernys@mchernys-ThinkPad-T430:~/Desktop$```. Next, copy paste this command into the terminal and press enter ```ssh your-username@ec2-18-191-97-249.us-east-2.compute.amazonaws.com```. Note: use Ctrl-shift-V to paste into terminal. Please replace "your-username" with your actual username. Save the command you used somewhere so you can copy paste it in the future. 
 
-You probably have your own password in mind for your account, so make it! Type ```passwd username``` and follow the prompts to set your own password. 
+You probably have your own password in mind for your account. Type ```passwd username``` and follow the prompts to set your own password. 
 
 Discover your identity. Type `whoami` into the window that just opened up and hit `enter`. And just like that you're talking
 with your computer, you bioinformatician, you.
