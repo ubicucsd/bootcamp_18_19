@@ -79,38 +79,40 @@ print "Hello World"
     print "Indented line"
 ```
 
-You'll have to apply this in the next section. Speaking of which, it's time for some bioinformatics.
+You'll learn more about when to indent in the next section. Speaking of which, it's time for some bioinformatics.
 
-## Loops, Loops, Loops
+## Loop-D-Loop
 
-Say I have a fasta file that has some number of reads (make sure you remember fasta format or you'll have trouble with this exercise!). I want to write a Python program that ONLY outputs the header lines (the ones that start with ">"). How can I do it? Think about how you might start before moving forward.
+Say I have a fasta file that has some number of reads (make sure you remember fasta format or you'll have trouble with this exercise!). I want to write a Python program that ONLY outputs the header lines (the ones that start with ">"). How can I do it? Think about how you might start before continuing.
 
 ```
 -check every line-
   -if it starts with a ">"-
     -print the line-
 ```
-This is one simple **representation** of how you could achieve this task. The **implementation**, as we shall see, uses a loop.
+This is one simple **representation** of how you could achieve this task. The **implementation** in Python, as we shall see, uses a loop.
 
-First, however, we need to get our fasta file. Use the following command to get a sample fasta file in your working directory:
+First, however, let's get a sample fasta file. Use the following command to download it straight in your working directory:
 
 ```shell
-wget [TODO]
+wget or curl [TODO]
 ```
 
-You'll notice this file is called "test.fasta". We can use this information to tell our Python program to read from the file. Let's do that: create a file called "Loop.py" and add this as the first line:
+Check the contents of your directory. You should see a file called "test.fasta". 
+
+Let's make a Python program that reads from this file. Create a new file called "Loop.py" and add this as the first line:
 ```python
 file = open("test.fasta", "r")
 ```
 
-This will open the file for "r"eading, and save that in a variable name called "file". Now let's use a loop to look at every line in the file:
+This will open the file (test.fasta) for "r"eading, and give you access to test.fasta in a variable called "file". Now let's use a loop to look at every line in the file:
 ```python
 file = open("test.fasta", "r")
 
 for line in file:
 ```
 
-That last line is the syntax for starting a for loop in Python. Next, looking back at our pseudocode, we see that we need to check if a line starts with a ">". Luckily, Strings (which is how lines are stored) are indexed, meaning individual characters from them can be extracted using brackets (you might remember we did something similar above with lists!). 
+That last line is the syntax for starting a for loop in Python. Next, looking back at our pseudocode, we see that we need to check if a line starts with a ">". Luckily, lines in a file are stored as strings! Remember that strings are indexed, meaning individual characters from them can be extracted using brackets (you might remember we did something similar above with!). 
 ```
 file = open("test.fasta", "r")
 
@@ -118,9 +120,9 @@ for line in file:
   if line[0] == ">":
 ```
 
-Pay close attention to the indentation here. You can thin of everything that's indented after the `for` as being "inside" of the for loop (it looks a bit like that too!). In our example, that means the `if` code is executed for every line in the file).
+Pay close attention to the indentation here. **You can think of everything that's indented after the `for` as being "inside" of the for loop** (it looks a bit like that too!). In our example, that means the `if` code is executed for every line in the file.
 
-Finally, we just specify that we want the line printed if the line does start with ">" (by indenting the next line!), and...
+Finally, we just specify that we want the line printed if the line does start with ">". We indent the next line so Python knows it's part of the "if" statement, and...
 
 ```
 file = open("test.fasta", "r")
@@ -135,19 +137,14 @@ Run Loop.py and see what happens. Voila
 ## Your turn! (Part I)
 
 Here's a warm up. We're going to print your name using the alphabet. Declare a variable that holds a string containing
-all 26 letters of the alphabet (just use uppercase letters for simplicity). Then, on the next line use one print statement
-that accesses letters in the alphabet to print out your name.
-
-#### Challenge
-
-Try doing this using just one print statement.
+all 26 letters of the alphabet (just use uppercase letters for simplicity: "ABCD...etc"). Then, on the next line use one print statement that accesses letters in the alphabet variable to print out your name. (Python will automatically put spaces between each letter. This is fine. Don't worry about adding an extra space between your first and last name).
 
 ## Your turn! (Part II)
 
 That was easy, let's try something a little more challenging. Grab a sample fastq file using
 
 ```shell
-wget [TODO]
+wget or curl [TODO]
 ```
 
 Now, write a program that outputs **ONLY** the lines containing actual genetic sequences (remember loops!). There are many ways to implement this, pick any that works for you.
