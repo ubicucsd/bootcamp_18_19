@@ -1,6 +1,6 @@
 # Hi There
 
-#### Skills: A vague understanding of what Bioinformatics?? 
+#### Skills: A vague understanding of what Bioinformatics is???
 
 ## The Big Picture
 
@@ -48,6 +48,14 @@ The most widely used method. This one is a bit harder to explain, so I recommend
 
 ![graphic explaining illumina](http://www.3402bioinformaticsgroup.com/wp-content/uploads/2016/07/NGS.png)
 
+**PacBio Sequencing:** 
+
+**1.** DNA is immobolized at the bottom of a small well with a DNA polymerase. 
+
+**2.** Flourescent nucleotides are introduced to into the well, each labeled with a unique flourophore.
+
+**3.** Light from the bottom of the well makes the bases fluoresce as they are added to the DNA template by the polymerase and the sequence of light colors is recorded.
+
 ***So, what does it matter?***
 
 What do Sanger and Illumina sequencing have in common? Both produce ridiculous quantities of small DNA fragments. Illumina produces  300 million to 4 billion reads per run, with a selection of read lengths ranging from 50 base pairs to 300 base pairs. Meanwhile, Sanger produces 50000 sequences at lengths varying from 800 to 1000 base pairs. To give some perspective, the typical animal of interest is a human and those have 3.0×10^9 base pairs. Individual human genes range from 1148 to 37.7 kb (average length = 8446 bp,s.d. = 7124). 
@@ -84,7 +92,10 @@ PacBio
 
 |Pros |Cons|
 |---|---|   
-|   |   |
+|- long reads - up to 15kpb |- expensive |
+|- high throughput| - high error rate |
+
+Longer reads means that fewer reads are needed for the same coverage. Clearly, PacBio is best used for the reconstruction of longer genes or entire genomes. 
 
 Different tricks are available for different situations (Needleman-Wunsch for pairwise alignment or Burrows-Wheeler transform for aligning many reads to a single template), but we will be focusing mostly on how to use the tools rather than the algorithms within them. 
 
@@ -104,9 +115,13 @@ Based on a system where elements that are closer together are more similar than 
 
 ## Task 3: Aliview
 
-You will need java to proceed. If you do not have, go [here](java.com) and install it. 
+Okay, we have had enough of conceptual stuff. Let's get at it with some cool visuals. 
 
-Aliview is a sequence viewer with a bunch of builtin tools, including alignment tools. We will use Aliview to see what a typical dataset looks like coming out of the illumina sequencing machine and what it means, visually, to align the sequences. Click [here](http://www.ormbunkar.se/aliview/) and go to download the stable version for your OS. Next, download a neat dataset I have for you from [here](https://drive.google.com/open?id=1iIzDwKm2k_VOnen0BRwtZ9Jlf81h3t5g). Launch aliview, click file->open file->PC64_V48_small_reconstructed_seqs.fasta. Scroll to the right and notice the mess that begins to form as you scroll. These sequences are sourced from the same gene and have gone through many steps, so the differences between them are quite likely to be real. Click align in the upper left corner and click realign everything. Now scroll forward and observe the gaps that have been inserted by the aligner. Now that the sequences have been aligned, you can start asking questions like what differences between
+You will need java to proceed. If you do not have it, go [here](java.com) and press the big red install button in the middle of the page. 
+
+Aliview is a sequence viewer with a bunch of builtin tools, including alignment tools. We will use Aliview to see what a typical dataset looks like coming out of the illumina sequencing machine and what it means, visually, to align the sequences. Click [here](http://www.ormbunkar.se/aliview/) and go to download the stable version for your OS. Next, download a neat dataset I have for you from [here](https://drive.google.com/open?id=1iIzDwKm2k_VOnen0BRwtZ9Jlf81h3t5g). Launch aliview, click file->open file->PC64_V48_small_reconstructed_seqs.fasta. Scroll to the right and notice the mess that begins to form as you scroll. These sequences are sourced from the same gene and have gone through many steps, so the differences between them are quite likely to be real. Click align in the upper left corner and click realign everything. Now scroll forward and observe the gaps that have been inserted by the aligner.
+
+These sequences are actually from a broadly neutralizing antibody against HIV-1. The steps leading up to the data you downloaded allowed us to reveal a few specific antibody strains. Now that we have them aligned, we can start asking questions about the differences between them and their evolution(which is important to figuring out how to make more effective antibodies). If you want to go into the nitty-gritty biology behind these sequences, go [here](https://www.cell.com/immunity/pdf/S1074-7613(17)30479-X.pdf). 
 
 ## Task 4: Explore your EC2
 
