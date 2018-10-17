@@ -72,7 +72,13 @@ Based on a system where elements that are closer together are more similar than 
 
 *Side Note:* As you will soon learn in your CSE classes, implementation is important and the state of the art alignment and clustering programs do their job quickly and accurately because they attempt to do the minimum amount of work possible. Fast alignment programs like mafft use fancy tricks like fourier tranforms and fast clustering algorithms often use simpler tricks like transforming into kmer representation. Bioinformatics has lots of data, so you should never attempt to solve a problem by going through all possible combinations or even the majority of all possible combinations. To give the classic stupid example, 80 sequences of length 1000 technically have over 1000^80 possible alignments which is a bit off from the 10^80 atoms in our universe. 
 
-## Task 3: Explore your EC2
+## Task 3: Aliview
+
+You will need java to proceed. If you do not have, go [here](java.com) and install it. 
+
+Aliview is a sequence viewer with a bunch of builtin tools, including alignment tools. We will use Aliview to see what a typical dataset looks like coming out of the illumina sequencing machine and what it means, visually, to align the sequences. Click [here](http://www.ormbunkar.se/aliview/) and go to download the stable version for your OS. Next, download
+
+## Task 4: Explore your EC2
 
 In your email, you should have a password from me. 
 
