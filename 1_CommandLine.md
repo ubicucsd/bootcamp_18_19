@@ -2,7 +2,7 @@
 
 #### Skill: Command line use
 
-The previuos doc we went over included some information on alignment. This lesson will teach command line skills which will allow us to utilize alignment software. There are an endless number of commands, each with a ridiculous amount of options so  do NOT attempt to memorize on the first try. I included a ton of commands so that you guys could have a reference to look at. In my experience, actually learning the commands comes from repeated use of the terminal. Same goes for the tool installation process we will go through. This course is supposed to be all about these tools, so we will have much more practice with handling them. Think of this as an introduction and a reference sheet. 
+The previous doc we went over included some information on alignment. This lesson will teach command line skills which will allow us to utilize alignment software. There are an endless number of commands, each with a ridiculous amount of options so  do NOT attempt to memorize on the first try. I included a ton of commands so that you guys could have a reference to look at. In my experience, actually learning the commands comes from repeated use of the terminal. Same goes for the tool installation process we will go through. This course is supposed to be all about these tools, so we will have much more practice with handling them. Think of this as an introduction and a reference sheet. 
 
 ## Why should I learn this?
 
