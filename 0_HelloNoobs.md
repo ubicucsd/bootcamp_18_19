@@ -8,8 +8,6 @@ These activities are designed for people with zero to some programming experienc
 
 ## Getting a Computer Set Up
 
-Open up your laptops and go [here](https://www.awseducate.com/registration?refid=xr0Lxh7HpxP72qFKW8ygIpfSP6vTXyof). If you do not have an AWS account, please fill out that form with your UCSD account - it is free for you, and I get free money. Thanks!
-
 ## Task 1: Make Accounts
 
 In order to make sure everyone is on the same page at all times, we are going to have everyone use the same computer: a giant computer in the sky, EC2. We have an Ubuntu instance large enough to handle everyone's activities running in EC2, now we just need to have everyone make accounts. Please click [here](https://docs.google.com/spreadsheets/d/1M4S22RieI7GnJqGJZo_4flSU3FzP7ypCqrNSjZ-rf9w/edit?usp=sharing) and enter your name and UCSD user name. If you cannot open the link, make sure you are logged into your UCSD email account. I will create an EC2 account for everyone - your username will be your UCSD username. 
@@ -54,14 +52,23 @@ The most widely used method. This one is a bit harder to explain, so I recommend
 
 What do Sanger and Illumina sequencing have in common? Both produce ridiculous quantities of small DNA fragments. Illumina produces  300 million to 4 billion reads per run, with a selection of read lengths ranging from 50 base pairs to 300 base pairs. Meanwhile, Sanger produces 50000 sequences at lengths varying from 800 to 1000 base pairs. To give some perspective, the typical animal of interest is a human and those have 3.0×10^9 base pairs. Individual human genes range from 1148 to 37.7 kb (average length = 8446 bp,s.d. = 7124). 
 
-These tiny reads overlap all over the place. If you imagine the true sequence these reads came from and place the reads where they came from, you will get many reads piled up over every base pair in the true sequence. The more reads pile up, the more accurately you can be about the actual sequence. A common measure that rates the robustness of an alignment is coverage:
+These tiny reads overlap all over the place. If you imagine the true sequence these reads came from and place the reads where they came from, you will get many reads piled up over every base pair in the true sequence. The more reads pile up, the more accurately you can predict the actual sequence. A common measure that rates the robustness of an alignment is coverage:
 
 ![coverage](https://slideplayer.com/slide/5083621/16/images/4/Definition+of+Coverage.jpg)
 
-- compare dumb approach (linear alignment) to what is actually done (kmers). Link some example tools for alignment. 
-- Alignment is what helps us find de novo sequences, which means that it helps us derive unkown sequences. When trying to figure out the difference between a bacteria weak to antibiotics and another bacteria resistant to them, you usually have the standard non-resistant genome and you must align the reads from a resistant bacteria back to the non resistant bacteria's template. After alignment, you can see where the differences are.
+Alignment allows us to find how two or two thousand sequences line up, allowing us to identify single mutations, reduce error rates, build original(de novo) sequences, and analyze homology to build evolutionary trees. 
 
 TLDR: There are numerous complex applications of bioinformatics algorithms, from functional structure predictions to ancestral reconstructions. Alignment serves as the foundation for many of these algorithms, making basic sense of the incomprehensible mass of DNA that sequencing gives us. 
+
+### The Clustering Problem 
+
+The general idea behind clustering is the grouping of many elements so that the elements in a cluster are more similar to each other than they are to those in other groups. 
+
+**Hierarchical Clustering:** 
+
+Based on a system where elements that are closer together are more similar than those that are further apart. In this approach, elements which are close together will be combined into a cluster that is the hybrid location of both elements. So if we have an element a (0, 4) and another at (0, 2), the cluster is at (0, 3). The reason this is interesting to us is that it forms a tree of clusters, which can represent a tree of related genes which can be used to infer homology. Another example application is the finding of true sequences. Imagine you have a sequencing experiment that amplifies genes from an HIV sample, but you do not know how many successful mutations of HIV you have in the sample(infected people usually carry multiple versions because of how fast it mutates). After cleaning these sequences, clustering them together can reveal closely related groups. With the proper distance tweaking and statistical tricks, you can separate each real version of the virus into a cluster, revealing the prevalent mutations in the patient.
+
+*Side Note:* As you will soon learn in your CSE classes, implementation is important and the state of the art alignment and clustering programs do their job quickly and accurately because they attempt to do the minimum amount of work possible. Fast alignment programs like mafft use fancy tricks like fourier tranforms and fast clustering algorithms often use simpler tricks like transforming into kmer representation. Bioinformatics has lots of data, so you should never attempt to solve a problem by going through all possible combinations or even the majority of all possible combinations. To give the classic stupid example, 80 sequences of length 1000 technically have over 1000^80 possible alignments which is a bit off from the 10^80 atoms in our universe. 
 
 ## Task 3: Explore your EC2
 
