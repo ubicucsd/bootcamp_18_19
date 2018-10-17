@@ -62,6 +62,7 @@ Alignment allows us to find how two or two thousand sequences line up, allowing 
 
 Each sequencing platform has its strengths and weaknesses that we will have to account for later.
 Sanger
+
 |Pros |Cons|
 |---|---|   
 |- High precision - error rates of ~.001% |- low throughput   |
@@ -70,6 +71,7 @@ Sanger
 Sanger sequencing is currently only really for small sequence lengths in a small number of samples.
 
 Illumina
+
 |Pros |Cons|
 |---|---|   
 |- low cost  |- short reads   |
@@ -79,6 +81,7 @@ Illumina
 Although the reads are short and the error rate is not as low as Sanger sequencing, Illumina sequencing produces so many sequences that it doesn't matter. Getting the most out of Illumina means getting the most out of its high throughput and per base coverage, which requires the proper software. 
 
 PacBio
+
 |Pros |Cons|
 |---|---|   
 |   |   |
