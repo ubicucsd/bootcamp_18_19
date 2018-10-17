@@ -1,4 +1,4 @@
-# Well Hello There
+# Hi There
 
 #### Skills: A vague understanding of what Bioinformatics?? 
 
@@ -58,6 +58,33 @@ These tiny reads overlap all over the place. If you imagine the true sequence th
 
 Alignment allows us to find how two or two thousand sequences line up, allowing us to identify single mutations, reduce error rates, build original(de novo) sequences, and analyze homology to build evolutionary trees. 
 
+***Some problems to keep in mind for later***
+
+Each sequencing platform has its strengths and weaknesses that we will have to account for later.
+Sanger
+|Pros |Cons|
+|---|---|   
+|- High precision - error rates of ~.001% |- low throughput   |
+|- long read length  |- expensive  |
+
+Sanger sequencing is currently only really for small sequence lengths in a small number of samples.
+
+Illumina
+|Pros |Cons|
+|---|---|   
+|- low cost  |- short reads   |
+|- high throughput   |- not cost effective for small number of targets|
+|- decent precision - error rate: 0.46% - 2.4% |   |
+
+Although the reads are short and the error rate is not as low as Sanger sequencing, Illumina sequencing produces so many sequences that it doesn't matter. Getting the most out of Illumina means getting the most out of its high throughput and per base coverage, which requires the proper software. 
+
+PacBio
+|Pros |Cons|
+|---|---|   
+|   |   |
+
+Different tricks are available for different situations (Needleman-Wunsch for pairwise alignment or Burrows-Wheeler transform for aligning many reads to a single template), but we will be focusing mostly on how to use the tools rather than the algorithms within them. 
+
 TLDR: There are numerous complex applications of bioinformatics algorithms, from functional structure predictions to ancestral reconstructions. Alignment serves as the foundation for many of these algorithms, making basic sense of the incomprehensible mass of DNA that sequencing gives us. 
 
 ### The Clustering Problem 
@@ -76,7 +103,7 @@ Based on a system where elements that are closer together are more similar than 
 
 You will need java to proceed. If you do not have, go [here](java.com) and install it. 
 
-Aliview is a sequence viewer with a bunch of builtin tools, including alignment tools. We will use Aliview to see what a typical dataset looks like coming out of the illumina sequencing machine and what it means, visually, to align the sequences. Click [here](http://www.ormbunkar.se/aliview/) and go to download the stable version for your OS. Next, download
+Aliview is a sequence viewer with a bunch of builtin tools, including alignment tools. We will use Aliview to see what a typical dataset looks like coming out of the illumina sequencing machine and what it means, visually, to align the sequences. Click [here](http://www.ormbunkar.se/aliview/) and go to download the stable version for your OS. Next, download a neat dataset I have for you from [here](https://drive.google.com/open?id=1iIzDwKm2k_VOnen0BRwtZ9Jlf81h3t5g). Launch aliview, click file->open file->PC64_V48_small_reconstructed_seqs.fasta. Scroll to the right and notice the mess that begins to form as you scroll. These sequences are sourced from the same gene and have gone through many steps, so the differences between them are quite likely to be real. Click align in the upper left corner and click realign everything. Now scroll forward and observe the gaps that have been inserted by the aligner. Now that the sequences have been aligned, you can start asking questions like what differences between
 
 ## Task 4: Explore your EC2
 
@@ -90,4 +117,29 @@ You probably have your own password in mind for your account. Type ```passwd use
 
 Discover your identity. Type `whoami` into the window that just opened up and hit `enter`. And just like that you're talking
 with your computer, you bioinformatician, you.
+
+## How do I see what a command does?
+
+Anytime you need a refresh on what a command does, type the command line with the --help option like so: ```ls --help```. If that does not work, try ```man ls```. I will go over why different commands have different help syntax in a bit. 
+
+## Navigation, manipulation, and permission
+
+In order to get started, we need to be able to do the same thing we do in a file explorer in the command line. You may find it inconvenient at first, but with time these commands become faster and more versatile than the file explorer's interface. 
+
+The forward slashes in a terminal console represent directories, with the home directory being a ```~```. Your default folder on EC2 is your use folder, which is ```~/username```. This means the folder named after your username is a subfolder of the home folder, which is represented by ```~```. 
+
+```cd```(change directory) Type cd followed by the directory's path to navigate a terminal to that directory. ```.``` is current directory and ```..``` is the parent of the current directory. 
+
+```ls```(list files) prints out the contents of a directory. There are tons of options for this command - my favorite is ```ls -lah``` , since it prints the directory contents in list format(```-l```), includes hidden files/folders(```-a```), and makes the storage sizes more readable for humans(```-h```). 
+
+
+```mkdir```(make directory) Creates a directory with the same name as the argument you give it. 
+
+---
+
+### TODO: Make a Software Folder
+
+Navigate your terminal to your home directory(the directory named after your UCSD username) using ```cd```. Type ```mkdir software``` and press enter. Type ```ls``` to see the changes you have made. The reason for a software folder is to keep your software in it, oddly enough. Usually, you would place executables in the /bin system folder, but you are not the admin so you cannot access that folder :( . This is often the case when you ssh into a system, so get used to having a dedicated software folder.  
+
+---
 
