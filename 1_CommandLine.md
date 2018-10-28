@@ -2,7 +2,7 @@
 
 #### Skill: Command line use
 
-The previous doc we went over included some information on alignment. This lesson will teach command line skills which will allow us to utilize alignment software. There are an endless number of commands, each with a ridiculous amount of options so  do NOT attempt to memorize on the first try. I included a ton of commands so that you guys could have a reference to look at. In my experience, actually learning the commands comes from repeated use of the terminal. Same goes for the tool installation process we will go through. This course is supposed to be all about these tools, so we will have much more practice with handling them. Think of this as an introduction and a reference sheet. 
+The previous doc we went over included some information on alignment. This lesson will teach command line skills which will allow us to utilize alignment software. There are an endless number of commands, each with a ridiculous amount of options so do NOT attempt to memorize on the first try. I included a ton of commands so that you guys could have a reference to look at. In my experience, actually learning the commands comes from repeated use of the terminal. Same goes for the tool installation process we will go through. This course is supposed to be all about these tools, so we will have much more practice with handling them. Think of this as an introduction and a reference sheet. 
 
 ## Why should I learn this?
 
@@ -85,7 +85,7 @@ Much of the data people want to download is large, but they want it fast. That's
 
 ## Compilation
 
-What is compilation? It is the conversion of one programming language into another. Typically, it is a conversion of what's known as a high level languag(C, Java, Python, etc) to a low level language (binary, assembly). CPUs understand only very very very basic logic, so a super smart program called a compiler has to convert your convoluted and messy code into the simple delicious porridge that the CPU can eat(execute).
+What is compilation? It is the conversion of one programming language into another. Typically, it is a conversion of what's known as a high-level language (C, Java, Python, etc) to a low level language (binary, assembly). CPUs understand only very very very basic logic, so a super smart program called a compiler has to convert your convoluted and messy code into the simple delicious porridge that the CPU can eat(execute).
 
 **shell scripts and python files** do not need compilation.
 
@@ -93,7 +93,7 @@ What is compilation? It is the conversion of one programming language into anoth
 
 **C** ```gcc -c filename.c``` to compile and assemble. 
 
-Note: Much of the time, software you download online is alread in binary form so there is no need to compile. This is not always the case!
+Note: Much of the time, software you download online is already in binary form so there is no need to compile. This is not always the case!
 
 ## Execution
 
