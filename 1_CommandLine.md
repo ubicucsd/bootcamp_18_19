@@ -1,14 +1,19 @@
 # Your favorite rectangle: the terminal
 
-#### Skill: Command line use
+#### Skill: UNIX/Command Line
 
-The previous doc we went over included some information on alignment. This lesson will teach command line skills which will allow us to utilize alignment software. There are an endless number of commands, each with a ridiculous amount of options so do NOT attempt to memorize on the first try. I included a ton of commands so that you guys could have a reference to look at. In my experience, actually learning the commands comes from repeated use of the terminal. Same goes for the tool installation process we will go through. This course is supposed to be all about these tools, so we will have much more practice with handling them. Think of this as an introduction and a reference sheet. 
+The previous doc we went over included some information on alignment. This lesson will teach command line skills which will allow us to use alignment software. There are an endless number of commands, each with a ridiculous amount of options, so **do NOT attempt to memorize on the first try**. Use the commands listed below as a reference to look at. Actually learning (or memorizing) the commands comes from repeated use of the terminal. Same goes for the tool installation process we will go through. This course is supposed to be all about these tools, so we will have much more practice with handling them. Think of this as an introduction, a reference sheet, and generalized example.
+
+
+## But first...
+
+We're going to set up your EC2 instances. Follow the directions on the screen.
 
 ## Why should I learn this?
 
-Quoting my PI: "ja, true, you need that shit."
+Quoting Mark's PI: "ja, true, you need that shit."
 
-Other reasons: It is the fastest way to deal with XXL sized files, much of the software in bioinformatics has no GUI, and any programmer should have a healthy relationship with their system.  
+Other reasons: It is the fastest way to deal with XXL sized files, much of the software in bioinformatics has no Graphical User Interface (GUI), and any programmer should have a healthy relationship with their system.  
 
 ## How do I see what a command does?
 
@@ -31,7 +36,9 @@ The forward slashes in a terminal console represent directories, with the home d
 
 ### TODO: Make a Software Folder
 
-Navigate your terminal to your home directory(the directory named after your UCSD username) using ```cd```. Type ```mkdir software``` and press enter. Type ```ls``` to see the changes you have made. The reason for a software folder is to keep your software in it, oddly enough. Usually, you would place executables in the /bin system folder, but you are not the admin so you cannot access that folder :( . This is often the case when you ssh into a system, so get used to having a dedicated software folder.  
+Navigate your terminal to your home directory (the directory named after your UCSD username) using ```cd```. Type ```mkdir software``` and press enter. Type ```ls``` to see the changes you have made. The reason for a software folder is to... keep your software in it. 
+
+*Note: Usually, you would place executables in the /bin system folder, but you are not the admin so you cannot access that folder :( . This is often the case when you ssh into a system, so get used to having a dedicated software folder.*
 
 ---
 
@@ -43,7 +50,7 @@ Navigate your terminal to your home directory(the directory named after your UCS
 
 ```wc```(word count) counts things like lines, words, and characters. ```wc -l file.txt``` prints the number of lines in file.txt. 
 
-```chmod``` In order to execute files, you need permission to do so. When looking at the output of ```ls -lah``` , you will see something on the order of ```-rwxrw-r--```. This indicates that the owner has read, write, and execute permissions. The next three characters are group permissions, and the last three are permissions for everyone else. Change permissions with ```chmod XXX filename``` where each X is a number 1 through 7(first for owner, second for group, third for everyone else).
+```chmod``` In order to execute files, you need permission to do so. When looking at the output of ```ls -lah``` , you will see something on the order of ```-rwxrw-r--```. This indicates that the owner has read, write, and execute permissions. The next three characters are group permissions, and the last three are permissions for everyone else. Change permissions with ```chmod XXX filename``` where each X is a number 1 through 7 (first for owner, second for group, third for everyone else).
 
 ***Permission	rwx	Binary***
 7	read, write and execute	rwx	111
@@ -59,7 +66,7 @@ Navigate your terminal to your home directory(the directory named after your UCS
 
 ## Downloading
 
-```curl``` Will download stuff for you. The most simple and relevant combination of options is ```curl -L https://examplelink.com -outdir .``` which will download from https://examplelink.com into the current directory(indicated by the dot). 
+```curl``` Will download stuff for you. The most simple and relevant combination of options is ```curl -L https://examplelink.com -outdir .``` which will download from https://examplelink.com into the current directory (indicated by the dot). 
 
 ```apt-get```Handles packages from the apt library for Debian based systems. However, this installs packages system-wide so you are not going to be able to use it on EC2. The mac equivalent is homebrew. ```sudo apt-get install google-chrome-stable``` will install chrome. 
 
@@ -111,14 +118,16 @@ Note: Much of the time, software you download online is already in binary form s
 
 ### Piping 
 
+Piping is stringing multiple commands together to perform some larger task. You can string commands together using the `|` symbol like so:
 
+```
+cat file.txt | grep "hello"
+```
 
+This will first perform the `cat` command: it will attempt to print everything inside file.txt to the terminal, but the pipe symbol `|` will stop it. Instead, everything from file.txt will get pushed through the `grep` command, which will print out any line that contains "hello". The result is only the lines containing "hello" in file.txt will be printed out.
 
+## Getting yer feet wet
 
+Here are a quick batch of exercises using the command line (and different commands) in roughly increasing order of difficulty:
 
-
-
-
-
-
-
+##### 1. 
