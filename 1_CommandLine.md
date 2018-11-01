@@ -15,7 +15,7 @@ I set up accounts for everyone based on the usernames from last time. Click [her
 
 ---
 
-###TODO
+### TODO
 
 Right now, everyone's passowrd is ubic2018 but you probably have your own password in mind for your account. Type ```passwd username``` and follow the prompts to set your own password. 
 
