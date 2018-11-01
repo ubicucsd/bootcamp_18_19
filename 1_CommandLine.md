@@ -97,7 +97,7 @@ Navigate your terminal to your home directory (the directory named after your UC
 
 ---
 
-### TODO: Get the FastQC .tar.gz file onto EC2
+### TODO: Get the FastQC .zip file onto EC2
 
 Quality of genetic information is important! FastQC is the gold standard for quality control in the bioinformatics field. Google "download FastQC" and find the instructions. Make sure to select the correct package for a linux system, then go think about how you would get that package onto EC2. There are two main ways to do this. 
 
@@ -109,11 +109,15 @@ Quality of genetic information is important! FastQC is the gold standard for qua
 
 Much of the data people want to download is large, but they want it fast. That's why things like .zip, .tar, .gz and such exist. Those are the file extensions of compressed data. In order to make software work, it must be unpackaged.
 
+```unzip``` Is exactly what it sounds like. This command unzips .zip file types. 
+
 ```tar```(tape archive) Is the command linux uses to package and unpackage stuff. This command has an incomprehensible amount of confusing options, so let me just copy paste the ones you should care about. ```tar -xvf file.tar.gz -C .``` unpacks a .tar.gz file into the current directory and ```tar -xvf -C .``` unpacks a .tar file into the current directory. The -C option indicates the files' destination.
 
 ---
 
-### TODO: Unpackage and explore your Mafft software
+### TODO: Unpackage your FastQC
+
+Now you have your fastqc*.zip in your software folder. In order to use it, you're going to have to unpackage it. Look a couple lines up to figure out how. 
 
 ---
 
@@ -140,6 +144,14 @@ Note: Much of the time, software you download online is already in binary form s
 **java** can be executed with ```java compiledfilename```
 
 **C** is executed like a shell script ```./out```
+
+---
+
+### TODO
+
+Okay, we now how to execute now. The FastQC folder you have now contains an executable called fastqc. Go into the folder containing the executable, type ```./fastqc --help``` to see usage instructions. Your task is simply to run the fastqc on each of the files sitting in the ``` ``` directory. These file are subsamples of the RNA-seq information from [this article] on gastric cancer in mice. The data is subsampled due to time and storage constrainst and the data is mouse(not human) due to legal restrictions placed on accessing human genetic data. 
+
+---
 
 ## Tying It All Together 
 
