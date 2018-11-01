@@ -214,9 +214,11 @@ This will first perform the `cat` command: it will attempt to print everything i
 
 Here are a quick batch of tasks/exercises using the command line (and different commands) in roughly increasing order of difficulty:
 
-##### (0.) Copy-paste the following command into your terminal and hit enter. Use `ls` to see the new directory it creates: `CP COMMAND HERE` 
+##### (0.) Copy-paste the following two commands into your terminal in order and hit enter.
+`cd ~`  
+`cp -r ../smansuri/parent/ ~`
 
-##### 1. Enter the new directory (hint: use `cd`)
+##### 1. Enter the new directory (hint: use `ls` and `cd`)
 
 ##### 2. Name all of the files (not other directories!) inside this directory. How many are there? (hint: use `ls`)
 
