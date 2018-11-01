@@ -1,9 +1,10 @@
 # Your favorite rectangle: the terminal
 
-#### Skill: UNIX/Command Line
+#### Skill: UNIX/Command Line + RNA-seq quantification
 
 The previous doc we went over included some information on alignment. This lesson will teach command line skills which will allow us to use alignment software. There are an endless number of commands, each with a ridiculous amount of options, so **do NOT attempt to memorize on the first try**. Use the commands listed below as a reference to look at. Actually learning (or memorizing) the commands comes from repeated use of the terminal. Same goes for the tool installation process we will go through. This course is supposed to be all about these tools, so we will have much more practice with handling them. Think of this as an introduction, a reference sheet, and generalized example.
 
+As a way of practicing command line skills, this lesson will also go through the motions of a very common problem in bioinformatics: quantifying gene expression in RNA-seq data. Today we will be looking at a specific type of RNA, called lnc RNA. Long Non coding(lnc) RNA, strands of 200 or more non coding nucleotides are implicated in a range of gene regulation roles, from epigenetic X inactivation to transcriptional control. The irregular expression of lnc RNA is involved in the parthenogenesis of just about every cancer, including gastric cancer.
 
 ## But first... EC2
 
@@ -101,11 +102,13 @@ Navigate your terminal to your home directory (the directory named after your UC
 
 ---
 
-### TODO: Get the FastQC .zip file onto EC2
+### TODO: Get FastQC and Kallisto
 
 Quality of genetic information is important! FastQC is the gold standard for quality control in the bioinformatics field. Google "download FastQC" and find the instructions. Make sure to select the correct package for a linux system, then go think about how you would get that package onto EC2. There are two main ways to do this. 
 
 *Hint: the last three commands mentioned contain both of the two ways you can get FastQC onto EC2*
+
+Next, we need Kallisto, which describes itself as "a program for quantifying abundances of transcripts from RNA-Seq data, or more generally of target sequences using high-throughput sequencing reads." 
 
 ---
 
