@@ -42,6 +42,10 @@ In order to get started, we need to be able to do the same thing we do in a file
 
 The forward slashes in a terminal console represent directories, with the home directory being a ```~```. Your default folder on EC2 is your use folder, which is ```~/username```. This means the folder named after your username is a subfolder of the home folder, which is represented by ```~```. 
 
+```screen``` A way to have multiple terminal instance from a single screen. Start screen by typing ```screen -a```, open new screens with ```ctrl a c```, move between screens with ```ctrl a n```. If you already have screeens working in the background, you can access them with ```screen -dr``` (so you don't have to start with a blank terminal every time). 
+
+*Note: the ```ctrl d``` command for closing terminals will close one screen window at a time, as one would (hopefully) expect it to do* 
+
 ```cd```(change directory) Type cd followed by the directory's path to navigate a terminal to that directory. ```.``` is current directory and ```..``` is the parent of the current directory. 
 
 ```ls```(list files) prints out the contents of a directory. There are tons of options for this command - my favorite is ```ls -lah``` , since it prints the directory contents in list format(```-l```), includes hidden files/folders(```-a```), and makes the storage sizes more readable for humans(```-h```). 
