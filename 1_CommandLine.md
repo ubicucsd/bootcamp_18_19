@@ -4,7 +4,12 @@
 
 The previous doc we went over included some information on alignment. This lesson will teach command line skills which will allow us to use alignment software. There are an endless number of commands, each with a ridiculous amount of options, so **do NOT attempt to memorize on the first try**. Use the commands listed below as a reference to look at. Actually learning (or memorizing) the commands comes from repeated use of the terminal. Same goes for the tool installation process we will go through. This course is supposed to be all about these tools, so we will have much more practice with handling them. Think of this as an introduction, a reference sheet, and generalized example.
 
+#### About the RNA-seq Tasks
+
 As a way of practicing command line skills, this lesson will also go through the motions of a very common problem in bioinformatics: quantifying gene expression in RNA-seq data. Today we will be looking at a specific type of RNA, called lnc RNA. Long Non coding(lnc) RNA, strands of 200 or more non coding nucleotides are implicated in a range of gene regulation roles, from epigenetic X inactivation to transcriptional control. The irregular expression of lnc RNA is involved in the parthenogenesis of just about every cancer, including gastric cancer.
+
+Due to data storage restrictions, I have subsampled the RNA-seq data for you and placed it in ``` ```. The RNA-seq data was obtained through a paired-end illumina sequencing protocol. This means that there is a forward and a reverse read for every fragment which was sequenced. According to illumina, this makes for better alignment to a reference genome. You will find there is a file called ```sub_SRR2073159_1.fastq``` and ```sub_SRR2073159_2.fastq```, which are the forward and reverse reads of the same fragments. Software made for illumina data processing will always have a paired-end option, so pay attention to what kind of data you have! If you want to look at where I got the data for today's lesson, [go here](http://cancerpreventionresearch.aacrjournals.org/content/9/3/253) and take a look at the "Next-generation sequencing analyses" section. It will give you an accession number corresponding to the experiment's data. Accession numbers will be a story for a future lesson(downloading data takes horridly long so I'm going to have to think of a way to get around this while teaching the subject). 
+
 
 ## But first... EC2
 
@@ -124,7 +129,7 @@ Much of the data people want to download is large, but they want it fast. That's
 
 ---
 
-### TODO: Unpackage your FastQC
+### TODO: Unpackage your FastQC Kallisto
 
 Now you have your fastqc*.zip in your software folder. In order to use it, you're going to have to unpackage it. Look a couple lines up to figure out how. 
 
@@ -158,11 +163,34 @@ Note: Much of the time, software you download online is already in binary form s
 
 ---
 
-### TODO
+### TODO Actually Quantify Stuff
 
-Okay, we now how to execute now. The FastQC folder you have now contains an executable called fastqc. Go into the folder containing the executable, type ```./fastqc --help``` to see usage instructions. Your task is simply to run the fastqc on each of the files sitting in the ``` ``` directory. These file are subsamples of the RNA-seq information from [this article] on gastric cancer in mice. The data is subsampled due to time and storage constrainst and the data is mouse(not human) due to legal restrictions placed on accessing human genetic data.
+Okay, we now how to execute now. The FastQC folder you have now contains an executable called fastqc. Go into the folder containing the executable, type ```./fastqc --help``` to see usage instructions. Your task is simply to run the fastqc on each of the files sitting in the ``` ``` directory. FastQC will produce some .html files, which I will just show on the large screen and explain in the interest of saving time. 
 
-Kallisto is a little more complicated. Our first step is to build a kallisto index file, which will assign an index to each RNA transcript we will quantify and optimizes the quantifying procedure in general. Where did we get these RNA transcripts you ask? Good question! I googled 
+Kallisto is a little more complicated. Our first step is to build a kallisto index file, which will assign an index to each RNA transcript we will quantify and optimizes the quantifying procedure in general. Where did we get these RNA transcripts you ask? Good question! I googled "mouse lncRNA database" and eventually happened upon a [website](https://www.gencodegenes.org/) where there was a fantastically easy to download .fasta file full of lnc RNA sequences from mice. Anyways, go back to the kallisto website and look at the instructions on how to index a file. The list of target sequences I got from gencode is at ``` ``` and you might want to specify the name for the destination file. 
+
+Next, you will need to look at the ```kallisto quant``` command. Specify an output folder, the index you made just now, set --bootstrap-samples=100, and finally include the forward and reverse paired end files at the end. You will run the quant command 4 times for the 2 control and 2 affected files. You might want to create 4 separate output folders in order to keep everything organized. 
+
+The last part will be a bit of a walkthrough, since it is kind of complicated (I don't understand every option either, don't worry about it). Open up R  by simply typing R into the terminal and pressing enter. Below is the template for what you need to execute in R in order to compare transcription levels. Note the parts where you need to enter a path and replace them with your own filepaths
+
+library("sleuth")
+#paths to Kallisto outputs from MPNST study
+sample_id = c("/home/mchernys/Documents/UCSD_Classes/Spring_2018/CSE_185/final_project/kallisto_output/Gastric_Ctr_Rep1", "/home/mchernys/Documents/UCSD_Classes/Spring_2018/CSE_185/final_project/kallisto_output/Gastric_Ctr_Rep2", "/home/mchernys/Documents/UCSD_Classes/Spring_2018/CSE_185/final_project/kallisto_output/Gastric_Affect_Rep1", "/home/mchernys/Documents/UCSD_Classes/Spring_2018/CSE_185/final_project/kallisto_output/Gastric_Affect_Rep2")
+
+kallisto_dirs = file.path(sample_id)
+s2c = read.table(file.path("/home/mchernys/Documents/UCSD_Classes/Spring_2018/CSE_185/final_project/sleuth_Gastric_info.txt"), header = TRUE, stringsAsFactors=FALSE)
+s2c = dplyr::mutate(s2c, path = kallisto_dirs)
+
+so = sleuth_prep(s2c, extra_bootstrap_summary = TRUE)
+so = sleuth_fit(so, ~condition, 'full')
+so = sleuth_fit(so, ~1, 'reduced')
+so = sleuth_lrt(so, 'reduced', 'full')
+
+sleuth_table <- sleuth_results(so, 'reduced:full', 'lrt', show_all = FALSE)
+sleuth_significant <- dplyr::filter(sleuth_table, qval <= 0.05)
+
+
+write.table(sleuth_significant, "/home/my_username/sleuth_output/", sep="\t", quote=FALSE)
 
 ---
 
