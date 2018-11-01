@@ -191,6 +191,7 @@ sleuth_significant <- dplyr::filter(sleuth_table, qval <= 0.05)
 
 
 write.table(sleuth_significant, "/home/my_username/sleuth_output/", sep="\t", quote=FALSE)
+plot_transcript_heatmap(so, transcripts, units = "tpm", trans = "log", offset = 1)
 
 ---
 
