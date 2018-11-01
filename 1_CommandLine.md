@@ -5,9 +5,24 @@
 The previous doc we went over included some information on alignment. This lesson will teach command line skills which will allow us to use alignment software. There are an endless number of commands, each with a ridiculous amount of options, so **do NOT attempt to memorize on the first try**. Use the commands listed below as a reference to look at. Actually learning (or memorizing) the commands comes from repeated use of the terminal. Same goes for the tool installation process we will go through. This course is supposed to be all about these tools, so we will have much more practice with handling them. Think of this as an introduction, a reference sheet, and generalized example.
 
 
-## But first...
+## But first... EC2
 
-We're going to set up your EC2 instances. Follow the directions on the screen.
+I set up accounts for everyone based on the usernames from last time. Click [here](https://docs.google.com/spreadsheets/d/1M4S22RieI7GnJqGJZo_4flSU3FzP7ypCqrNSjZ-rf9w/edit?usp=sharing) for the list of usernames.
+
+**Windows:** Open putty, paste ```my_username@ec2-52-15-126-191.us-east-2.compute.amazonaws.com``` into the Host Name section and select port 22 and SSH on that same page. Type a name under Saved Sessions and click the Save icon on the right. Now, press Open and type your username and password when prompted. 
+
+**Mac or Linux:** Right click anywhere and click open terminal. You should see a prompt that looks something like  ```mchernys@mchernys-ThinkPad-T430:~/Desktop$```. Next, copy paste this command into the terminal and press enter ```ssh my_username@ec2-52-15-126-191.us-east-2.compute.amazonaws.com```. Note: use Ctrl-shift-V to paste into terminal. Please replace "your-username" with your actual username. Save the command you used somewhere so you can copy paste it in the future. 
+
+---
+
+###TODO
+
+Right now, everyone's passowrd is ubic2018 but you probably have your own password in mind for your account. Type ```passwd username``` and follow the prompts to set your own password. 
+
+---
+
+Discover your identity. Type `whoami` into the window that just opened up and hit `enter`. And just like that you're talking
+with your computer, you bioinformatician, you.
 
 ## Why should I learn this?
 
