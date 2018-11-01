@@ -173,6 +173,8 @@ Next, you will need to look at the ```kallisto quant``` command. Specify an outp
 
 The last part will be a bit of a walkthrough, since it is kind of complicated (I don't understand every option either, don't worry about it). Open up R  by simply typing R into the terminal and pressing enter. Below is the template for what you need to execute in R in order to compare transcription levels. Note the parts where you need to enter a path and replace them with your own filepaths
 
+
+```
 library("sleuth")
 #paths to Kallisto outputs from MPNST study
 sample_id = c("/home/mchernys/Documents/UCSD_Classes/Spring_2018/CSE_185/final_project/kallisto_output/Gastric_Ctr_Rep1", "/home/mchernys/Documents/UCSD_Classes/Spring_2018/CSE_185/final_project/kallisto_output/Gastric_Ctr_Rep2", "/home/mchernys/Documents/UCSD_Classes/Spring_2018/CSE_185/final_project/kallisto_output/Gastric_Affect_Rep1", "/home/mchernys/Documents/UCSD_Classes/Spring_2018/CSE_185/final_project/kallisto_output/Gastric_Affect_Rep2")
@@ -192,6 +194,7 @@ sleuth_significant <- dplyr::filter(sleuth_table, qval <= 0.05)
 
 write.table(sleuth_significant, "/home/my_username/sleuth_output/", sep="\t", quote=FALSE)
 plot_transcript_heatmap(so, transcripts, units = "tpm", trans = "log", offset = 1)
+```
 
 ---
 
