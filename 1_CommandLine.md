@@ -128,6 +128,20 @@ This will first perform the `cat` command: it will attempt to print everything i
 
 ## Getting yer feet wet
 
-Here are a quick batch of exercises using the command line (and different commands) in roughly increasing order of difficulty:
+Here are a quick batch of tasks/exercises using the command line (and different commands) in roughly increasing order of difficulty:
 
-##### 1. 
+##### (0.) Copy-paste the following command into your terminal and hit enter. Use `ls` to see the new directory it creates: `CP COMMAND HERE` 
+
+##### 1. Enter the new directory (hint: use `cd`)
+
+##### 2. Name all of the files (not other directories!) inside this directory. How many are there? (hint: use `ls`)
+
+##### 3. How many lines are in file1.txt? (hint: use `wc`)
+
+##### 4. Do any lines inside file2.txt contain the word "boop"? (hint: use `grep`)
+
+##### 5. How many lines inside file2.txt contain the word "boop"? (hint: use a pipe of `grep` and `wc`)
+
+##### 6. (Challenge 1) Read mystery.txt. There's a hidden message somewhere! Follow the instructions to find it.
+
+##### 7. (Challenge 2) Attempt to delete the directory you downloaded in step 0. This directory is called "parent".
