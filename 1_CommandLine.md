@@ -222,8 +222,8 @@ Here are a quick batch of tasks/exercises using the command line (and different 
 
 ##### 3. How many lines are in file1.txt? (hint: use `wc`)
 
-##### 5. How many lines inside file2.txt contain the characters (not the word) "no"? This means "anNOunce" will count, too. (hint: use a pipe of `grep` and `wc`)
+##### 5. How many lines inside file2.txt contain the characters (not the word) "no"? This means "anNOunce" will count too. (hint: use a pipe of `grep` and `wc`)
 
-##### 6. (Challenge 1) Read mystery.txt. There's a hidden message somewhere! Follow the instructions to find it.
+##### 6. (Challenge 1) Execute the "instructions" file. Follow the instructions. (hint: `./instructions`)
 
 ##### 7. (Challenge 2) Attempt to delete the directory you downloaded in step 0. This directory is called "parent".
