@@ -222,9 +222,7 @@ Here are a quick batch of tasks/exercises using the command line (and different 
 
 ##### 3. How many lines are in file1.txt? (hint: use `wc`)
 
-##### 4. Do any lines inside file2.txt contain the word "boop"? (hint: use `grep`)
-
-##### 5. How many lines inside file2.txt contain the word "boop"? (hint: use a pipe of `grep` and `wc`)
+##### 5. How many lines inside file2.txt contain the characters (not the word) "no"? This means "anNOunce" will count, too. (hint: use a pipe of `grep` and `wc`)
 
 ##### 6. (Challenge 1) Read mystery.txt. There's a hidden message somewhere! Follow the instructions to find it.
 
