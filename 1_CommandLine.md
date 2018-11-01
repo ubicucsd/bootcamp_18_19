@@ -70,16 +70,24 @@ Navigate your terminal to your home directory (the directory named after your UC
 ```chmod``` In order to execute files, you need permission to do so. When looking at the output of ```ls -lah``` , you will see something on the order of ```-rwxrw-r--```. This indicates that the owner has read, write, and execute permissions. The next three characters are group permissions, and the last three are permissions for everyone else. Change permissions with ```chmod XXX filename``` where each X is a number 1 through 7 (first for owner, second for group, third for everyone else).
 
 ***Permission	rwx	Binary***
+
 7	read, write and execute	rwx	111
+
 6	read and write	rw-	110
+
 5	read and execute	r-x	101
+
 4	read only	r--	100
+
 3	write and execute	-wx	011
+
 2	write only	-w-	010
+
 1	execute only	--x	001
+
 0	none	---	000
 
-```scp```(secure copy) is a command used to copy files from one machine to another. The first argument is the source location, while the second argument is the destination. 
+```scp```(secure copy) is a command used to copy files from one machine to another. The first argument is the source location, while the second argument is the destination. ```scp file.txt my_username@dns_address.com:/home/my_username/docs```
 
 ## Downloading
 
@@ -89,9 +97,11 @@ Navigate your terminal to your home directory (the directory named after your UC
 
 ---
 
-### TODO: Get Mafft
+### TODO: Get the FastQC .tar.gz file onto EC2
 
-One of the gold standard alignment programs available today is called mafft. Let's download it into your software directory. First, you will need to find the download page online. Google search for mafft (any profession nowadays has plenty of googling, I am sure you are used to it). Right click on the download link and press "copy link address." Next, use the format presented in the curl example to download the contents of that link. 
+Quality of genetic information is important! FastQC is the gold standard for quality control in the bioinformatics field. Google "download FastQC" and find the instructions. Make sure to select the correct package for a linux system, then go think about how you would get that package onto EC2. There are two main ways to do this. 
+
+*Hint: the last three commands mentioned contain both of the two ways you can get FastQC onto EC2*
 
 ---
 
