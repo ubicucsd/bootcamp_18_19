@@ -20,7 +20,7 @@ I set up accounts for everyone based on the usernames from last time. Click [her
 
 ### TODO
 
-Right now, everyone's passowrd is ubic2018 but you probably have your own password in mind for your account. Type ```passwd username``` and follow the prompts to set your own password. 
+Right now, everyone's passowrd is ubic2018 but you probably have your own password in mind for your account. Type ```passwd my_username``` and follow the prompts to set your own password. 
 
 ---
 
@@ -76,21 +76,21 @@ Navigate your terminal to your home directory (the directory named after your UC
 
 ***Permission	rwx	Binary***
 
-7	read, write and execute	rwx	111
+7	read, write and execute	rwx
 
-6	read and write	rw-	110
+6	read and write	rw-	
 
-5	read and execute	r-x	101
+5	read and execute	r-x	
 
-4	read only	r--	100
+4	read only	r--
 
-3	write and execute	-wx	011
+3	write and execute	-wx
 
-2	write only	-w-	010
+2	write only	-w-	
 
-1	execute only	--x	001
+1	execute only	--x	
 
-0	none	---	000
+0	none	---	
 
 ```scp```(secure copy) is a command used to copy files from one machine to another. The first argument is the source location, while the second argument is the destination. ```scp file.txt my_username@dns_address.com:/home/my_username/docs```
 
