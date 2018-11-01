@@ -16,6 +16,8 @@ I set up accounts for everyone based on the usernames from last time. Click [her
 
 **Mac or Linux:** Right click anywhere and click open terminal. You should see a prompt that looks something like  ```mchernys@mchernys-ThinkPad-T430:~/Desktop$```. Next, copy paste this command into the terminal and press enter ```ssh my_username@ec2-52-15-126-191.us-east-2.compute.amazonaws.com```. Note: use Ctrl-shift-V to paste into terminal. Please replace "your-username" with your actual username. Save the command you used somewhere so you can copy paste it in the future. 
 
+**Some things to keep in mind:** I have some promotional credits for EC2, but they are not infinite. Please help me not run over budget by following my instructions and asking if you are unsure of what you are doing. Processing power is plentiful and the rate charged is constant, but storage can add up if everyone uploads large files. Please only upload what I ask you to upload. A few megabytes here and there is fine but please do not go uploading several gigabytes at a time. In addition, the actual process of uploading costs no money but downloading from EC2 does. Again, just download when I ask you to. Thanks!!
+
 ---
 
 ### TODO
@@ -108,7 +110,7 @@ Quality of genetic information is important! FastQC is the gold standard for qua
 
 *Hint: the last three commands mentioned contain both of the two ways you can get FastQC onto EC2*
 
-Next, we need Kallisto, which describes itself as "a program for quantifying abundances of transcripts from RNA-Seq data, or more generally of target sequences using high-throughput sequencing reads." 
+Next, we need Kallisto, which describes itself as "a program for quantifying abundances of transcripts from RNA-Seq data, or more generally of target sequences using high-throughput sequencing reads." Google "download kallisto" and find the appropriate file (it should be a .tar.gz). Use the same method you used for FastQC to transfer it to EC2(or challenge yourself to find the second way).
 
 ---
 
@@ -125,6 +127,8 @@ Much of the data people want to download is large, but they want it fast. That's
 ### TODO: Unpackage your FastQC
 
 Now you have your fastqc*.zip in your software folder. In order to use it, you're going to have to unpackage it. Look a couple lines up to figure out how. 
+
+The same goes for your kallisto .tar.gz. This is a filetype you will run into often when dealing with linux, since it is the default way linux compresses a folder. If you look in the Unpackaging section of this document, you will find instructions on how to open up this strange creature. 
 
 ---
 
@@ -156,7 +160,9 @@ Note: Much of the time, software you download online is already in binary form s
 
 ### TODO
 
-Okay, we now how to execute now. The FastQC folder you have now contains an executable called fastqc. Go into the folder containing the executable, type ```./fastqc --help``` to see usage instructions. Your task is simply to run the fastqc on each of the files sitting in the ``` ``` directory. These file are subsamples of the RNA-seq information from [this article] on gastric cancer in mice. The data is subsampled due to time and storage constrainst and the data is mouse(not human) due to legal restrictions placed on accessing human genetic data. 
+Okay, we now how to execute now. The FastQC folder you have now contains an executable called fastqc. Go into the folder containing the executable, type ```./fastqc --help``` to see usage instructions. Your task is simply to run the fastqc on each of the files sitting in the ``` ``` directory. These file are subsamples of the RNA-seq information from [this article] on gastric cancer in mice. The data is subsampled due to time and storage constrainst and the data is mouse(not human) due to legal restrictions placed on accessing human genetic data.
+
+Kallisto is a little more complicated. Our first step is to build a kallisto index file, which will assign an index to each RNA transcript we will quantify and optimizes the quantifying procedure in general. Where did we get these RNA transcripts you ask? Good question! I googled 
 
 ---
 
