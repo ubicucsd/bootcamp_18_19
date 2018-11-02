@@ -8,7 +8,7 @@ The previous doc we went over included some information on alignment. This lesso
 
 As a way of practicing command line skills, this lesson will also go through the motions of a very common problem in bioinformatics: quantifying gene expression in RNA-seq data. Today we will be looking at a specific type of RNA, called lnc RNA. Long Non coding(lnc) RNA, strands of 200 or more non coding nucleotides are implicated in a range of gene regulation roles, from epigenetic X inactivation to transcriptional control. The irregular expression of lnc RNA is involved in the parthenogenesis of just about every cancer, including gastric cancer.
 
-Due to data storage restrictions, I have subsampled the RNA-seq data for you and placed it in ``` ```. The RNA-seq data was obtained through a paired-end illumina sequencing protocol. This means that there is a forward and a reverse read for every fragment which was sequenced. According to illumina, this makes for better alignment to a reference genome. You will find there is a file called ```sub_SRR2073159_1.fastq``` and ```sub_SRR2073159_2.fastq```, which are the forward and reverse reads of the same fragments. Software made for illumina data processing will always have a paired-end option, so pay attention to what kind of data you have! If you want to look at where I got the data for today's lesson, [go here](http://cancerpreventionresearch.aacrjournals.org/content/9/3/253) and take a look at the "Next-generation sequencing analyses" section. It will give you an accession number corresponding to the experiment's data. Accession numbers will be a story for a future lesson(downloading data takes horridly long so I'm going to have to think of a way to get around this while teaching the subject). 
+Due to data storage restrictions, I have subsampled the RNA-seq data for you and placed it in ```/srv/lesson2/sub_Gastric_Ctr``` and ```/srv/lesson2/sub_Gastric_Affect``` (sub stands for subsampled). The RNA-seq data was obtained through a paired-end illumina sequencing protocol. This means that there is a forward and a reverse read for every fragment which was sequenced. According to illumina, this makes for better alignment to a reference genome. You will find there is a file called ```sub_SRR2073159_1.fastq``` and ```sub_SRR2073159_2.fastq```, which are the forward and reverse reads of the same fragments. Software made for illumina data processing will always have a paired-end option, so pay attention to what kind of data you have! If you want to look at where I got the data for today's lesson, [go here](http://cancerpreventionresearch.aacrjournals.org/content/9/3/253) and take a look at the "Next-generation sequencing analyses" section. It will give you an accession number corresponding to the experiment's data. Accession numbers will be a story for a future lesson(downloading data takes horridly long so I'm going to have to think of a way to get around this while teaching the subject). 
 
 
 ## But first... EC2
@@ -83,21 +83,21 @@ Navigate your terminal to your home directory (the directory named after your UC
 
 ***Permission	rwx	Binary***
 
-7	read, write and execute	rwx
+7	read, write and execute	rwx 111
 
-6	read and write	rw-	
+6	read and write	rw-	110
 
-5	read and execute	r-x	
+5	read and execute	r-x	101
 
-4	read only	r--
+4	read only	r-- 100
 
-3	write and execute	-wx
+3	write and execute	-wx 011
 
-2	write only	-w-	
+2	write only	-w- 010
 
-1	execute only	--x	
+1	execute only	--x	001
 
-0	none	---	
+0	none	---	000
 
 ```scp```(secure copy) is a command used to copy files from one machine to another. The first argument is the source location, while the second argument is the destination. ```scp file.txt my_username@dns_address.com:/home/my_username/docs```
 
