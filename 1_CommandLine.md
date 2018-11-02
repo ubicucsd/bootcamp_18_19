@@ -165,7 +165,7 @@ Note: Much of the time, software you download online is already in binary form s
 
 ### TODO Actually Quantify Stuff
 
-Okay, we now how to execute now. The FastQC folder you have now contains an executable called fastqc. Go into the folder containing the executable, type ```./fastqc --help``` to see usage instructions. Your task is simply to run the fastqc on each of the files sitting in the ``` ``` directory. FastQC will produce some .html files, which I will just show on the large screen and explain in the interest of saving time. 
+Okay, we now how to execute now. The FastQC folder you have now contains an executable called fastqc. Go into the folder containing the executable, type ```./fastqc --help``` to see usage instructions. Your task is simply to run the fastqc on each of the files sitting in the ```/srv/lesson2/sub_Gastric_Ctr``` and ```/srv/lesson2/sub_Gastric_Affect```directories. FastQC will produce some .html files, which I will just show on the large screen and explain in the interest of saving time. 
 
 Kallisto is a little more complicated. Our first step is to build a kallisto index file, which will assign an index to each RNA transcript we will quantify and optimizes the quantifying procedure in general. Where did we get these RNA transcripts you ask? Good question! I googled "mouse lncRNA database" and eventually happened upon a [website](https://www.gencodegenes.org/) where there was a fantastically easy to download .fasta file full of lnc RNA sequences from mice. Anyways, go back to the kallisto website and look at the instructions on how to index a file. The list of target sequences I got from gencode is at ``` ``` and you might want to specify the name for the destination file. 
 
