@@ -1,3 +1,5 @@
+# bit.ly/week2binf
+
 # Your favorite rectangle: the terminal
 
 #### Skill: UNIX/Command Line + RNA-seq quantification
