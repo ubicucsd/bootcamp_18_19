@@ -25,7 +25,7 @@ I set up accounts for everyone based on the usernames from last time. Click [her
 
 ---
 
-### TODO
+## Passwords!
 
 Right now, everyone's passowrd is ubic2018 but you probably have your own password in mind for your account. Type ```passwd my_username``` and follow the prompts to set your own password. 
 
@@ -99,9 +99,42 @@ Navigate your terminal to your home directory (the directory named after your UC
 
 0	none	---	000
 
-```scp```(secure copy) is a command used to copy files from one machine to another. The first argument is the source location, while the second argument is the destination. ```scp file.txt my_username@dns_address.com:/home/my_username/docs```
+## Tying It All Together 
+
+### Piping 
+
+Piping is stringing multiple commands together to perform some larger task. You can string commands together using the `|` symbol like so:
+
+```
+cat file.txt | grep "hello"
+```
+
+This will first perform the `cat` command: it will attempt to print everything inside file.txt to the terminal, but the pipe symbol `|` will stop it. Instead, everything from file.txt will get pushed through the `grep` command, which will print out any line that contains "hello". The result is only the lines containing "hello" in file.txt will be printed out.
+
+## Getting yer feet wet
+
+Here are a quick batch of tasks/exercises using the command line (and different commands) in roughly increasing order of difficulty:
+
+##### (0.) Copy-paste the following two commands into your terminal in order and hit enter.
+`cd ~`  
+`cp -r ../smansuri/parent/ ~`
+
+##### 1. Enter the new directory (hint: use `ls` and `cd`)
+
+##### 2. Name all of the files (not other directories!) inside this directory. How many are there? (hint: use `ls`)
+
+##### 3. How many lines are in file1.txt? (hint: use `wc`)
+
+##### 5. How many lines inside file2.txt contain the characters (not the word) "no"? This means "anNOunce" will count too. (hint: use a pipe of `grep` and `wc`)
+
+##### 6. (Challenge 1) Execute the "instructions" file. Follow the instructions. (hint: `./instructions`)
+
+##### 7. (Challenge 2) Attempt to delete the directory you downloaded in step 0. This directory is called "parent".
+
 
 ## Downloading
+
+```scp```(secure copy) is a command used to copy files from one machine to another. The first argument is the source location, while the second argument is the destination. ```scp file.txt my_username@dns_address.com:/home/my_username/docs```
 
 ```curl``` Will download stuff for you. The most simple and relevant combination of options is ```curl -L https://examplelink.com -outdir .``` which will download from https://examplelink.com into the current directory (indicated by the dot). 
 
@@ -199,34 +232,4 @@ ggsave("/home/my_username/plots/", plot=gg)
 
 ---
 
-## Tying It All Together 
 
-### Piping 
-
-Piping is stringing multiple commands together to perform some larger task. You can string commands together using the `|` symbol like so:
-
-```
-cat file.txt | grep "hello"
-```
-
-This will first perform the `cat` command: it will attempt to print everything inside file.txt to the terminal, but the pipe symbol `|` will stop it. Instead, everything from file.txt will get pushed through the `grep` command, which will print out any line that contains "hello". The result is only the lines containing "hello" in file.txt will be printed out.
-
-## Getting yer feet wet
-
-Here are a quick batch of tasks/exercises using the command line (and different commands) in roughly increasing order of difficulty:
-
-##### (0.) Copy-paste the following two commands into your terminal in order and hit enter.
-`cd ~`  
-`cp -r ../smansuri/parent/ ~`
-
-##### 1. Enter the new directory (hint: use `ls` and `cd`)
-
-##### 2. Name all of the files (not other directories!) inside this directory. How many are there? (hint: use `ls`)
-
-##### 3. How many lines are in file1.txt? (hint: use `wc`)
-
-##### 5. How many lines inside file2.txt contain the characters (not the word) "no"? This means "anNOunce" will count too. (hint: use a pipe of `grep` and `wc`)
-
-##### 6. (Challenge 1) Execute the "instructions" file. Follow the instructions. (hint: `./instructions`)
-
-##### 7. (Challenge 2) Attempt to delete the directory you downloaded in step 0. This directory is called "parent".
