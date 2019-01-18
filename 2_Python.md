@@ -1,17 +1,17 @@
-# Let's Talk Snake
+# Intro to Python
 #### Skill: Python
 
 ## The Big Picture
 
-The command line can only take you so far when you're working with bioinformatic data. You'll often want to do more than the command line easily allows you to, which means it's time to write some code. This week, we're going to be doing that using a popular scripting language called Python. Let's get started.
+So far, we've been working with bioinformatic data only on the command line. However, you'll often want to do more than the command line easily allows. Today, we're going to be learning the basics of one of the most popular languages for doing that: Python.
 
-(Side note: If you know a bit about Python, you'll know that there are two commonly used versions: python2 and python3. **They are VERY similar.** If you spend enough time doing bioinformatics, you're going to run into programs written for/in both versions, so being familiar with both is important. For this lesson, however, we're going to be using python2 because... well... we are.)
+(Side note: If you know a bit about Python, you'll know that there are two commonly used versions: python2 and python3. **They are VERY similar.** You're going to run into programs written for/in either version, so being familiar with both is important. For this lesson, however, we're going to be using python2 because... well... we are.)
 
 ## Getting Started
 
-Create a new directory (remmber: mkdir) wherever you are saving your work. Call it "week3". Enter the directory.
+Create a new directory (remmber: mkdir) wherever you are saving your work. Call it "pydir". Enter the directory.
 
-Python *should* already be installed on your workstations. Let's make sure: Type the following on the command line:
+Python should already be installed on your workstations. Let's make sure: Type the following on the command line:
 ```shell
 python
 ```
@@ -24,10 +24,11 @@ Type "help", "copyright", "credits" or "license" for more information.
 ```
 
 If you do not see something similar to this, let one of us know.   
-If you do, you're ready to roll. Type exit(), and move on to the next section.
+If you do, you're ready to roll. Type exit(), and move on.
 
 ## How to Python
 
+### Hello World!
 We're going to start by taking a quick look at how Python code is written. Create a file called Hello.py. The ".py" extension signals that you will be writing in python. Inside the file put:
 ```python
 print "Hello World"
@@ -38,28 +39,19 @@ Great! Now save + close the file, and run your newly-written program by typing t
 python Hello.py
 ```
 
-Because the "print" statement in Python outputs whatever follows it to the command line, you'll see your program print "Hello World". That was boring... let's try something more interesting. Skim through the following program:
-```python
-# This is a comment in Python! Anything on a line after a "#" in Python is ignored when executing.
+##### Hint: If you're using vim, press "i" to enter insert mode, type your code, press "esc" to exit insert mode, and type ":x" to save and close.
 
-# Here are two common data structures. They just store data together:
+Because the "print" statement in Python outputs whatever follows it to the command line, you'll see your program print "Hello World". That was pretty trivial... let's try something more interesting.
 
-# 1. A list. This is a simple collection of items that's similar to an array in other languages.
-#    The first item ("Cool") is at index 0.
-myList = ["Cool", "is", "Bioinformatics"]
+### Basic syntax
 
-# 2. A string. This is the most common type of data structure. Think of it as a list
-#    of characters. The first character ('H') is at index 0.
-myString = "Hello Mars!"
+You'll need to obtain a file I've written and add it to your "pydir" directory. Using the `cp` command, and knowing that the file is currently located in `~/../smansuri/syntax.py`, copy the file into your "pydir" directory.
 
-# Now, let's use our list to print "Bioinformatics is Cool".
-print myList[2], myList[1], myList[0]
+Now, open the syntax.py file and take a look inside.
 
-# How about printing from our string?
-# print myString
-```
+Make sure you understand what's happening. Follow the comments closely, and ask one of us if you have any questions.
 
-Woah! That's a lot to take in. Make sure you really understand what's happening here. Follow the comments closely, and ask one of us if you have any questions. Copy-paste this code into a new file called "Data.py" and run the code the same way we ran "Hello.py". You should see "Bioinformatics is Cool". Can you edit line 14 to make the program print: "is Bioinformatics Cool"?
+Now, run the code the same way we ran "Hello.py". You should see "Bioinformatics is Cool". Can you edit line 14 to make the program print: "is Bioinformatics Cool"?
 
 At this point, you can remove the "#" from the start of the last line (this is called uncommenting). Your Python senses should tell you that this line will now print out myString. Take a look at how myString is defined above and take a guess about what should be printed when you run the program. Once you're ready, run the program.
 
@@ -73,13 +65,13 @@ Note that the first number is the position of the first character printed (0 = '
 
 ## Indentation 
 
-Indentation in Python **matters**. Try adding a second print statement your Hello.py file so it looks like this:
+Indentation in Python **matters**. Try adding a second print statement your "Hello.py" file so it looks like this:
 ``` python
 print "Hello World"
     print "Indented line"
 ```
 
-You'll learn more about when to indent in the next section. Speaking of which, it's time for some bioinformatics.
+Now, try to run "Hello.py". Python will complain that there's a problem with your indentation (there was no need to indent, but you did anyways). You'll learn more about when to indent in the next section. Speaking of which, it's time for some bioinformatics.
 
 ## Loop-D-Loop
 
@@ -90,7 +82,7 @@ Say I have a fasta file that has some number of reads (make sure you remember fa
   -if it starts with a ">"-
     -print the line-
 ```
-This is one simple **representation** of how you could achieve this task. The **implementation** in Python, as we shall see, uses a loop.
+This is one simple **representation** of how you could achieve this task. The **implementation** in Python, as we shall see, uses a loop. Which one of the three pseudocode lines above suggests we will need a loop?
 
 First, however, let's get a sample fasta file. Use the following command to download it straight in your working directory:
 
@@ -136,8 +128,12 @@ Run Loop.py and see what happens. Voila
 
 ## Your turn! (Part I)
 
-Here's a warm up. We're going to print your name using the alphabet. Declare a variable that holds a string containing
-all 26 letters of the alphabet (just use uppercase letters for simplicity: "ABCD...etc"). Then, on the next line use one print statement that accesses letters in the alphabet variable to print out your name. (Python will automatically put spaces between each letter. This is fine. Don't worry about adding an extra space between your first and last name).
+Here's a warm up. You're going to print your name using the alphabet. Declare a variable that holds a string containing
+all 26 letters of the alphabet (just use the declaration provided below for simplicity). Then, on the next line use one print statement that accesses letters in the alphabet variable to print out your name.
+
+```
+"ABCDEFGHIJKLMNOPQRSTUVWXYZ "
+```
 
 ## Your turn! (Part II)
 
@@ -147,11 +143,16 @@ That was easy, let's try something a little more challenging. Grab a sample fast
 wget or curl [TODO]
 ```
 
-Now, write a program that outputs **ONLY** the lines containing actual genetic sequences (remember loops!). There are many ways to implement this, pick any that works for you.
+Now, write a program that outputs **ONLY** the lines containing actual genetic sequences (remember loops!). There are various ways to implement this, pick any that works for you.
 
-#### Challenge
+#### Challenge 1
 
 Try finding the total number of bases (A/T/C/G) that are in this file. Again, many implementations are possible--pick any that works for you.
+
+
+#### Challenge 2
+
+
 
 ## What You've Learned
 
