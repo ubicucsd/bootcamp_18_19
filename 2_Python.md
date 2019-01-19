@@ -179,7 +179,7 @@ Various implementations may work. Pick any that you like.
 
 ### Challenge 1
 
-Create a file that takes in the DNA data (A/T/C/G) from "test.fasta" and prints out the file as RNA data (A/U/C/G). 
+Create a file that takes in the DNA data (A/T/C/G) from "test.fasta" and prints out the file as RNA data (A/U/C/G). (Note: This is not how real transcription works. Just use this simple replacement as an example).
 
 **Make sure you don't attempt to transcribe the header lines!**
 
