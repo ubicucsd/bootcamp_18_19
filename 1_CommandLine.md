@@ -1,4 +1,4 @@
-# bit.ly/week2binf
+[username]@ec2-3-16-76-94.us-east-2.compute.amazonaws.com
 
 # Your favorite rectangle: the terminal
 
