@@ -134,6 +134,11 @@ for line in file:
 
 Run Loop.py and see what happens. Voila
 
+## Packages
+
+pip install --user biopython
+
+
 ## Your turn!
 
 #### Warm-up
