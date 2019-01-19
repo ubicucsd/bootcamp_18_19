@@ -89,7 +89,7 @@ This is one simple **representation** of how you could achieve this task. The **
 First, however, let's get a sample fasta file. Use the following command to download it straight in your working directory:
 
 ```shell
-wget or curl [TODO]
+cp /srv/Winter19/gencode.vM17.lncRNA_transcripts_subsampled.fasta . 
 ```
 
 Check the contents of your directory. You should see a file called "test.fasta". 
