@@ -136,8 +136,35 @@ Run Loop.py and see what happens. Voila
 
 ## Packages
 
-pip install --user biopython
+An important feature of Python is its packages. Think of packages as Python programs someone else has written that you can borrow and use for your own purposes.
 
+For example, you may want to take the first sequence of "test.fasta" and use NCBI BLAST (learn more about the BLAST database [here](https://blast.ncbi.nlm.nih.gov/Blast.cgi)) to determine what organism the sequence may have come from. You wouldn't want to write your own code to connect to the database... instead you can use a nifty package to do that for you. Let's try:
+
+First, extract the first two lines of "test.fasta" into a new file, "small.fasta":
+
+```
+head -n2 test.fasta >> small.fasta
+```
+
+Now, install the correct package. The one you want to use is called [BioPython](https://biopython.org/). Use the Python program installer (called pip) to install the package to your user:
+
+```
+pip install --user biopython
+```
+
+Great! BioPython is now available on your account. Let's use it. Create a new file "Blast.py", and add the following code:
+
+```
+from Bio.Blast import NCBIWWW
+
+fasta_string = open("small.fasta").read()
+result_handle = NCBIWWW.qblast("blastn", "nt", fasta_string)
+print result_handle.read()
+```
+
+Let's walk through what this does. The first line takes the programs we want for NCBI from BioPython and prepares them to be used. The second line reads in the "small.fasta" file. The third line is the most imporant: it takes the genetic data, connects to the NCBI BLAST database, searches for matches, and then returns the result from the database. Finally, the last line prints that result.
+
+You can try running Blast.py if you'd like, but it might take a while and the results aren't particularly nice to look at. Knock yourself out, though.
 
 ## Your turn!
 
