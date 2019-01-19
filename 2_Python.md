@@ -128,7 +128,7 @@ for line in file:
     print line
 ```
 
-Run Loop.py and see what happens. Voila
+Run Loop.py and see what happens. Voila.
 
 ## Packages
 
