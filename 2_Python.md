@@ -176,9 +176,9 @@ all 26 letters of the alphabet (just use the declaration provided below for simp
 "ABCDEFGHIJKLMNOPQRSTUVWXYZ "
 ```
 
-#### Challenge 1
-
 We'll now shift our focus onto applying what we've learned to bioinformatics.
+
+#### Challenge 1
 
 Create a file that takes in the DNA data (A/T/C/G) from "test.fasta" and prints out the file as RNA data (A/U/C/G). **Make sure you don't attempt to transcribe the header lines!**
 
