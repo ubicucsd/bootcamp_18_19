@@ -15,7 +15,7 @@ So far, we've been working with bioinformatic data only on the command line. How
 
 ## Getting Started
 
-Create a new directory (remmber: mkdir) wherever you are saving your work. Call it "pydir". Enter the directory.
+Create a new directory (remember: mkdir) wherever you are saving your work. Call it "pydir". Enter the directory.
 
 Python should already be installed on your workstations. Let's make sure: Type the following on the command line:
 ```shell
@@ -162,9 +162,9 @@ result_handle = NCBIWWW.qblast("blastn", "nt", fasta_string)
 print result_handle.read()
 ```
 
-Let's walk through what this does. The first line takes the programs we want for NCBI from BioPython and prepares them to be used. The second line reads in the "small.fasta" file. The third line is the most imporant: it takes the genetic data, connects to the NCBI BLAST database, searches for matches, and then returns the result from the database. Finally, the last line prints that result.
+Let's walk through what this does. The first line takes the programs we want for NCBI from BioPython and prepares them to be used. The second line reads in the "small.fasta" file. The third line is the most important: it takes the genetic data, connects to the NCBI BLAST database, searches for matches, and then returns the result from the database. Finally, the last line prints that result.
 
-You can try running Blast.py if you'd like, but it might take a while and the results aren't particularly nice to look at. Knock yourself out, though.
+You can try running Blast.py if you'd like, but it might take a while and the results aren't particularly nice to look at. Maybe come back to this if you finish all three of the following exercises.
 
 ## Your turn!
 
@@ -186,7 +186,7 @@ Various implementations may work. Pick any that you like.
 
 #### Challenge 2
 
-Create a file that takes in "test.fasta" and prints out the GC-content of all of the data. Hint: the GC-content is the perecentage of G's + C's in some genetic data. If you wish, you can read more about it [here](https://en.wikipedia.org/wiki/GC-content)
+Create a file that takes in "test.fasta" and prints out the GC-content of all of the data. Hint: the GC-content is the percentage of G's + C's in some genetic data. If you wish, you can read more about it [here](https://en.wikipedia.org/wiki/GC-content)
 
 
 ## Credits
