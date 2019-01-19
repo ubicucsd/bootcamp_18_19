@@ -186,7 +186,7 @@ Create a file that takes in the DNA data (A/T/C/G) from "test.fasta" and prints 
 
 Create a file that takes in "test.fasta" and prints out the GC-content of all of the data. Hint: the GC-content is the percentage of G's + C's in some genetic data. If you wish, you can read more about it [here](https://en.wikipedia.org/wiki/GC-content)
 
-**Hint: If you keep getting 0, try explicitly converting the either GC count or the string length to a decimal using float()**
+**Hint: If you keep getting 0, try explicitly converting either the GC count or the string length to a decimal using float()**
 
 ## Credits
 
