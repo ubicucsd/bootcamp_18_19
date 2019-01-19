@@ -168,7 +168,7 @@ You can try running Blast.py if you'd like, but it might take a while and the re
 
 ## Your turn!
 
-#### Warm-up
+### Warm-up
 You're going to print your name using the alphabet. Declare a variable that holds a string containing
 all 26 letters of the alphabet (just use the declaration provided below for simplicity). Then, on the next line use one print statement that accesses letters in the alphabet variable to print out your name.
 
@@ -178,13 +178,13 @@ all 26 letters of the alphabet (just use the declaration provided below for simp
 
 We'll now shift our focus onto applying what we've learned to bioinformatics.
 
-#### Challenge 1
+### Challenge 1
 
 Create a file that takes in the DNA data (A/T/C/G) from "test.fasta" and prints out the file as RNA data (A/U/C/G). **Make sure you don't attempt to transcribe the header lines!**
 
 Various implementations may work. Pick any that you like.
 
-#### Challenge 2
+### Challenge 2
 
 Create a file that takes in "test.fasta" and prints out the GC-content of all of the data. Hint: the GC-content is the percentage of G's + C's in some genetic data. If you wish, you can read more about it [here](https://en.wikipedia.org/wiki/GC-content)
 
