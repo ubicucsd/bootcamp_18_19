@@ -1,6 +1,12 @@
 # Intro to Python
 #### Skill: Python
 
+## Preface
+
+### If this is your first time here, please check in with Mark to get an AWS account. Then, a board member can help you connect (SSH) to the cluster
+
+### Please fill out this sign-in sheet: https://goo.gl/forms/YoNHEmLpsYnFl0A62
+
 ## The Big Picture
 
 So far, we've been working with bioinformatic data only on the command line. However, you'll often want to do more than the command line easily allows. Today, we're going to be learning the basics of one of the most popular languages for doing that: Python.
@@ -151,13 +157,5 @@ Now, write a program that outputs **ONLY** the lines containing actual genetic s
 
 Try finding the total number of bases (A/T/C/G) that are in this file. Again, many implementations are possible--pick any that works for you.
 
-
 #### Challenge 2
 
-
-
-## What You've Learned
-
-Skills developed + next steps. Applications.
-
-## Credits and Citations
