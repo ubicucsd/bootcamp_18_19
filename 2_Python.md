@@ -39,7 +39,7 @@ Great! Now save + close the file, and run your newly-written program by typing t
 python Hello.py
 ```
 
-##### Hint: If you're using vim, press "i" to enter insert mode, type your code, press "esc" to exit insert mode, and type ":x" to save and close.
+##### vim-hint: If you're using vim, press "i" to enter insert mode, type your code, press "esc" to exit insert mode (and enter command mode), and type ":x" to save and close. 
 
 Because the "print" statement in Python outputs whatever follows it to the command line, you'll see your program print "Hello World". That was pretty trivial... let's try something more interesting.
 
@@ -52,6 +52,8 @@ Now, open the syntax.py file and take a look inside.
 Make sure you understand what's happening. Follow the comments closely, and ask one of us if you have any questions.
 
 Now, run the code the same way we ran "Hello.py". You should see "Bioinformatics is Cool". Can you edit line 14 to make the program print: "is Bioinformatics Cool"?
+
+##### vim-hint: navigate to a specific line in vim by going into command mode and typing ```:14```
 
 At this point, you can remove the "#" from the start of the last line (this is called uncommenting). Your Python senses should tell you that this line will now print out myString. Take a look at how myString is defined above and take a guess about what should be printed when you run the program. Once you're ready, run the program.
 
