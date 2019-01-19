@@ -21,16 +21,14 @@ Python should already be installed on your workstations. Let's make sure: Type t
 ```shell
 python
 ```
-You should see something that looks like this (note that this lesson was created on a Mac, so your output might differ slightly):
+You should see something that looks like this:
 ```shell
-Python 2.7.10 (default, Oct  6 2017, 22:29:07) 
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.31)] on darwin
+Python 2.7.15rc1 (default, Nov 12 2018, 14:31:15)
+[GCC 7.3.0] on linux2
 Type "help", "copyright", "credits" or "license" for more information.
->>> 
+>>>
 ```
-
-If you do not see something similar to this, let one of us know.   
-If you do, you're ready to roll. Type exit(), and move on.
+Type exit(), and move on.
 
 ## How to Python
 
