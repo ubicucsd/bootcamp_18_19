@@ -134,28 +134,23 @@ for line in file:
 
 Run Loop.py and see what happens. Voila
 
-## Your turn! (Part I)
+## Your turn!
 
-Here's a warm up. You're going to print your name using the alphabet. Declare a variable that holds a string containing
+#### Warm-up
+You're going to print your name using the alphabet. Declare a variable that holds a string containing
 all 26 letters of the alphabet (just use the declaration provided below for simplicity). Then, on the next line use one print statement that accesses letters in the alphabet variable to print out your name.
 
 ```
 "ABCDEFGHIJKLMNOPQRSTUVWXYZ "
 ```
 
-## Your turn! (Part II)
-
-That was easy, let's try something a little more challenging. Grab a sample fastq file using
-
-```shell
-wget or curl [TODO]
-```
-
-Now, write a program that outputs **ONLY** the lines containing actual genetic sequences (remember loops!). There are various ways to implement this, pick any that works for you.
-
 #### Challenge 1
 
-Try finding the total number of bases (A/T/C/G) that are in this file. Again, many implementations are possible--pick any that works for you.
+We'll now shift our focus onto applying what we've learned to bioinformatics.
+
+Create a file that takes in the DNA data (A/T/C/G) from "test.fasta" and prints out the file as RNA data (A/U/C/G). **Make sure you don't attempt to transcribe the header lines!**
+
+Various implementations may work. Pick any that you like.
 
 #### Challenge 2
 
