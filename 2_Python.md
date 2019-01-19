@@ -154,3 +154,9 @@ Various implementations may work. Pick any that you like.
 
 #### Challenge 2
 
+Create a file that takes in "test.fasta" and prints out the GC-content of all of the data. Hint: the GC-content is the perecentage of G's + C's in some genetic data. If you wish, you can read more about it [here](https://en.wikipedia.org/wiki/GC-content)
+
+
+## Credits
+
+Exercises were adapted from [Rosalind](http://rosalind.info)
