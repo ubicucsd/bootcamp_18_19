@@ -162,7 +162,7 @@ print result_handle.read()
 
 Let's walk through what this does. The first line takes the programs we want for NCBI from BioPython and prepares them to be used. The second line reads in the "small.fasta" file. The third line is the most important: it takes the genetic data, connects to the NCBI BLAST database, searches for matches, and then returns the result from the database. Finally, the last line prints that result.
 
-You can try running Blast.py if you'd like, but it might take a while and the results aren't particularly nice to look at. Maybe come back to this if you finish all three of the following exercises.
+You can try running "Blast.py" now if you'd like, but I'd recommend coming back to this after completing the next 3 exercises.
 
 ## Your turn!
 
