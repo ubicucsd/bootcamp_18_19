@@ -166,7 +166,7 @@ You can try running Blast.py if you'd like, but it might take a while and the re
 
 ### Warm-up
 You're going to print your name using the alphabet. Declare a variable that holds a string containing
-all 26 letters of the alphabet (just use the declaration provided below for simplicity). Then, on the next line use one print statement that accesses letters in the alphabet variable to print out your name.
+all 26 letters of the alphabet, and one space character (just use the declaration provided below for simplicity--the last character is a space!). Then, on the next line use one print statement that accesses letters in the alphabet variable to print out your name.
 
 ```python
 "ABCDEFGHIJKLMNOPQRSTUVWXYZ "
