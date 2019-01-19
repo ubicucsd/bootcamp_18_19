@@ -113,7 +113,7 @@ for line in file:
 ```
 
 That last line is the syntax for starting a for loop in Python. Next, looking back at our pseudocode, we see that we need to check if a line starts with a ">". Luckily, lines in a file are stored as strings! Remember that strings are indexed, meaning individual characters from them can be extracted using brackets (you might remember we did something similar above with!). 
-```
+```python
 file = open("test.fasta", "r")
 
 for line in file:
@@ -124,7 +124,7 @@ Pay close attention to the indentation here. **You can think of everything that'
 
 Finally, we just specify that we want the line printed if the line does start with ">". We indent the next line so Python knows it's part of the "if" statement, and...
 
-```
+```python
 file = open("test.fasta", "r")
 
 for line in file:
@@ -142,19 +142,19 @@ For example, you may want to take the first sequence of "test.fasta" and use NCB
 
 First, extract the first two lines of "test.fasta" into a new file, "small.fasta":
 
-```
+```shell
 head -n2 test.fasta >> small.fasta
 ```
 
 Now, install the correct package. The one you want to use is called [BioPython](https://biopython.org/). Use the Python program installer (called pip) to install the package to your user:
 
-```
+```shell
 pip install --user biopython
 ```
 
 Great! BioPython is now available on your account. Let's use it. Create a new file "Blast.py", and add the following code:
 
-```
+```python
 from Bio.Blast import NCBIWWW
 
 fasta_string = open("small.fasta").read()
@@ -172,7 +172,7 @@ You can try running Blast.py if you'd like, but it might take a while and the re
 You're going to print your name using the alphabet. Declare a variable that holds a string containing
 all 26 letters of the alphabet (just use the declaration provided below for simplicity). Then, on the next line use one print statement that accesses letters in the alphabet variable to print out your name.
 
-```
+```python
 "ABCDEFGHIJKLMNOPQRSTUVWXYZ "
 ```
 
