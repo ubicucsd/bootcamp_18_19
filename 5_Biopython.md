@@ -6,4 +6,18 @@
 
 ### 🔸 The cluster is live on: [username]@TODO
 
-## 
+continuation of [Python lesson](https://github.com/sabeelmansuri/binf_crash_course/blob/master/3_Python.md) do first
+
+install biopython (pip should be there)
+
+check with user input ex
+
+not much of a walkthrough... why? -> background is in [Python lesson](https://github.com/sabeelmansuri/binf_crash_course/blob/master/3_Python.md), rest is up to you to figure out. this doc provides you with examples and guidelines on stuff we haven't covered (ie bioinformatics basics, unfamiliar python concepts, etc). 
+
+parse fasta file
+
+parse fastq file
+
+connect to ncbi database... what does this mean? parse output
+
+challenges
