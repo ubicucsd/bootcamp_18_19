@@ -14,13 +14,36 @@ This lesson is a continuation of our previous lesson, Intro to Python, located [
 
 We're going to start by using a Python package called [Biopython](https://biopython.org/) to perform a few common bioinformatic tasks. We'll need to install Biopython (note: some of you will have done this last time, you can still run the following command again to be safe):
 
-```
+```shell
 pip install biopython
 ```
 
 Confirm that you've successfully downloaded the package by creating a file (remember your .py extension!), adding `from Bio.Blast import NCBIWWW` as the first line, and running the program via the command line. If nothing prints out, you're good. If you get a "traceback error," something is amiss.
 
-## 
+## Sequences
+
+### Seq objects
+
+The first thing you think of when you hear "genetic data" is probably a sequence of DNA, which is a string of nucleotides (A's C's G's and T's). Let's use Biopython to work with sequences. Create a file to work in.
+
+First, import the Seq package:
+
+```python
+ from Bio.Seq import Seq
+ ```
+ 
+ Next, create a Seq object (think of that as a sequence) and assign it to a dna variable:
+ ```python
+ dna = Seq("AGTACACTGGT")
+ ```
+ 
+ Now, print out that variable:
+ ```python
+ print dna
+ ```
+ 
+ ###
+ 
 
 check with user input ex
 
