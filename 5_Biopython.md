@@ -42,7 +42,19 @@ First, import the Seq package:
  print dna
  ```
  
- ###
+ ### Loading sequences
+ 
+ In reality, you're probably not going to be typing in your A-G-C-T's--you'll be using a fasta file containing them. To do this, we can load a fasta file to work with. Create a new file and import the SeqIO package:
+ 
+ ```python
+from Bio import SeqIO
+for seq_record in SeqIO.parse("ls_orchid.fasta", "fasta"):
+   print(seq_record.id)
+   print(repr(seq_record.seq))
+   print(len(seq_record))
+```
+ 
+ 
  
 
 check with user input ex
