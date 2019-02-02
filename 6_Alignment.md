@@ -65,7 +65,9 @@ subprocess.call(["mafft", "--out", "nuc_aligned.fasta", in_file])
 
 
   **a.** Go through each of the sequences in the mafft aligned file, see part 5 for how to do this
+  
   **b.** Count the number of initial gaps on each sequence
+  
   **c.** Degap each sequence and place it into a Seq object
   
 <details>
