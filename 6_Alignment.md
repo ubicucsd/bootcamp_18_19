@@ -61,11 +61,13 @@ I made a fake fasta of sequences that need to be codon aligned over at ```/srv/P
 3. Translate the DNA into amino acids. This should be simple, but unfortunately there is some confusing BioPython syntax to deal with. If you want to figure it out yourself: turn each sequence into a Seq object, use the translate function with table=2, and turn it all back into a string before adding to an array for amino acids. Not a fan of googling syntax? Look over here 
 <details>
   <summary>Not a fan of googling syntax? Click here</summary>
+  
 ```python
 aa_seqs=[]
 for seq in seqs:
     aa_seqs.append(str(Seq.Seq(seq, generic_dna).translate(table=2)))
 ````
+
 <details>
 
 4. Back translate
