@@ -41,24 +41,22 @@ The numbers at the end indicate +1 for matches, -1 for mismatches, -1 for openin
 
 Looking at the matching nucleotides in global and local alignments of these string, which one makes more sense? Does it make sense to care about the matches the global alignment has at the very end of the sequences? 
 
-## Codon Alignment - A bit more hands on 
+## Codon Alignment - A bit more hands on
 
-There has been much explaining and not much doing, so this section is for you to get your hands wet with alignment. One thing that biologists care a lot about is the way amino acids change through time. This is found by sequencing DNA at several timepoints, codon aligning various timepoints, and comparing timepoints to see which amino acids change at what time. Picking this topic is no coincidence, if you want to see my application of codon aligned antibodies head [over here](insert PC39 flea link). 
+There has been much explaining and not much doing, so this section is for you to get your hands wet with alignment. One thing that biologists care a lot about is the way amino acids change through time. This is found by sequencing DNA at several timepoints, codon aligning various timepoints, and comparing timepoints to see which amino acids change at what time. Picking this topic is no coincidence, if you want to see the application my lab has made for this type alignment head [over here](http://flea.murrell.group/view/P018/sequences/). The sequences shown here are from an HIV envelope. If you click on on amino acid index, you can see a graph showing how the amino acid in that position evolved over time. You can explore the site - I recommend the tree section because it is pretty. I did not make this specific page, I am currently finishing up a webapp that will generate these pages from datasets automatically. 
 
 I made a fake fasta of sequences that need to be codon aligned over at ```/srv/Python2/not_codon_aligned.fasta```. I will number the issues that need to be solved to get a codon alignment in order to keep things organized:
 
-**HINT:** Test your code after every step. We are but mortals and will make mistakes; being a good coder means making fewer mistakes but more importantly it means being good at finding mistakes. Even if you do not finish all the steps, I think all of them are good ways to practice python and teach different important aspects of the language. 
+**NOTE:** A good programmer is good at finding mistakes, test each step to find yours. Also, I underestimated the volume of work in this challenge - I tried to provide as much help as possible without giving the exercise away. Do not worry if you don't finish all the steps, working on this will definitely get you hands on in Python. 
 
-1. Make ```codon_align.py``` and import the sequences from ```/srv/Python2/not_codon_aligned.fasta``` the way it was shown in part 5. 
+1. Align with mafft and replace initial gaps with n's. Mafft is already installed on EC2, but it is useful to know how to call command line software from inside a python script - look up the subprocess module. 
 
-2. Align with mafft and replace initial gaps with n's. 
-
-3. Pick a reading frame. Real sequences have deletions, and deletions make it impossible to figure out the correct codons. A robust way of making the choice between starting each sequence from the first, second, or third nucleotide by seeing which one results in the longest total distance between stop codons. In the interest of time, you can also do a simpler version by finding which indices give mutliples of 3. More detailed steps:
+2. Pick a reading frame. Real sequences have deletions, and deletions make it impossible to figure out the correct codons. A robust way of making the choice between starting each sequence from the first, second, or third nucleotide by seeing which one results in the longest total distance between stop codons. In the interest of time, you can also do a simpler version by finding which indices give mutliples of 3. More detailed steps:
   a. 
 
-4. Translate the DNA into amino acids
+3. Translate the DNA into amino acids
 
-5. Back translate
+4. Back translate
 
 
 
