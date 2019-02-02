@@ -86,6 +86,12 @@ sequence=Seq.Seq(str(seq_record.seq).replace("-", ""))
   
 **2.** Pick a reading frame. Real sequences have deletions, and deletions make it impossible to figure out the correct codons. A robust way of making the choice between starting each sequence from the first, second, or third nucleotide by seeing which one results in the longest total distance between stop codons. In the interest of time, you can also do a simpler version by finding which indices give mutliples of 3. More detailed steps:
 
+⋅⋅**a.** Go through each index from 0 to the number of sequences
+
+⋅⋅**b.** Use the modulus to find whether the current sequences has a length divisible by three. What is a modulus? it's this ```%``` symbol. In math, this symbol will find the remainder for you. So 15%3=0, 16%3=1, 17%3=2, 18%3=0 and so on. 
+
+⋅⋅**c** Based on the remainder you found in b, figure out how much of the sequence you should cut off the end. Syntax hint: ```seq[0:-1]``` will give you the sequence with the last nucleotide cut off. 
+
 
 **3.** Translate the DNA into amino acids. This should be simple, I will leave this exercise up to you with one hint - google translating DNA with BioPython.
 
