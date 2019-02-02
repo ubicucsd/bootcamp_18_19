@@ -47,7 +47,9 @@ There has been much explaining and not much doing, so this section is for you to
 
 I made a fake fasta of sequences that need to be codon aligned over at ```/srv/Python2/not_codon_aligned.fasta```. I will number the issues that need to be solved to get a codon alignment in order to keep things organized:
 
-1. Pick a reading frame. Real sequences have deletions, and deletions make it impossible to figure out the correct codons - just think of what chaos will result if you blindly translate a sequence with a single deletion.
+1. Make ```codon_align.py``` and import the sequences from ```/srv/Python2/not_codon_aligned.fasta``` the way it was shown in part 5. 
+
+2. Pick a reading frame. Real sequences have deletions, and deletions make it impossible to figure out the correct codons - just think of what chaos will result if you blindly translate a sequence with a single deletion.
 
 
 
