@@ -41,9 +41,15 @@ The numbers at the end indicate +1 for matches, -1 for mismatches, -1 for openin
 
 Looking at the matching nucleotides in global and local alignments of these string, which one makes more sense? Does it make sense to care about the matches the global alignment has at the very end of the sequences? 
 
-## Codon Alignment
+## Codon Alignment - A bit more hands on 
 
-There has been much explaining and not much doing, so this section is for you to get your hands wet with alignment. One thing that biologists care a lot about is the way amino acids change through time. This is found by sequencing DNA at several timepoints, codon aligning various timepoints, and comparing timepoints to see which amino acids change at what time. 
+There has been much explaining and not much doing, so this section is for you to get your hands wet with alignment. One thing that biologists care a lot about is the way amino acids change through time. This is found by sequencing DNA at several timepoints, codon aligning various timepoints, and comparing timepoints to see which amino acids change at what time. Picking this topic is no coincidence, if you want to see my application of codon aligned antibodies head [over here](insert PC39 flea link). 
+
+I made a fake fasta of sequences that need to be codon aligned over at ```/srv/Python2/not_codon_aligned.fasta```. I will number the issues that need to be solved to get a codon alignment in order to keep things organized:
+
+1. Pick a reading frame. Real sequences have deletions, and deletions make it impossible to figure out the correct codons - just think of what chaos will result if you blindly translate a sequence with a single deletion.
+
+
 
 
 
