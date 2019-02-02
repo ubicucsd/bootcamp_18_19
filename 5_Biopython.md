@@ -4,7 +4,7 @@
 
 ### 🔸 Please fill out this sign-in sheet: https://goo.gl/forms/kOZMaXwCW4PAWRY42
 
-### 🔸 The cluster is live on: [username]@TODO
+### 🔸 The cluster is live on: [username]@ec2-13-58-151-200.us-east-2.compute.amazonaws.com
 
 ## Introduction
 
