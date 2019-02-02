@@ -14,7 +14,7 @@ In this case, the word "global" just means that the entire first string is align
 
 First, make a file called ```aligners.py``` and import the ```pairwise2``` module from the BioPython library and the ```format_alignment``` method from the ```pairwise2``` module. **HINT: look at part 5 to find the correct import syntax**
 
-Now, define two small strings containing DNA sequences. I recommend using "TGCCTTAG" and "TGCTTGC" for an easy to look at example. Call the default pairwise alignment method, called 
+Now, define two small strings containing DNA sequences. I recommend using ```TGCCTTAG``` and ```TGCTTGC``` for an easy to look at example. Call the default pairwise alignment method, called 
 
 ```pairwise2.align.globalxx()``` 
 
@@ -32,7 +32,7 @@ Glad you asked! If you look at the score printed out below each alignment, you w
 
 The word "local" means the best alignment between two *subsequences*. This method can be used when looking for a conserved gene between two otherwise very different organisms. Aligning the messy differences between two different species is not useful, but finding two subsequences (two genes) that the species have in common without aligning the whole sequences can be very useful. 
 
-Open up ```aligners.py``` and create strings "ATGCGGCCATTATAAGCGGTCTCT" and "GATTATAATT". Now, let's compare how these strings align with globally vs locally. The point is best illustrated when gaps and mismatches are penalized, so indicate the scoring system of the alignment like this: 
+Open up ```aligners.py``` and create strings ```ATGCGGCCATTATAAGCGGTCTCT``` and ```GATTATAATT```. Now, let's compare how these strings align with globally vs locally. The point is best illustrated when gaps and mismatches are penalized, so indicate the scoring system of the alignment like this: 
 
 ```pairwise2.align.localms(str1, str2, 1, -1, -1, -1)```
 ```pairwise2.align.globalms(str1, str2, 1, -1, -1, -1)```
@@ -40,6 +40,10 @@ Open up ```aligners.py``` and create strings "ATGCGGCCATTATAAGCGGTCTCT" and "GAT
 The numbers at the end indicate +1 for matches, -1 for mismatches, -1 for opening a gap, and -1 for extending a gap. 
 
 Looking at the matching nucleotides in global and local alignments of these string, which one makes more sense? Does it make sense to care about the matches the global alignment has at the very end of the sequences? 
+
+## Multiple Sequence alignment 
+
+Multiple sequence alignment aligns multiple sequences, but its inner workings are bit complicated (my way of saying I do not know them well enough to teach them) so we are just going to look at them from a distance. This type of alignment is used on a large number of more or less related sequences in order to infer homology and build evolutionary trees. My multiple sequence aligner of choice is mafft, which we will be using in the challenge below. 
 
 ## Codon Alignment - A bit more hands on
 
@@ -54,7 +58,13 @@ I made a fake fasta of sequences that need to be codon aligned over at ```/srv/P
 2. Pick a reading frame. Real sequences have deletions, and deletions make it impossible to figure out the correct codons. A robust way of making the choice between starting each sequence from the first, second, or third nucleotide by seeing which one results in the longest total distance between stop codons. In the interest of time, you can also do a simpler version by finding which indices give mutliples of 3. More detailed steps:
   a. 
 
-3. Translate the DNA into amino acids
+3. Translate the DNA into amino acids. This should be simple, but unfortunately there is some confusing BioPython syntax to deal with. If you want to figure it out yourself: turn each sequence into a Seq object, use the translate function with table=2, and turn it all back into a string before adding to an array for amino acids. Not a fan of googling syntax? Look over here 
+
+```python
+aa_seqs=[]
+for seq in seqs:
+    aa_seqs.append(str(Seq.Seq(seq, generic_dna).translate(table=2)))
+````
 
 4. Back translate
 
