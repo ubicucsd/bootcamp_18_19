@@ -59,7 +59,7 @@ for seq_record in SeqIO.parse("ls_orchid.fasta", "fasta"):
 
 ## Complements and Transcription
 
-You've probably heard of complement strands and transcription. If you haven't, here are two excellent sources: [transcription](https://www.khanacademy.org/science/biology/gene-expression-central-dogma/transcription-of-dna-into-rna/a/overview-of-transcription) and [complements](https://en.wikipedia.org/wiki/Complementarity_(molecular_biology)). Biopython can perform these actions too!
+You've probably heard of complementary strands and transcription. If you haven't, here are two excellent sources: [transcription](https://www.khanacademy.org/science/biology/gene-expression-central-dogma/transcription-of-dna-into-rna/a/overview-of-transcription) and [complements](https://en.wikipedia.org/wiki/Complementarity_(molecular_biology)). Biopython can perform these actions too!
 
 ### Complements
 
@@ -105,10 +105,18 @@ Look through the code, and look through [this documentation](http://biopython.or
 
 ## Your turn!
 
-There's only one challenge for this half of today's lesson, and it comes with starter code! Your task is to write a program that asks 
+There's only one (fairly easy) challenge for this half of today's lesson, and it comes with starter code! Your task is to write a program that asks for two DNA sequences, concatenates them, and prints out the complement and reverse complement.
 
-### 🔸 At this point, you've completed the first part of today's lesson. Move on to the next part on alignment located [here](TODO).
+Starter code:
+```python
+seq1 = raw_input("First sequence: ")
+seq2 = raw_input("Second sequence: ")
 
+print "Complement of strings: "
+print "Reverse complement of strings: "
+```
+
+### 🔸 You've completed the first part of today's lesson. Move on to the next part on alignment located [here](TODO).
 
 ## Credits
 
