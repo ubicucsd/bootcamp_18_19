@@ -44,7 +44,10 @@ First, import the Seq package:
  
  ### Loading sequences
  
- In reality, you're probably not going to be typing in your A-G-C-T's--you'll be using a fasta file containing them. To do this, we can load a fasta file to work with. Create a new file and import the SeqIO package:
+ In reality, you're probably not going to be typing in your A-G-C-T's--you'll be using a fasta file containing them. 
+ 
+ 
+Now to parse, we can load a fasta file to work with. Create a new file and import the SeqIO package:
  
  ```python
 from Bio import SeqIO
@@ -53,13 +56,14 @@ for seq_record in SeqIO.parse("ls_orchid.fasta", "fasta"):
    print(repr(seq_record.seq))
    print(len(seq_record))
 ```
- 
- 
+
+ Before you run this program, take a guess what will print (confirm with a neighbor!). Were you right? If not, what printed and why?
  
 
-check with user input ex
+### Complements and Transcription
 
-not much of a walkthrough... why? -> background is in [Python lesson](https://github.com/sabeelmansuri/binf_crash_course/blob/master/3_Python.md), rest is up to you to figure out. this doc provides you with examples and guidelines on stuff we haven't covered (ie bioinformatics basics, unfamiliar python concepts, etc). 
+You've probably heard of complement strands and transcription. If you haven't, here are two excellent sources: [transcription](https://www.khanacademy.org/science/biology/gene-expression-central-dogma/transcription-of-dna-into-rna/a/overview-of-transcription) and [complements](https://en.wikipedia.org/wiki/Complementarity_(molecular_biology)) 
+
 
 parse fasta file
 
