@@ -53,7 +53,7 @@ I made a fake fasta of sequences that need to be codon aligned over at ```/srv/P
 
 **PLEASE NOTE:** A good programmer is good at finding mistakes, test each step to find yours. Also, I underestimated the volume of work in this challenge - I tried to provide as much help as possible without giving the exercise away. Do not worry if you don't finish all the steps, working on this will definitely get you hands on in Python. 
 
-1. Align with mafft and replace initial gaps with n's. Mafft is already installed on EC2, but it is useful to know how to call command line software from inside a python script - look up the subprocess module. 
+**1.** Align with mafft and replace initial gaps with n's. Mafft is already installed on EC2, but it is useful to know how to call command line software from inside a python script - look up the subprocess module. 
 
 <details>
   <summary>Can't figure out the correct syntax to call mafft? click here</summary>
@@ -64,9 +64,9 @@ subprocess.call(["mafft", "--out", "nuc_aligned.fasta", in_file])
 </details>
 
 
-  a. Go through each of the sequences in the mafft aligned file, see part 5 for how to do this
-  b. Count the number of initial gaps on each sequence
-  c. Degap each sequence and place it into a Seq object
+  **a.** Go through each of the sequences in the mafft aligned file, see part 5 for how to do this
+  **b.** Count the number of initial gaps on each sequence
+  **c.** Degap each sequence and place it into a Seq object
   
 <details>
   <summary>Running into type issues? This one is a bit of a pain, so let me give you this</summary>
@@ -78,14 +78,14 @@ sequence=Seq.Seq(str(seq_record.seq).replace("-", ""))
 </details>
   
   
-  d. Prepend each sequence with n's. The number of n's should be equal to the number of initial gaps that sequence had.
+  **d.** Prepend each sequence with n's. The number of n's should be equal to the number of initial gaps that sequence had.
 
 
   
-2. Pick a reading frame. Real sequences have deletions, and deletions make it impossible to figure out the correct codons. A robust way of making the choice between starting each sequence from the first, second, or third nucleotide by seeing which one results in the longest total distance between stop codons. In the interest of time, you can also do a simpler version by finding which indices give mutliples of 3. More detailed steps:
+**2.** Pick a reading frame. Real sequences have deletions, and deletions make it impossible to figure out the correct codons. A robust way of making the choice between starting each sequence from the first, second, or third nucleotide by seeing which one results in the longest total distance between stop codons. In the interest of time, you can also do a simpler version by finding which indices give mutliples of 3. More detailed steps:
 
 
-3. Translate the DNA into amino acids. This should be simple, I will leave this exercise up to you with one hint - google translating DNA with BioPython.
+**3.** Translate the DNA into amino acids. This should be simple, I will leave this exercise up to you with one hint - google translating DNA with BioPython.
 
 
 4. Back translate
