@@ -18,5 +18,9 @@ on those two strings. The alignment method returns a list of the most high scori
 
 ```print(format_alignment(*alignment_name))```
 
+### What exactly is a good score? Why is one alignment better than another? 
+
+Glad you asked! If you look at the score printed out below each alignment, you will notice that the score is coincidentially identical to the number of nucleotides that match between the two aligned sequences. The way we determine the alignment with the optimal score is beyond the scope of what I plan to discuss, but it is good to know that alignments are mostly determined by the way a program decides on alignment scores. 
+
 
 [link to pairwise types](http://biopython.org/DIST/docs/api/Bio.pairwise2-module.html)
