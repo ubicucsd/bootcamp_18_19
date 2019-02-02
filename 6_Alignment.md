@@ -61,14 +61,14 @@ I made a fake fasta of sequences that need to be codon aligned over at ```/srv/P
 ```python
 subprocess.call(["mafft", "--out", "nuc_aligned.fasta", in_file])
 ````
-</details>
+</details></br>
 
 
-  **a.** Go through each of the sequences in the mafft aligned file, see part 5 for how to do this
+  ⋅⋅**a.** Go through each of the sequences in the mafft aligned file, see part 5 for how to do this
   
-  **b.** Count the number of initial gaps on each sequence
+  ⋅⋅**b.** Count the number of initial gaps on each sequence
   
-  **c.** Degap each sequence and place it into a Seq object
+  ⋅⋅**c.** Degap each sequence and place it into a Seq object
   
 <details>
   <summary>Running into type issues? This one is a bit of a pain, so let me give you this</summary>
@@ -80,7 +80,7 @@ sequence=Seq.Seq(str(seq_record.seq).replace("-", ""))
 </details></br>
   
   
-  **d.** Prepend each sequence with n's. The number of n's should be equal to the number of initial gaps that sequence had.
+  ⋅⋅**d.** Prepend each sequence with n's. The number of n's should be equal to the number of initial gaps that sequence had.
 
 
   
