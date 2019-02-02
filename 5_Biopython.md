@@ -93,10 +93,22 @@ cp ~/../smansuri/NC_005816.fna .
 Now, we'll run the BLAST:
 
 ```python
-TODO
+from Bio.Blast import NCBIWWW
+from Bio.Blast import NCBIXML
+result_handle = NCBIWWW.qblast("blastn", "nt", "8332116")
+blast_record = NCBIXML.read(result_handle)
+for alignment in blast_record.alignments:
+  for hsp in alignment.hsps:
+    if hsp.expect < 8.02643e-114:
+      print("****Alignment****")
+      print("sequence:", alignment.title)
+      print("length:", alignment.length)
+      print("e value:", hsp.expect)
+      print(hsp.query[0:75] + "...")
+      print(hsp.match[0:75] + "...")
+      print(hsp.sbjct[0:75] + "...")
 ```
-
-You're encouraged to look through this code to make sense of it. If you've been following closely, you have all of the tools needed to. This is not, however, required. Simply run the code and look at the neat output!
+Run the program. You should look through this code and see why what prints, prints.
 
 ### 🔸 At this point, you've completed the first part of today's lesson. Move on to the next part on alignment located [here](TODO).
 
