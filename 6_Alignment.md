@@ -49,7 +49,7 @@ I made a fake fasta of sequences that need to be codon aligned over at ```/srv/P
 
 1. Make ```codon_align.py``` and import the sequences from ```/srv/Python2/not_codon_aligned.fasta``` the way it was shown in part 5. 
 
-2. Pick a reading frame. Real sequences have deletions, and deletions make it impossible to figure out the correct codons. We will make the choice between starting each sequence from the first, second, or third nucleotide by seeing which one results in the fewest stop codons. For more experienced programmers, head down these steps below to implement the method. For beginners, copy from ```/srv/Python2/get_frames.py```
+2. Pick a reading frame. Real sequences have deletions, and deletions make it impossible to figure out the correct codons. We will make the choice between starting each sequence from the first, second, or third nucleotide by seeing which one results in the longest total distance between stop codons. For more experienced programmers, head down these steps below to implement the method. For beginners, copy from ```/srv/Python2/get_frames.py```
   a. 
 
 
