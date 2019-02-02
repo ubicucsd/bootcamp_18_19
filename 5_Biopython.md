@@ -62,16 +62,31 @@ for seq_record in SeqIO.parse("ls_orchid.fasta", "fasta"):
 
 ### Complements and Transcription
 
-You've probably heard of complement strands and transcription. If you haven't, here are two excellent sources: [transcription](https://www.khanacademy.org/science/biology/gene-expression-central-dogma/transcription-of-dna-into-rna/a/overview-of-transcription) and [complements](https://en.wikipedia.org/wiki/Complementarity_(molecular_biology)) 
+You've probably heard of complement strands and transcription. If you haven't, here are two excellent sources: [transcription](https://www.khanacademy.org/science/biology/gene-expression-central-dogma/transcription-of-dna-into-rna/a/overview-of-transcription) and [complements](https://en.wikipedia.org/wiki/Complementarity_(molecular_biology)). Biopython can perform these actions too!
 
+#### Complements
 
-parse fasta file
+Create a new file and import the Seq package again. Create a Seq object with a DNA strand of your choosing (A's C's G's and T's only!). Call the `complement()` method on your Seq object. What do you expect will print out? Does it?
 
-parse fastq file
+#### Transcription
+
+**Make sure you understand transcription before moving on**
+
+Copy and paste the following into a new file:
+
+```python
+from Bio.Seq import Seq
+template_dna = Seq("ATGGCCATTGTAATGGGCCGCTGAAAGGGTGCCCGATAG")
+```
+
+You've been given a template DNA strand. Can you turn this into the transcribed RNA strand? 
+
+##### Hint: You'll need the `reverse_complement()` before you `transcribe()`
+
 
 connect to ncbi database... what does this mean? parse output
 
-challenges
+## Challenges
 
 ## Credits
 
