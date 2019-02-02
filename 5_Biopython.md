@@ -84,13 +84,9 @@ You've been given a template DNA strand. Can you turn this into the transcribed 
 
 ## NCBI BLAST
 
-We connected to the BLAST database last time (take a look if you haven't already!). The output, however, wasn't very nice. Biopython can clear that up for us. Let's get a new fasta file to BLAST. While you're inside your working directory type:
+We connected to the BLAST database last time (take a look if you haven't already!). The output, however, wasn't very nice. Biopython can clear that up for us. 
 
-```shell
-cp ~/../smansuri/NC_005816.fna .
-```
-
-Now, we'll run the BLAST:
+Let's prepare to BLAST. Instead of explicitly specifying a fasta sequence, we're going to instead use a [gi number](https://www.ncbi.nlm.nih.gov/genbank/sequenceids/). Don't worry too much about this--just know we're running BLAST on some sequence, even though we haven't specified it with A's G's C's and T's.
 
 ```python
 from Bio.Blast import NCBIWWW
@@ -108,10 +104,9 @@ for alignment in blast_record.alignments:
       print(hsp.match[0:75] + "...")
       print(hsp.sbjct[0:75] + "...")
 ```
-Run the program. You should look through this code and see why what prints, prints.
+Look through the code, and look through [this documentation](http://biopython.org/DIST/docs/api/Bio.Blast.Record.HSP-class.html) (side note: a lot of coding/bioinformatics is looking through documentation--this is a valuable exercise that you shouldn't just skip!). What do you expect will print? Run the program to check.
 
 ### 🔸 At this point, you've completed the first part of today's lesson. Move on to the next part on alignment located [here](TODO).
-
 
 
 ## Credits
