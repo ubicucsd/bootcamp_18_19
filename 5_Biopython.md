@@ -98,9 +98,9 @@ TODO
 
 You're encouraged to look through this code to make sense of it. If you've been following closely, you have all of the tools needed to. This is not, however, required. Simply run the code and look at the neat output!
 
-## Closing statements
+### 🔸 At this point, you've completed the first part of today's lesson. Move on to the next part on alignment located [here](TODO).
 
-At this point, you've completed the first part of today's lesson. Move on to the next part on alignment located [here](TODO).
+
 
 ## Credits
 
