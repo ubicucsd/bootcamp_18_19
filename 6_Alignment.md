@@ -8,7 +8,11 @@ Every bioinformatics tool needs to start somewhere, and beyond quality control t
 
 In order to see why alignments are useful on a larger scale, let us start by looking at them from a smaller scale. 
 
-First, import the ```pairwise2``` module from the BioPython library and the ```format_alignment``` method from the ```pairwise2``` module. **HINT: look at part 5 to find the correct import syntax**
+### Global Alignment
+
+In this case, the word "global" just means that the entire first string is aligned as best as possible to the entire second string. 
+
+First, make a file called ```aligners.py``` and import the ```pairwise2``` module from the BioPython library and the ```format_alignment``` method from the ```pairwise2``` module. **HINT: look at part 5 to find the correct import syntax**
 
 Now, define two small strings containing DNA sequences. I recommend using "TGCCTTAG" and "TGCTTGC" for an easy to look at example. Call the default pairwise alignment method, called 
 
@@ -22,4 +26,24 @@ What is that asteriks? In different languages an asteriks has different meanings
 
 ### What exactly is a good score? Why is one alignment better than another? 
 
-Glad you asked! If you look at the score printed out below each alignment, you will notice that the score is coincidentially identical to the number of nucleotides that match between the two aligned sequences. The way we determine the alignment with the optimal score is beyond the scope of what I plan to discuss, but it is good to know that alignments are mostly determined by the way a program decides on alignment scores. The alignment we tried gives gaps, insertions, and deletions a score of zero and matches a score of one. Other alignments may have more complex behaviors, including negative scores for insertions/deletions, custom scores based on which nucleotide is mismatched with which, and more. If you want to explore how different scoring systems look like in alignment, take a look [over here.](http://biopython.org/DIST/docs/api/Bio.pairwise2-module.html)
+Glad you asked! If you look at the score printed out below each alignment, you will notice that the score is coincidentially identical to the number of nucleotides that match between the two aligned sequences. The way we determine the alignment with the optimal score is beyond the scope of what I plan to discuss, but it is good to know that alignments are mostly determined by the way a program decides on alignment scores. The alignment we tried gives gaps, insertions, and deletions a score of zero and matches a score of one. Other alignments may have more complex behaviors, including negative scores for insertions/deletions, custom scores based on which nucleotide is mismatched with which, and more. There are several modes of alignment available on BioPython, each with customizable scoring. Look [over here] (http://biopython.org/DIST/docs/api/Bio.pairwise2-module.html) if you want to see the range of what BioPython has to offer.
+
+### Local Alignment
+
+The word "local" means the best alignment between two *subsequences*. This method can be used when looking for a conserved gene between two otherwise very different organisms. Aligning the messy differences between two different species is not useful, but finding two subsequences (two genes) that the species have in common without aligning the whole sequences can be very useful. 
+
+Open up ```aligners.py``` and create strings "ATGCGGCCATTATAAGCGGTCTCT" and "GATTATAATT". Now, let's compare how these strings align with globally vs locally. The point is best illustrated when gaps and mismatches are penalized, so indicate the scoring system of the alignment like this: 
+
+```pairwise2.align.localms(str1, str2, 1, -1, -1, -1)```
+```pairwise2.align.globalms(str1, str2, 1, -1, -1, -1)```
+
+The numbers at the end indicate +1 for matches, -1 for mismatches, -1 for opening a gap, and -1 for extending a gap. 
+
+Looking at the matching nucleotides in global and local alignments of these string, which one makes more sense? Does it make sense to care about the matches the global alignment has at the very end of the sequences? 
+
+## Codon Alignment
+
+There has been much explaining and not much doing, so this section is for you to get your hands wet with alignment. One thing that biologists care a lot about is the way amino acids change through time. This is found by sequencing DNA at several timepoints, codon aligning various timepoints, and comparing timepoints to see which amino acids change at what time. 
+
+
+
