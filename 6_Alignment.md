@@ -55,12 +55,8 @@ I made a fake fasta of sequences that need to be codon aligned over at ```/srv/P
 
 1. Align with mafft and replace initial gaps with n's. Mafft is already installed on EC2, but it is useful to know how to call command line software from inside a python script - look up the subprocess module. 
 
-2. Pick a reading frame. Real sequences have deletions, and deletions make it impossible to figure out the correct codons. A robust way of making the choice between starting each sequence from the first, second, or third nucleotide by seeing which one results in the longest total distance between stop codons. In the interest of time, you can also do a simpler version by finding which indices give mutliples of 3. More detailed steps:
-  a. 
-
-3. Translate the DNA into amino acids. This should be simple, but unfortunately there is some confusing BioPython syntax to deal with. If you want to figure it out yourself: turn each sequence into a Seq object, use the translate function with table=2, and turn it all back into a string before adding to an array for amino acids. Not a fan of googling syntax? Look over here 
 <details>
-  <summary>Not a fan of googling syntax? Click here</summary>
+  <summary>Can't figure out the correct syntax to call mafft? click here</summary>
   
 ```python
 aa_seqs=[]
@@ -69,6 +65,29 @@ for seq in seqs:
 ````
 
 <details>
+  
+
+
+2. Pick a reading frame. Real sequences have deletions, and deletions make it impossible to figure out the correct codons. A robust way of making the choice between starting each sequence from the first, second, or third nucleotide by seeing which one results in the longest total distance between stop codons. In the interest of time, you can also do a simpler version by finding which indices give mutliples of 3. More detailed steps:
+  a. Go through each of the sequences in the mafft aligned file, see part 5 for how to do this
+  b. Count the number of initial gaps on each sequence
+  c. Degap each sequence and place it into a Seq object
+  
+<details>
+  <summary>Running into type issues? This one is a bit of a pain, so let me give you this</summary>
+  
+```python
+#This line does a few things:
+#1. It takes only the nucleotides from index i onwards. Recall that i should be the place where the initial gaps end. That's for you to find!
+#2. It degaps the subsampled sequence and converts it into a Seq object so BioPython can comfortably work with it
+sequence=Seq.Seq(str(seq_record.seq)[i:].replace("-", ""))
+````
+<details>
+  
+  d. Prepend each sequence with n's. The number of n's should be equal to the number of initial gaps that sequence had.
+
+3. Translate the DNA into amino acids. This should be simple, I will leave this exercise up to you with one hint - google translating DNA with BioPython.
+
 
 4. Back translate
 
