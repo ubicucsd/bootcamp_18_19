@@ -12,13 +12,11 @@ This lesson is a continuation of our previous lesson, Intro to Python, located [
 
 ## Setup
 
-We're going to start by using a Python package called [Biopython](https://biopython.org/) to perform a few common bioinformatic tasks. We'll need to install Biopython (note: some of you will have done this last time, you can still run the following command again to be safe):
+We're going to start by using a Python package called [Biopython](https://biopython.org/) to perform a few common bioinformatic tasks. Biopython is already installed on the cluster. You can prove this to yourself by typing the following on the command line:
 
 ```shell
-pip install biopython
+pip list
 ```
-
-Confirm that you've successfully downloaded the package by creating a file (remember your .py extension!), adding `from Bio.Blast import NCBIWWW` as the first line, and running the program via the command line. If nothing prints out, you're good. If you get a "traceback error," something is amiss.
 
 ## Sequences
 
@@ -30,23 +28,22 @@ First, import the Seq package:
 
 ```python
  from Bio.Seq import Seq
- ```
- 
- Next, create a Seq object (think of that as a sequence) and assign it to a dna variable:
- ```python
- dna = Seq("AGTACACTGGT")
- ```
- 
- Now, print out that variable:
- ```python
- print dna
- ```
- 
- ### Loading sequences
- 
- In reality, you're probably not going to be typing in your A-G-C-T's--you'll be using a fasta file containing them. 
- 
- 
+```
+
+Next, create a Seq object (think of that as a sequence) and assign it to a dna variable:
+```python
+dna = Seq("AGTACACTGGT")
+```
+
+Now, print out that variable:
+```python
+print dna
+```
+
+### Loading sequences
+
+In reality, you're probably not going to be typing in your A-G-C-T's--you'll be using a fasta file containing them. 
+
 Now to parse, we can load a fasta file to work with. Create a new file and import the SeqIO package:
  
  ```python
@@ -106,9 +103,13 @@ for alignment in blast_record.alignments:
 ```
 Look through the code, and look through [this documentation](http://biopython.org/DIST/docs/api/Bio.Blast.Record.HSP-class.html) (side note: a lot of coding/bioinformatics is looking through documentation--this is a valuable exercise that you shouldn't just skip!). What do you expect will print? Run the program to check.
 
+## Your turn!
+
+There's only one challenge for this half of today's lesson, and it comes with starter code! Your task is to write a program that asks 
+
 ### 🔸 At this point, you've completed the first part of today's lesson. Move on to the next part on alignment located [here](TODO).
 
 
 ## Credits
 
-Exercises are adapted from the official [Biopython tutorial textbook](http://biopython.org/DIST/docs/tutorial/Tutorial.pdf)
+Exercises are adapted from the official [Biopython tutorial textbook](http://biopython.org/DIST/docs/tutorial/Tutorial.pdf) and a [course](http://disi.unitn.it/~teso/courses/sciprog/python_biopython_exercises.html) from the University of Trento.
