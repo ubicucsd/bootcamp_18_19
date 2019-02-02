@@ -63,8 +63,7 @@ aa_seqs=[]
 for seq in seqs:
     aa_seqs.append(str(Seq.Seq(seq, generic_dna).translate(table=2)))
 ````
-
-<details>
+</details>
   
 2. Pick a reading frame. Real sequences have deletions, and deletions make it impossible to figure out the correct codons. A robust way of making the choice between starting each sequence from the first, second, or third nucleotide by seeing which one results in the longest total distance between stop codons. In the interest of time, you can also do a simpler version by finding which indices give mutliples of 3. More detailed steps:
   a. Go through each of the sequences in the mafft aligned file, see part 5 for how to do this
@@ -78,7 +77,7 @@ for seq in seqs:
 #This line converts the sequence to a string, replaces gaps with empty strings, and placed the result into a Seq object
 sequence=Seq.Seq(str(seq_record.seq).replace("-", ""))
 ````
-<details>
+</details>
   
   d. Prepend each sequence with n's. The number of n's should be equal to the number of initial gaps that sequence had.
 
