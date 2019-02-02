@@ -53,7 +53,8 @@ I made a fake fasta of sequences that need to be codon aligned over at ```/srv/P
 
 2. Align with mafft and replace initial gaps with n's. 
 
-3. Pick a reading frame. Real sequences have deletions, and deletions make it impossible to figure out the correct codons. A robust way of making the choice between starting each sequence from the first, second, or third nucleotide by seeing which one results in the longest total distance between stop codons. In the interest of time, you can also do a simpler version by 
+3. Pick a reading frame. Real sequences have deletions, and deletions make it impossible to figure out the correct codons. A robust way of making the choice between starting each sequence from the first, second, or third nucleotide by seeing which one results in the longest total distance between stop codons. In the interest of time, you can also do a simpler version by finding which indices give mutliples of 3. More detailed steps:
+  a. 
 
 4. Translate the DNA into amino acids
 
