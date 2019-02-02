@@ -66,8 +66,6 @@ for seq in seqs:
 
 <details>
   
-
-
 2. Pick a reading frame. Real sequences have deletions, and deletions make it impossible to figure out the correct codons. A robust way of making the choice between starting each sequence from the first, second, or third nucleotide by seeing which one results in the longest total distance between stop codons. In the interest of time, you can also do a simpler version by finding which indices give mutliples of 3. More detailed steps:
   a. Go through each of the sequences in the mafft aligned file, see part 5 for how to do this
   b. Count the number of initial gaps on each sequence
@@ -77,10 +75,8 @@ for seq in seqs:
   <summary>Running into type issues? This one is a bit of a pain, so let me give you this</summary>
   
 ```python
-#This line does a few things:
-#1. It takes only the nucleotides from index i onwards. Recall that i should be the place where the initial gaps end. That's for you to find!
-#2. It degaps the subsampled sequence and converts it into a Seq object so BioPython can comfortably work with it
-sequence=Seq.Seq(str(seq_record.seq)[i:].replace("-", ""))
+#This line converts the sequence to a string, replaces gaps with empty strings, and placed the result into a Seq object
+sequence=Seq.Seq(str(seq_record.seq).replace("-", ""))
 ````
 <details>
   
