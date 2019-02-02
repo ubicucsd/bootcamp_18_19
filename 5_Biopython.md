@@ -60,15 +60,15 @@ for seq_record in SeqIO.parse("ls_orchid.fasta", "fasta"):
  Before you run this program, take a guess what will print (confirm with a neighbor!). Were you right? If not, what printed and why?
  
 
-### Complements and Transcription
+## Complements and Transcription
 
 You've probably heard of complement strands and transcription. If you haven't, here are two excellent sources: [transcription](https://www.khanacademy.org/science/biology/gene-expression-central-dogma/transcription-of-dna-into-rna/a/overview-of-transcription) and [complements](https://en.wikipedia.org/wiki/Complementarity_(molecular_biology)). Biopython can perform these actions too!
 
-#### Complements
+### Complements
 
 Create a new file and import the Seq package again. Create a Seq object with a DNA strand of your choosing (A's C's G's and T's only!). Call the `complement()` method on your Seq object. What do you expect will print out? Does it?
 
-#### Transcription
+### Transcription
 
 **Make sure you understand transcription before moving on**
 
@@ -78,15 +78,29 @@ Copy and paste the following into a new file:
 from Bio.Seq import Seq
 template_dna = Seq("ATGGCCATTGTAATGGGCCGCTGAAAGGGTGCCCGATAG")
 ```
-
 You've been given a template DNA strand. Can you turn this into the transcribed RNA strand? 
 
-##### Hint: You'll need the `reverse_complement()` before you `transcribe()`
+**Hint: You'll need the `reverse_complement()` before you `transcribe()`**
 
+## NCBI BLAST
 
-connect to ncbi database... what does this mean? parse output
+We connected to the BLAST database last time (take a look if you haven't already!). The output, however, wasn't very nice. Biopython can clear that up for us. Let's get a new fasta file to BLAST. While you're inside your working directory type:
 
-## Challenges
+```shell
+cp ~/../smansuri/NC_005816.fna .
+```
+
+Now, we'll run the BLAST:
+
+```python
+TODO
+```
+
+You're encouraged to look through this code to make sense of it. If you've been following closely, you have all of the tools needed to. This is not, however, required. Simply run the code and look at the neat output!
+
+## Closing statements
+
+At this point, you've completed the first part of today's lesson. Move on to the next part on alignment located [here](TODO).
 
 ## Credits
 
