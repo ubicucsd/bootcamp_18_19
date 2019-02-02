@@ -47,12 +47,17 @@ There has been much explaining and not much doing, so this section is for you to
 
 I made a fake fasta of sequences that need to be codon aligned over at ```/srv/Python2/not_codon_aligned.fasta```. I will number the issues that need to be solved to get a codon alignment in order to keep things organized:
 
+**HINT:** Test your code after every step. We are but mortals and will make mistakes, being a good coder means making fewer mistakes but more importantly it means being good at finding mistakes. Even if you do not finish all the steps, I think all of them are good ways to practice python and teach different important aspects of the language. 
+
 1. Make ```codon_align.py``` and import the sequences from ```/srv/Python2/not_codon_aligned.fasta``` the way it was shown in part 5. 
 
-2. Pick a reading frame. Real sequences have deletions, and deletions make it impossible to figure out the correct codons. We will make the choice between starting each sequence from the first, second, or third nucleotide by seeing which one results in the longest total distance between stop codons. For more experienced programmers, head down these steps below to implement the method. For beginners, copy from ```/srv/Python2/get_frames.py```
-  a. 
+2. Align with mafft and replace initial gaps with n's. 
 
+3. Pick a reading frame. Real sequences have deletions, and deletions make it impossible to figure out the correct codons. A robust way of making the choice between starting each sequence from the first, second, or third nucleotide by seeing which one results in the longest total distance between stop codons. In the interest of time, you can also do a simpler version by 
 
+4. Translate the DNA into amino acids
+
+5. Back translate
 
 
 
