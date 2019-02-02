@@ -77,7 +77,7 @@ subprocess.call(["mafft", "--out", "nuc_aligned.fasta", in_file])
 #This line converts the sequence to a string, replaces gaps with empty strings, and placed the result into a Seq object
 sequence=Seq.Seq(str(seq_record.seq).replace("-", ""))
 ````
-</details>
+</details></br>
   
   
   **d.** Prepend each sequence with n's. The number of n's should be equal to the number of initial gaps that sequence had.
