@@ -1,16 +1,14 @@
-# EDIT THIS FOR LESSON FORMAT
-
 # Tutorial: Nanopore Analysis Pipeline
+#### Adapted from my [Bowman Lab Tutorial](https://www.polarmicrobes.org/tutorial-nanopore-analysis-pipeline/)
 
 ## Introduction
 
-The following is a tutorial that demonstrates a pipeline used for analysis of Oxford Nanopore genetic data. It is written by Sabeel Mansuri, an Undergraduate Research Assistant for the Bowman Lab at the Scripps Institute of Oceanography, University of California San Diego. 
-
-This tutorial will require the following (brief installation instructions are included below):
+The following is a tutorial that demonstrates a pipeline used for analysis of Oxford Nanopore genetic data. This tutorial will require the following (they are all already installed *DO NOT INSTALL THEM AGAIN!*):
 
 [Canu Assembler](https://canu.readthedocs.io/en/latest/)  
 [Bandage](https://rrwick.github.io/Bandage/)  
-[Prokka](https://github.com/tseemann/prokka)  
+[Prokka](https://github.com/tseemann/prokka)
+[Barrnap](https://github.com/tseemann/barrnap)
 
 
 ## Software Installation
@@ -30,6 +28,7 @@ Bandage is an assembly visualization software. Install it by visiting [this link
 
 ### Prokka
 Prokka is a gene annotation program. Install it by visiting [this link](https://github.com/tseemann/prokka), and running the installation commands appropriate for your device.
+
 
 
 ## Dataset
@@ -102,4 +101,3 @@ The newly created circular directory contains various files with data on the gen
 ## Summary
 The analysis above has taken Oxford Nanopore sequenced data, assmebled contigs, identified the closest matching
 organism, and annotated its genome.
-
