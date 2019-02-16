@@ -96,7 +96,7 @@ head -n38673 test_canu/test_canu.contigs.fasta >> test_canu/contig1.fasta
 ```
 
 ## NCBI BLAST
-We can now blast this Contig using NCBI’s nucleotide BLAST database (linked [here](https://blast.ncbi.nlm.nih.gov/Blast.cgi)) with all default options. (**Challenge: can you BLAST using Biopython?**) The top hit is:
+We can now blast this Contig using NCBI’s nucleotide BLAST database (linked [here](https://blast.ncbi.nlm.nih.gov/Blast.cgi)) with all default options. (**Extra: can you BLAST using Biopython?**) The top hit is:
 
 ```
 Hit: Halomonas sp. hl-4 genome assembly, chromosome: I  
