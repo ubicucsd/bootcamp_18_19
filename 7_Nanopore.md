@@ -1,3 +1,5 @@
+# EDIT THIS FOR LESSON FORMAT
+
 # Tutorial: Nanopore Analysis Pipeline
 
 ## Introduction
