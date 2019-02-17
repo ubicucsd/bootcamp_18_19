@@ -8,7 +8,7 @@ This is a bit of a bonus lesson. Nanopore is an experimental, new sequencing tec
 
 ### What's Nanopore?
 
-Nanopore sequencing is a new and developing technique in bioinformatics that you can read about [here](https://nanoporetech.com/applications/dna-nanopore-sequencing) from one of the leading companies in the field, Oxford Nanopore. If you're not interested in the details, here's a summary: Nanopore uses super small holes to run DNA through, measures current changes to determine which base pair is at that position, and reports it as output.
+Nanopore sequencing is a new and developing technique in bioinformatics that you can read about [here](https://nanoporetech.com/how-it-works) from one of the leading companies in the field, Oxford Nanopore. If you're not interested in the details, here's a summary: Nanopore uses super small holes to run DNA through, measures current changes to determine which base pair is at that position, and reports it as output.
 
 ### So... why?
 
