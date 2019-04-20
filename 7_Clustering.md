@@ -56,16 +56,28 @@ There are a few approaches to clustering, let us look into 3 of them for now.
   
   IV. Reassign all points to their nearest center and continue reassigning + averaging until the iteration when nothing changes
   
-  Take a look at the cluster.KMeans functionality [over here](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html) and see if you can figure out how to run the K-means algorithm on both of the datasets we generated above. **Hint:** The only parameter you need to indicate is the number of clusters. For the first dataset, K should be the same as the number of blobs you made earlier and for the circles you can set it to two. 
+  Code to apply K-means clustering to set1 is below, don't forget to replace k with the number of blops you made above. Do the same for set2, but now set k=2.   There are two circles, right? It seems like each circle might share a characteristics within itself, so it would be nice if the computer could cluster the circles into 2 partitions. 
+  ```
+  kmeans_dataset1 = cluster.KMeans(n_clusters=k).fit_prediction(set1)
+  ```
+  Now, use ```cluster_plots()``` to plot the results of K-means and then scp it over. 
+  
+### 2. Agglomerative Hierarchical 
+
+   I. Start with every point being its very own cluster center. 
+   
+   II. Find the two centers which are closest to each other and combine them into one cluster. The new center is the average of the two previous ones. 
+   
+   III. Continue combining the closest centers until all points are under a single cluster. 
+   
 
 ### A few examples of Bioinformatics applications: 
 
 1. Finding what genes are up and down regulated under certain conditions. Imagine you have a matrix, where each point is a set of gene expression recorded for a variety of conditions. If two points are close to each other, that means they had similar expression levels throughout those conditions. 
 
-2. 
+2. Discerning different species present in a sample of unkown contents. This can be done with an algorithm that does not have a preditermined amount of clusters. An example application is taking HIV sequences from a patient, clustering them, and filtering clusters under a certain size to find the sequences of prevalent strains within the patient.
 
-2. Get an example dataset and have them learn a few different methods with sklearn on python
+3. Finding evolutionary relationships between samples using hierarchical clustering. 
 
-3. Example from Ben lab + an article example or something
-
+3. 
 4. Challenge exercise can be a 181-like assignment to implement a type of clustering (such as soft clustering) 
