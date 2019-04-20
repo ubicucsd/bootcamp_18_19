@@ -51,8 +51,6 @@ Do not forget to replace the paths and username!
 ```
 </details></br>
 
-There are a few approaches to clustering, let us look into 3 of them for now. 
-
 ### 1. K-means
 
 &nbsp;&nbsp; I. Select K centers. This can be done a variety of ways, the easiest of which is to select a random point, find the farthest point from that and select it, find the furthest point from the previous and so on. 
