@@ -3,6 +3,10 @@
 
 scp ubuntu@ec2-18-218-72-125.us-east-2.compute.amazonaws.com:/home/ubuntu/clustering_lesson/foo.pdf .
 
+#### Preliminary note:
+
+This lesson will force you to look through documentation and fill in the blanks on some of the functions. I know I could have given you the full code, but I think that more is learned when you are forced to interact with the code to some extent. Note that in Python syntax, you will have to use the dot (period) to indicate when you are going from a general to specific scope. For example, there is a package called numpy, with a module called random, with a function called seed. The seed function is called by typing out ```np.random.seed()```, telling python where exactly it needs to look. 
+
 # Clustering
 
 #### Skills: Familiarity with sklearn package and an understanding of why clustering is useful in bioinformatics
@@ -52,7 +56,7 @@ There are a few approaches to clustering, let us look into 3 of them for now.
   
   IV. Reassign all points to their nearest center and continue reassigning + averaging until the iteration when nothing changes
   
-  
+  Take a look at the cluster.KMeans functionality [over here](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html) and see if you can figure out how to run the K-means algorithm on both of the datasets we generated above. **Hint:** The only parameter you need to indicate is the number of clusters. For the first dataset, K should be the same as the number of blobs you made earlier and for the circles you can set it to two. 
 
 ### A few examples of Bioinformatics applications: 
 
