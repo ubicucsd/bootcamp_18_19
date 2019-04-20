@@ -1,8 +1,6 @@
 ### SSH address: @ec2-18-218-72-125.us-east-2.compute.amazonaws.com
 ### Talk to Mark if you do not have an ec2 account yet
 
-scp ubuntu@ec2-18-218-72-125.us-east-2.compute.amazonaws.com:/home/ubuntu/clustering_lesson/foo.pdf .
-
 #### Preliminary note:
 
 This lesson will force you to look through documentation and fill in the blanks on some of the functions. I know I could have given you the full code, but I think that more is learned when you are forced to interact with the code to some extent. Note that in Python syntax, you will have to use the dot (period) to indicate when you are going from a general to specific scope. For example, there is a package called numpy, with a module called random, with a function called seed. The seed function is called by typing out ```np.random.seed()```, telling python where exactly it needs to look. 
