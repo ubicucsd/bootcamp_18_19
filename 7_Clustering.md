@@ -46,9 +46,13 @@ Do not forget to replace the paths and username!
 There are a few approaches to clustering, let us look into 3 of them for now. 
 
 ### 1. K-means
+
   I. Select K centers. This can be done a variety of ways, the easiest of which is to select a random point, find the farthest point from that and select it, find the furthest point from the previous and so on. 
+  
   II. Assign each point to the center nearest to it. 
-  III. For each center, take all the points attached to it and take their average to create a new center for that cluster
+  
+  III. For each center, take all the points attached to it and take their average to create a new center for that cluster.
+  
   IV. Reassign all points to their nearest center and continue reassigning + averaging until the iteration when nothing changes
   
   
