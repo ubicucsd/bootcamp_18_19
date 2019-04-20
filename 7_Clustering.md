@@ -11,8 +11,6 @@ This lesson will force you to look through documentation and fill in the blanks 
 
 #### Skills: Familiarity with sklearn package and an understanding of why clustering is useful in bioinformatics
 
-1. General Description of clustering and why it is important in bioinformatics
-
 ### General Factoids
 
 **Clustering:** The process of partitioning a dataset into groups based on shared unkown characteristics. In other words, we are looking for patterns in data where we do not necessarily know the patterns to look for ahead of time. 
