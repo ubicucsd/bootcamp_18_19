@@ -116,8 +116,6 @@ Do not forget to replace the paths and username!
   ```
   
   Use these new clusters in our ```cluster_plots()```
-  ```
-  
 
 
 ## Dirichlet Process Means Clustering
