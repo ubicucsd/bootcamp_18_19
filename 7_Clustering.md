@@ -23,6 +23,14 @@ This lesson will force you to look through documentation and fill in the blanks 
 
 **Out:** K groups, each containing points which are similar to each other in some way. Some algorithms cluster for a preset number K, others figure it out as they go along. 
 
+### Example Bioinformatics Applications: 
+
+1. Finding what genes are up and down regulated under certain conditions. Imagine you have a matrix, where each point is a set of gene expression recorded for a variety of conditions. If two points are close to each other, that means they had similar expression levels throughout those conditions. 
+
+2. Discerning different species present in a sample of unkown contents. This can be done with an algorithm that does not have a preditermined amount of clusters. An example application is taking HIV sequences from a patient, clustering them, and filtering clusters under a certain size to find the sequences of prevalent strains within the patient.
+
+3. Finding evolutionary relationships between samples using hierarchical clustering. The earlier on two centers were combined, the closer their corresponding points are from an evolutionary perspective. 
+
 ## Clustering Methods
 
 In this class, I want to demonstrate the difference between different clustering algorithms. To start with, we need data that will make these differences very obvious. 
@@ -71,13 +79,7 @@ There are a few approaches to clustering, let us look into 3 of them for now.
    III. Continue combining the closest centers until all points are under a single cluster. 
    
 
-### A few examples of Bioinformatics applications: 
 
-1. Finding what genes are up and down regulated under certain conditions. Imagine you have a matrix, where each point is a set of gene expression recorded for a variety of conditions. If two points are close to each other, that means they had similar expression levels throughout those conditions. 
-
-2. Discerning different species present in a sample of unkown contents. This can be done with an algorithm that does not have a preditermined amount of clusters. An example application is taking HIV sequences from a patient, clustering them, and filtering clusters under a certain size to find the sequences of prevalent strains within the patient.
-
-3. Finding evolutionary relationships between samples using hierarchical clustering. 
 
 3. 
 4. Challenge exercise can be a 181-like assignment to implement a type of clustering (such as soft clustering) 
