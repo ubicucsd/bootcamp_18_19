@@ -101,13 +101,13 @@ Now that you have learned some terminology so you know how to Google information
 
 The dirichlet process is just a method of clustering without knowing the number of clusters ahead of time. Something like this algorithm may be used for example 2 in the list of clustering related bioinformatics problems. Here are the steps:
  
-  I. Add the first point in your data as the first center
+\t  I. Add the first point in your data as the first center
   
-  II. Iterate through all of the points in your data, calculating the distance between the current point and all existing centers. 
+\t  II. Iterate through all of the points in your data, calculating the distance between the current point and all existing centers. 
   
-    A. If the point falls within a certain threshold distance of the center, add that point to that center's cluster
+   A. If the point falls within a certain threshold distance of the center, add that point to that center's cluster
   
-    B. If the point does not fall within a certain threshold distance of the center, add that point to the list of centers
+   B. If the point does not fall within a certain threshold distance of the center, add that point to the list of centers
     
   III. Once you have gone through the Dirichlet Process, you do the means part. Redifine the centers of each cluster to be the average of all points in the cluster, like you would in most standard clustering algorithms. 
   
