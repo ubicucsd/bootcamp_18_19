@@ -19,7 +19,7 @@ This lesson will force you to look through documentation and fill in the blanks 
 
 **In:** N points, usually in the form of a matrix(each row is a point). 
 
-**In:** A distance function to tell us how similar two points are. The simplest is [euclidean distance](http://rosalind.info/glossary/euclidean-distance/)
+**In:** A distance function to tell us how similar two points are. The most intuitive distance function is [euclidean distance](http://rosalind.info/glossary/euclidean-distance/). The type of distance measure you use can vary depending on the type of data you are using. 
 
 **Out:** K groups, each containing points which are similar to each other in some way. Some algorithms cluster for a preset number K, others figure it out as they go along. 
 
@@ -45,11 +45,10 @@ Finally, use the provided ```cluster_plots()``` function with the two sets you h
 
 <details>
   <summary>Forgot how to scp? click here</summary>
-  
 ```
 scp username@ec2-18-218-72-125.us-east-2.compute.amazonaws.com:/home/username/path /localpath/
 Do not forget to replace the paths and username!
-````
+```
 </details></br>
 
 There are a few approaches to clustering, let us look into 3 of them for now. 
