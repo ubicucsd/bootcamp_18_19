@@ -45,10 +45,12 @@ Finally, use the provided ```cluster_plots()``` function with the two sets you h
 
 <details>
   <summary>Forgot how to scp? click here</summary>
+  
 ```
 scp username@ec2-18-218-72-125.us-east-2.compute.amazonaws.com:/home/username/path /localpath/
 Do not forget to replace the paths and username!
 ```
+
 </details></br>
 
 ### 1. K-means
