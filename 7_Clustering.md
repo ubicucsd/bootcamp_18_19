@@ -7,7 +7,7 @@ scp ubuntu@ec2-18-218-72-125.us-east-2.compute.amazonaws.com:/home/ubuntu/cluste
 
 This lesson will force you to look through documentation and fill in the blanks on some of the functions. I know I could have given you the full code, but I think that more is learned when you are forced to interact with the code to some extent. Note that in Python syntax, you will have to use the dot (period) to indicate when you are going from a general to specific scope. For example, there is a package called numpy, with a module called random, with a function called seed. The seed function is called by typing out ```np.random.seed()```, telling python where exactly it needs to look. 
 
-# Clustering
+# A lesson on Clustering
 
 #### Skills: Familiarity with sklearn package and an understanding of why clustering is useful in bioinformatics
 
@@ -23,7 +23,7 @@ This lesson will force you to look through documentation and fill in the blanks 
 
 **Out:** K groups, each containing points which are similar to each other in some way. Some algorithms cluster for a preset number K, others figure it out as they go along. 
 
-### Methods
+## Clustering Methods
 
 In this class, I want to demonstrate the difference between different clustering algorithms. To start with, we need data that will make these differences very obvious. 
 
