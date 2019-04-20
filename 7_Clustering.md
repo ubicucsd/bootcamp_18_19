@@ -67,7 +67,7 @@ Do not forget to replace the paths and username!
   
   Code to apply K-means clustering to set1 is below, don't forget to replace k with the number of blops you made above. Do the same for set2, but now set k=2.   There are two circles, right? It seems like each circle might share a characteristics within itself, so it would be nice if the computer could cluster the circles into 2 partitions. 
   ```
-  kmeans_dataset1 = cluster.KMeans(n_clusters=k).fit_prediction(set1)
+  kmeans_dataset1 = cluster.KMeans(n_clusters=k).fit_predict(set1)
   cluster_plots(set1, set2, kmeans_dataset1, kmeans_dataset2)
   ```
   
