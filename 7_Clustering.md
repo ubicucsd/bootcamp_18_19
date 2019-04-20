@@ -83,7 +83,9 @@ Do not forget to replace the paths and username!
    
 &nbsp;&nbsp; III. Continue combining the closest centers until all points are under a single cluster. 
    
-   Let's look at the blobs and circles we made again. Look at the [documentation page for agglomerative clustering](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.AgglomerativeClustering.html) and figure out the proper calls for the two datasets (syntax is very similar to what you did for k-means). 
+   Let's look at the blobs and circles we made again. Look at the [documentation page for agglomerative clustering](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.AgglomerativeClustering.html) and figure out the proper calls for the two datasets (syntax is very similar to what you did for k-means).
+   
+   Now, run `cluster_plots()` to graph and `scp` to view the results. Do you notice a difference in quality of the clustering of the left and right graphs?
    
    Unfortunately, this still does not solve our circlular cluster issue. For that, we can ask the sklearn package to build a graph out of our circles which restricts the amount of nearest neighbors a point can cluster with. 
    
