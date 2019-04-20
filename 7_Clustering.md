@@ -77,7 +77,19 @@ There are a few approaches to clustering, let us look into 3 of them for now.
    
    III. Continue combining the closest centers until all points are under a single cluster. 
    
-
+   Let's look at the blobs and circles we made again. Look at the [documentation page for agglomerative clustering](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.AgglomerativeClustering.html) and figure out the proper calls for the two datasets (syntax is very similar to what you did for k-means). 
+   
+   Unfortunately, this still does not solve our circlular cluster issue. For that, we can ask the sklearn package to build a graph out of our circles which restricts the amount of nearest neighbors a point can cluster with. 
+   
+   ```
+   #this line is missing a parameter - how would you set the number of nearest neighbors to 6?
+   connect = kneighbors_graph(dataset2, include_self=False)
+   
+   #in this line, you need to set linkage to complete, number of clusters to 2, and set connectivity equal to the graph 
+   #on the previous line
+   hc_dataset2_connectivity = cluster.AgglomerativeClustering().fit_predict(dataset2)
+   
+   ```
 
 
 3. 
