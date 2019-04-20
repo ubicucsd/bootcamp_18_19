@@ -11,13 +11,16 @@
 
 *Clustering:* The process of partitioning a dataset into groups based on shared unkown characteristics. In other words, we are looking for patterns in data where we do not necessarily know the patterns to look for ahead of time. 
 
-*In:* N points, usually in the form of a matrix. 
+**In:** N points, usually in the form of a matrix(each row is a point). 
 
-*In:* A distance function to tell us how similar two points are. 
+**In:** A distance function to tell us how similar two points are. The simplest is [euclidean distance](http://rosalind.info/glossary/euclidean-distance/)
 
-*Out:* K groups, each containing points which are similar to each other in some way. 
+**Out:** K groups, each containing points which are similar to each other in some way. 
 
-Where does it apply to bioinformatics? Clustering, the same as most things in bioinformatics, applies to 
+A few examples of Bioinformatics applications: 
+
+1. 
+
 
 2. Get an example dataset and have them learn a few different methods with sklearn on python
 
