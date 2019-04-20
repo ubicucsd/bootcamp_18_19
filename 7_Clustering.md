@@ -100,11 +100,22 @@ Do not forget to replace the paths and username!
    
    Use ```cluster_plots()``` to graph the plot resulting from the regular AgglomerativeClustering beside the graph that plots the connected AgglomerativeClustering. As you may have guessed, this fixes the circle problem. 
    
-### 3. Expectation Maximization
+### 3. Soft Clustering
+  
+  I. Select K centers randomly (or slightly less randomly, like [farthest first traversal](https://en.wikipedia.org/wiki/Farthest-first_traversal). 
+  
+  II. Expectation step: Assign a responsibility (a likelyhood) for each point in respect to each cluster. Basically, the closer a point is to a center the higher the likelyhood of that point. This can be calculated in a variety of ways, but the main idea is that it is some function relating the distance from a point to a center to the distances between all points and that center to see if it is much closer or further than other points
+  
+  III. Maximization step: compute new cluster centers by using a **weighted** average of the points based on the likelyhoods calculated in step II. 
 
+  Let's go ahead and see what will happen with our blobs and circles under this clustering algorithm:
+  
   ```
   #I think you can figure out the arguments we need for expectation maximization
   em_set1=mixture.GaussianMixture().fit_predict
+  ```
+  
+  Use these new clusters in our ```cluster_plots()```
   ```
   
 
