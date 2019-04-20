@@ -5,6 +5,8 @@
 
 This lesson will force you to look through documentation and fill in the blanks on some of the functions. I know I could have given you the full code, but I think that more is learned when you are forced to interact with the code to some extent. Note that in Python syntax, you will have to use the dot (period) to indicate when you are going from a general to specific scope. For example, there is a package called numpy, with a module called random, with a function called seed. The seed function is called by typing out ```np.random.seed()```, telling python where exactly it needs to look. 
 
+**WE ARE USING PYTHON3, NOT PYTHON**
+
 # A little bit on Clustering
 
 #### Skills: Familiarity with sklearn package and an understanding of why clustering is useful in bioinformatics
