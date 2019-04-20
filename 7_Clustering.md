@@ -96,6 +96,12 @@ Do not forget to replace the paths and username!
    
 ### 3. Expectation Maximization
 
+  ```
+  #I think you can figure out the arguments we need for expectation maximization
+  em_set1=mixture.GaussianMixture().fit_predict
+  ```
+  
+
 
 ## Dirichlet Process Means Clustering
 
