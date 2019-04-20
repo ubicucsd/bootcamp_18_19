@@ -3,9 +3,6 @@
 
 scp ubuntu@ec2-18-218-72-125.us-east-2.compute.amazonaws.com:/home/ubuntu/clustering_lesson/foo.pdf .
 
-scp username@ec2-18-218-72-125.us-east-2.compute.amazonaws.com:/home/username/path /localpath/
-
-
 # Clustering
 
 #### Skills: Familiarity with sklearn package and an understanding of why clustering is useful in bioinformatics
@@ -26,7 +23,7 @@ scp username@ec2-18-218-72-125.us-east-2.compute.amazonaws.com:/home/username/pa
 
 In this class, I want to demonstrate the difference between different clustering algorithms. To start with, we need data that will make these differences very obvious. 
 
-First off, copy the file ```/home/ubuntu/clustering_lesson/```
+First off, copy the file ```/home/ubuntu/clustering_lesson/clust.py``` into your own directory. 
 
 Start by creating some blobs using numpy's random normal generator. First, create a seed for the random number generator with ```np.random.seed()```. This will make a blob centered around 5 with a stdev of 2 in the form of a 1000\*2 array: ```clust1 = np.random.normal(5, 2, (1000,2))```. Make a few blobs with centers between 0 and 20 (keep the array dimensions the same). Now, use ```set1=np.concatenate()``` to bring the blobs into one structure.
 
@@ -37,7 +34,7 @@ Finally, use the provided ```cluster_plots()``` function with the two sets you h
 <details>
   <summary>Forgot how to scp? click here</summary>
   
-```python
+```
 scp username@ec2-18-218-72-125.us-east-2.compute.amazonaws.com:/home/username/path /localpath/
 Do not forget to replace the paths and username!
 ````
