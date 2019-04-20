@@ -55,13 +55,13 @@ There are a few approaches to clustering, let us look into 3 of them for now.
 
 ### 1. K-means
 
-  I. Select K centers. This can be done a variety of ways, the easiest of which is to select a random point, find the farthest point from that and select it, find the furthest point from the previous and so on. 
+&nbsp;&nbsp; I. Select K centers. This can be done a variety of ways, the easiest of which is to select a random point, find the farthest point from that and select it, find the furthest point from the previous and so on. 
   
-  II. Assign each point to the center nearest to it. 
+&nbsp;&nbsp; II. Assign each point to the center nearest to it. 
   
-  III. For each center, take all the points attached to it and take their average to create a new center for that cluster.
+&nbsp;&nbsp; III. For each center, take all the points attached to it and take their average to create a new center for that cluster.
   
-  IV. Reassign all points to their nearest center and continue reassigning + averaging until the iteration when nothing changes
+&nbsp;&nbsp; IV. Reassign all points to their nearest center and continue reassigning + averaging until the iteration when nothing changes
   
   Code to apply K-means clustering to set1 is below, don't forget to replace k with the number of blops you made above. Do the same for set2, but now set k=2.   There are two circles, right? It seems like each circle might share a characteristics within itself, so it would be nice if the computer could cluster the circles into 2 partitions. 
   ```
@@ -71,11 +71,11 @@ There are a few approaches to clustering, let us look into 3 of them for now.
   
 ### 2. Agglomerative Hierarchical 
 
-   I. Start with every point being its very own cluster center. 
+&nbsp;&nbsp; I. Start with every point being its very own cluster center. 
    
-   II. Find the two centers which are closest to each other and combine them into one cluster. The new center is the average of the two previous ones. 
+&nbsp;&nbsp; II. Find the two centers which are closest to each other and combine them into one cluster. The new center is the average of the two previous ones. 
    
-   III. Continue combining the closest centers until all points are under a single cluster. 
+&nbsp;&nbsp; III. Continue combining the closest centers until all points are under a single cluster. 
    
    Let's look at the blobs and circles we made again. Look at the [documentation page for agglomerative clustering](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.AgglomerativeClustering.html) and figure out the proper calls for the two datasets (syntax is very similar to what you did for k-means). 
    
@@ -105,12 +105,12 @@ The dirichlet process is just a method of clustering without knowing the number 
   
 &nbsp;&nbsp;  II. Iterate through all of the points in your data, calculating the distance between the current point and all existing centers. 
   
-   A. If the point falls within a certain threshold distance of the center, add that point to that center's cluster
+&nbsp;&nbsp;&nbsp;&nbsp; A. If the point falls within a certain threshold distance of the center, add that point to that center's cluster
   
-   B. If the point does not fall within a certain threshold distance of the center, add that point to the list of centers
+&nbsp;&nbsp;&nbsp;&nbsp; B. If the point does not fall within a certain threshold distance of the center, add that point to the list of centers
     
-  III. Once you have gone through the Dirichlet Process, you do the means part. Redifine the centers of each cluster to be the average of all points in the cluster, like you would in most standard clustering algorithms. 
+&nbsp;&nbsp; III. Once you have gone through the Dirichlet Process, you do the means part. Redifine the centers of each cluster to be the average of all points in the cluster, like you would in most standard clustering algorithms. 
   
-  IV. Repeat steps II and III either until an iteration provides no change in the assignment of points to centers, or a maximum number of cycles is reached. 
+&nbsp;&nbsp; IV. Repeat steps II and III either until an iteration provides no change in the assignment of points to centers, or a maximum number of cycles is reached. 
   
 I provided a starting file at ```/home/ubuntu/clustering_lesson/dmp.py``` to get the ball rolling 
