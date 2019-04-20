@@ -7,7 +7,7 @@ scp ubuntu@ec2-18-218-72-125.us-east-2.compute.amazonaws.com:/home/ubuntu/cluste
 
 This lesson will force you to look through documentation and fill in the blanks on some of the functions. I know I could have given you the full code, but I think that more is learned when you are forced to interact with the code to some extent. Note that in Python syntax, you will have to use the dot (period) to indicate when you are going from a general to specific scope. For example, there is a package called numpy, with a module called random, with a function called seed. The seed function is called by typing out ```np.random.seed()```, telling python where exactly it needs to look. 
 
-# A lesson on Clustering
+# A little bit on Clustering
 
 #### Skills: Familiarity with sklearn package and an understanding of why clustering is useful in bioinformatics
 
@@ -66,8 +66,8 @@ There are a few approaches to clustering, let us look into 3 of them for now.
   Code to apply K-means clustering to set1 is below, don't forget to replace k with the number of blops you made above. Do the same for set2, but now set k=2.   There are two circles, right? It seems like each circle might share a characteristics within itself, so it would be nice if the computer could cluster the circles into 2 partitions. 
   ```
   kmeans_dataset1 = cluster.KMeans(n_clusters=k).fit_prediction(set1)
+  cluster_plots(set1, set2, kmeans_dataset1, kmeans_dataset2)
   ```
-  Now, use ```cluster_plots()``` to plot the results of K-means and then scp it over. 
   
 ### 2. Agglomerative Hierarchical 
 
@@ -88,9 +88,27 @@ There are a few approaches to clustering, let us look into 3 of them for now.
    #in this line, you need to set linkage to complete, number of clusters to 2, and set connectivity equal to the graph 
    #on the previous line
    hc_dataset2_connectivity = cluster.AgglomerativeClustering().fit_predict(dataset2)
-   
    ```
+   
+   Use ```cluster_plots()``` to graph the plot resulting from the regular AgglomerativeClustering beside the graph that plots the connected AgglomerativeClustering. As you may have guessed, this fixes the circle problem. 
+   
+### 3. Expectation Maximization
 
 
-3. 
-4. Challenge exercise can be a 181-like assignment to implement a type of clustering (such as soft clustering) 
+## Dirichlet Process Means Clustering
+
+Now that you have learned some terminology so you know how to Google information about clusters, let's practice Python by making our own clustering algorithm!
+
+The dirichlet process is just a method of clustering without knowing the number of clusters ahead of time. Something like this algorithm may be used for example 2 in the list of clustering related bioinformatics problems. Here are the steps:
+ 
+  I. Add the first point in your data as the first center
+  
+  II. Iterate through all of the points in your data, calculating the distance between the current point and all existing centers. 
+    A. If the point falls within a certain threshold distance of the center, add that point to that center's cluster
+    B. If the point does not fall within a certain threshold distance of the center, add that point to the list of centers
+    
+  III. Once you have gone through the Dirichlet Process, you do the means part. Redifine the centers of each cluster to be the average of all points in the cluster, like you would in most standard clustering algorithms. 
+  
+  IV. Repeat steps II and III either until an iteration provides no change in the assignment of points to centers, or a maximum number of cycles is reached. 
+  
+I provided a starting file at ```/home/ubuntu/clustering_lesson/dmp.py``` to get the ball rolling 
