@@ -39,7 +39,11 @@ In this class, I want to demonstrate the difference between different clustering
 
 First off, copy the file ```/home/ubuntu/clustering_lesson/clust.py``` into your own directory. 
 
-Start by creating some blobs using numpy's random normal generator. First, create a seed for the random number generator with ```np.random.seed()```. This will make a blob centered around 5 with a stdev of 2 in the form of a 1000\*2 array: ```clust1 = np.random.normal(5, 2, (1000,2))```. Make a few blobs with centers between 0 and 20 (keep the array dimensions the same). Now, use ```set1=np.concatenate()``` to bring the blobs into one structure.
+Start by creating some blobs using numpy's random normal generator. First, create a seed for the random number generator with ```np.random.seed()```. Then, use the following code as a guide for making a blob: ```clust1 = np.random.normal(5, 2, (1000,2))```. This will make a blob centered around 5 with a stdev of 2 in the form of a 1000\*2 array.
+
+Make a few blobs (and save them in variables `clust1`, `clust2`, etc.) with centers between 0 and 20 and varied stdevs (keeping the array dimensions the same). 
+
+Now, use ```set1=np.concatenate()``` to bring the blobs into one structure. (**Hint**: Don't know how to use this (or any other function below)? Try googling to find the official documentation!)
 
 The figure we can use to contrast the blobs is some circular point layouts. Make two concentric circles with ```set2=datasets.make_circles(n_samples=1000, factor=.5, noise=.05)[0]```
 
