@@ -19,9 +19,11 @@ This lesson will force you to look through documentation and fill in the blanks 
 
 **In:** N points, usually in the form of a matrix(each row is a point). 
 
-**In:** A distance function to tell us how similar two points are. The most intuitive distance function is [euclidean distance](http://rosalind.info/glossary/euclidean-distance/). The type of distance measure you use can vary depending on the type of data you are using. 
+**In:** A distance function to tell us how similar two points are. The most intuitive distance function is [euclidean distance](http://rosalind.info/glossary/euclidean-distance/). The type of distance measure you use can vary depending on the type of data you are using. One specific example of how fine tuned distance metrics can be is a distance metric that weights substitutions in DNA strings heavier than indels because indels are more common sequencing errors. This means that such a metric would not separate two DNA strands due to sequencing error. 
 
 **Out:** K groups, each containing points which are similar to each other in some way. Some algorithms cluster for a preset number K, others figure it out as they go along. 
+
+**How is DNA a point?** Discussing points in space is nice, but a little abstract. The way we translate DNA to points is by making a string of DNA into a kmer vector. A kmer is a string of length k, and there are 4^k possible kmers in any DNA strand. Usually we think of kmers as ordered lexicographically like this: AAA, AAC, AAG, AAT, ACA, ACC, ACG, ACT, AGA and so on. One way to represent a DNA strand is to create an array of zeros of length 4^k and increment by one for each time that kmer appears in the DNA strand. 
 
 ### Example Bioinformatics Applications: 
 
