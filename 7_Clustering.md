@@ -25,6 +25,8 @@ This lesson will force you to look through documentation and fill in the blanks 
 
 **How is DNA a point?** Discussing points in space is nice, but a little abstract. The way we translate DNA to points is by making a string of DNA into a kmer vector. A kmer is a string of length k, and there are 4^k possible kmers in any DNA strand. Usually we think of kmers as ordered lexicographically like this: AAA, AAC, AAG, AAT, ACA, ACC, ACG, ACT, AGA and so on. One way to represent a DNA strand is to create an array of zeros of length 4^k and increment by one for each time that kmer appears in the DNA strand. 
 
+*Problem:* Find the kmer vector of "AGTTTCAT" for k=2. 
+
 ### Example Bioinformatics Applications: 
 
 1. Finding what genes are up and down regulated under certain conditions. Imagine you have a matrix, where each point is a set of gene expression recorded for a variety of conditions. If two points are close to each other, that means they had similar expression levels throughout those conditions. 
