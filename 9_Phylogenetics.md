@@ -1,14 +1,16 @@
 # Phylogenetics
 
 ## The Basics
-### What is phylogenetics?
+### What is Phylogenetics?
 
-### Why do I care?
+### Why Do I Care?
 
-### How does it work?
+### How Does it Work?
+
+## XML
 
 ## Working with Trees
 
-## SOME MIDDLE SECTION
+## So, Um, Why Do I Care?
 
 ## The Challenge
