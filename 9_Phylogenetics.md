@@ -16,7 +16,9 @@ Imagine you're given five distinct organisms and are told to figure out how they
 
 The answer is twofold:
 
-1. On a broader scale, an understanding of phylogenetics
+1. On a broader scale, an understanding of phylogenetics gives us a better understanding of the living world, and how we + our fellow organisms fall into it. We can answer questions about how we are linked to jellyfish, and how that relationship has shaped the world around us.
+
+2. On a smaller scale, phylogenetics also provides key information about genetic drift, the evolution of genes and diseases, and the development of molecular differences between organisms. 
 
 ### How Does it Work?
 
@@ -34,7 +36,11 @@ We can compare the nucleotides at each position and find that 1 and 2 differ by 
 
 ## Biopython
 
-If you're not familiar with Biopython, please skim our previous lesson [here](https://github.com/sabeelmansuri/binf_crash_course/blob/master/4_Biopython.md). You'll need to have Biopython installed to continue. Confirm by running a Python program with the following:
+If you're not familiar with Biopython, please skim our previous lesson [here](https://github.com/sabeelmansuri/binf_crash_course/blob/master/4_Biopython.md). 
+
+**If you know what you're doing, running this on your own machine instead of on EC2 will probably give you some nicer graphs. This is optional, continue on EC2 if you wish!**
+
+You'll need to have Biopython installed to continue (done for you on EC2). Confirm by running a Python program with the following:
 
 ```python
 from Bio import Phylo
@@ -42,19 +48,66 @@ from Bio import Phylo
 
 If nothing shows up during execution, you're good to go!
 
-## XML
+## Find the Relationships
+### Working with Trees
+
+![phylo_tree](https://cdn.kastatic.org/ka-perseus-images/56c951f23a9092f45b66768ff611fca6debf9294.png)
+
+You've probably seen one or more of the phylogenetic trees diagramed above. These visually represent the heart and soul of pylogenetics. Because we use a **last universal common ancestor model** (LUCA model), in which the root represents an ancestral organism from which all living organisms today evolved, each evolutionary relationship can be represented by a branching of the tree.
+
+### The Data
+Let's see this in action with our own phylogenetic tree! Remember those five organisms we mentioned earlier? Well here they are, each with a conserved DNA region sequenced:
+```
+   5   13
+Alpha     AACGTGGCCACAT
+Beta      AAGGTCGCCACAC
+Gamma     CAGTTCGCCACAA
+Delta     GAGATTTCCGCCT
+Epsilon   GAGATCTCCGCCC
+```
+*Note: The first line is a header. The first number is the number of organisms, and the second is the length of each DNA sequence.*
+
+Copy and paste all of the data above (including the header file) into a new file called `msa.phy`. The `.phy` extension indicates that the file contains phylogenetic data.
+
+### The Setup
+
+Now we're ready to start analyzing this data. Create a new python file and add the following to import everything we need:
+```
+from Bio import Phylo
+from Bio.Phylo.TreeConstruction import DistanceCalculator
+from Bio.Phylo.TreeConstruction import DistanceTreeConstructor
+from Bio import AlignIO
+```
+
+Here's some documentation that may help you if you get stuck:
+[AlignIO](https://biopython.org/DIST/docs/api/Bio.AlignIO-module.html)
+[DistanceCalculator](https://biopython.org/DIST/docs/api/Bio.Phylo.TreeConstruction.DistanceCalculator-class.html)
+[DistanceTreeConstructor](https://biopython.org/DIST/docs/api/Bio.Phylo.TreeConstruction.DistanceTreeConstructor-class.html)
+
+**Make sure you can run this file without errors!**
+
+### Alignment
+
+The first step is to align the sequences. Because our sequences are all the same size, this is esentialy so that we can store our file's data in our program. **Use AlignIO to read in the data, and store it in a variable `aln`. Print `aln` to confirm this step worked correctly.**
+
+### Distance Matrix
+
+Now that we have our data, we're interested in how similiar (or different) the sequences are from each other. The more similar, the more likely they are to be evolutionarily close. Therefore, we use a distance matrix to store information on how similar each DNA sequence is from every other sequence. **Create a Distance Calculator object with the 'identity' model. Use it to calculate the distance matrix of the alignment, and store it in a variable `dm`.** 
+
+### Phylogenetic Tree
+
+Now, the real magic... creating the phylogenetic tree! We can use our Distance Tree Constructor to make a tree from our distance matrix. **Use the UPGMA algorithm in Distance Tree Constructor to create a tree, store it in a variable `tree`.**
+
+### Visualization
+
+Great, you're done! Except... you're probably interested in how your tree turned out! The simplest way to visualize your tree is to **use the `Phylo.draw_ascii` method to print the tree to the terminal.** This will give you a low-detail sketch of your tree. *Make sure you can do this before moving forward.*
+
+## Challenge I: Different Algorithms, Different Results
+
+## Challenge II: XML
 
 
-
-## Working with Trees
-
-
-
-## So, Um, Why Do I Care?
-
-
-
-## The Challenge
 
 ## Acknowledgements
 Many data and algorithms are adatpted from the offical Biopython textbook.
+Algorithm adapted from [Towards Data Science](https://towardsdatascience.com/).
