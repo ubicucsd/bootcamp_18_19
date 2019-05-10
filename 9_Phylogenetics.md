@@ -79,12 +79,15 @@ from Bio.Phylo.TreeConstruction import DistanceTreeConstructor
 from Bio import AlignIO
 ```
 
+**Make sure you can run this file without errors!**
+
 Here's some documentation that may help you if you get stuck:
 [AlignIO](https://biopython.org/DIST/docs/api/Bio.AlignIO-module.html)
 [DistanceCalculator](https://biopython.org/DIST/docs/api/Bio.Phylo.TreeConstruction.DistanceCalculator-class.html)
 [DistanceTreeConstructor](https://biopython.org/DIST/docs/api/Bio.Phylo.TreeConstruction.DistanceTreeConstructor-class.html)
 
-**Make sure you can run this file without errors!**
+
+*Note: If you 
 
 ### Alignment
 
@@ -100,9 +103,31 @@ Now, the real magic... creating the phylogenetic tree! We can use our Distance T
 
 ### Visualization
 
-Great, you're done! Except... you're probably interested in how your tree turned out! The simplest way to visualize your tree is to **use the `Phylo.draw_ascii` method to print the tree to the terminal.** This will give you a low-detail sketch of your tree. *Make sure you can do this before moving forward.*
+Great, you're done! Except... you're probably interested in how your tree turned out! The simplest way to visualize your tree is to **use the `Phylo.draw_ascii()` method to print the tree to the terminal.** This will give you a low-detail sketch of your tree. *Make sure you can do this before moving forward.*
+
+You're probably interested in a much more detailed tree, though. The `Phylo.draw()` method provides that, but requires `matplotlib` as a dependency (`pip install matplotlib` if you don't have it [EC2 does!]).
+
+### Interpretation
+
+Phylogenetic trees are interpreted using the following terms:
+
+
+![tree](https://cdn.kastatic.org/ka-perseus-images/aa95c701ebf845d93fed8362da63cbcc8439fb31.png)
+
+How many common ancestors are there? What does that tell you about the relationships and evolutionary distances between the organisms.
 
 ## Challenge I: Different Algorithms, Different Results
+
+We made two algorithm choices in our pipeline above. One is the distance calculator's model and the other is the distance tree's model. Use the documentation to find alternate algorithms and try various combinations. You'll see the predicted tree (and the evolutaionary relationships) change!
+
+How do we know which tree is the best? Let's look at an analogous example with phenotypic mutations that's easier to follow than genotypic mutations. Consider the two trees below:
+
+![tree1](https://cdn.kastatic.org/ka-perseus-images/491900ea3016ffa58693d3a4a8b594706661f648.png)
+![tree2](https://cdn.kastatic.org/ka-perseus-images/74878b775438cc2b9b4388eefaa60af1f262b3fc.png)
+
+The first tree is a better prediction because it relies on less evolutionary events to happen independent of each other (less "parsimony"). *Think: If you and your roommate are both sitting on the couch eating stawberry popsicles with chia seeds, it's more likely that the popsicles came from the same source than two independent sources.*
+
+Looking at the different trees produced, do you have a favorite? (There's no real right answer here... we don't know how these sequences evolved! As long as your can justify your choice, you're good.)
 
 ## Challenge II: XML
 
@@ -111,3 +136,4 @@ Great, you're done! Except... you're probably interested in how your tree turned
 ## Acknowledgements
 Many data and algorithms are adatpted from the offical Biopython textbook.
 Algorithm adapted from [Towards Data Science](https://towardsdatascience.com/).
+Diagrams adapted from [Khan Academy](https://www.khanacademy.org/science/biology/her/tree-of-life/a/building-an-evolutionary-tree).
