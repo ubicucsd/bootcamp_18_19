@@ -87,7 +87,7 @@ Here's some documentation that may help you if you get stuck:
 [DistanceTreeConstructor](https://biopython.org/DIST/docs/api/Bio.Phylo.TreeConstruction.DistanceTreeConstructor-class.html)
 
 
-*Note: If you 
+*Note: If you're not able to follow the instructions below, ask me (Sabeel) for a templated file to help guide you!*
 
 ### Alignment
 
