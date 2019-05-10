@@ -72,7 +72,7 @@ Copy and paste all of the data above (including the header file) into a new file
 ### The Setup
 
 Now we're ready to start analyzing this data. Create a new python file and add the following to import everything we need:
-```
+```python
 from Bio import Phylo
 from Bio.Phylo.TreeConstruction import DistanceCalculator
 from Bio.Phylo.TreeConstruction import DistanceTreeConstructor
