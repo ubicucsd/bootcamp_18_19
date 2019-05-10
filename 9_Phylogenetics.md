@@ -134,6 +134,6 @@ Looking at the different trees produced, do you have a favorite? (There's no rea
 
 
 ## Acknowledgements
-Many data and algorithms are adatpted from the offical Biopython textbook.
-Algorithm adapted from [Towards Data Science](https://towardsdatascience.com/).
+Many data and algorithms are adatpted from the offical Biopython textbook.  
+Algorithm adapted from [Towards Data Science](https://towardsdatascience.com/).  
 Diagrams adapted from [Khan Academy](https://www.khanacademy.org/science/biology/her/tree-of-life/a/building-an-evolutionary-tree).
