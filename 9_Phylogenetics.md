@@ -131,6 +131,8 @@ Looking at the different trees produced, do you have a favorite? (There's no rea
 
 ## Challenge II: XML
 
+Many times, phylogenetic trees are exported as XML files. XML stands for eXtensible Markup Language, and is used in a wide range of applications that require storage or transport of data in a structured fashion.
+
 
 
 ## Acknowledgements
