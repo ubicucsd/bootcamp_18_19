@@ -133,10 +133,10 @@ Looking at the different trees produced, do you have a favorite? (There's no rea
 
 In the lab, you're often not going to be given an explanation (such as provided above) of how to perform a task. This challenge will test your ability to use your resources (internet, documentation, etc.) to extend phylogenetic analysis given only input and output.
 
-**Input**
+**Input**   
 Many times, phylogenetic trees are exported as XML files. XML stands for eXtensible Markup Language, and is used in a wide range of applications that require storage or transport of data in a structured fashion. Provided are two XML files, `single.xml`, containing one phylogenetic tree, and `many.xml`, containing many different phylogenetic trees.
 
-**Output**
+**Output**  
 When your program is executed, the following should be printed to the terminal for every tree (from both files):  
 * [Tree Name] or "Unnamed"  
 * [Tree Description] or "No description"  
