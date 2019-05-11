@@ -1,7 +1,7 @@
 # Phylogenetics
 #### Skills: Biopython, phylogenetic analysis
 
-#### SSH: 
+#### SSH: @ec2-18-221-253-106.us-east-2.compute.amazonaws.com
 
 Today's lesson is going to cover basic phylogenetic motifs as well as phylogenetic analysis in a Python environment. Let's get started!
 
