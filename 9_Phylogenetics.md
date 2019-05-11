@@ -136,7 +136,7 @@ Looking at the different trees the algorithms produced, do you have a favorite? 
 So, what are these models we're switching between? Let's take a look:
 
 ### Distance Tree Models
-#### Unweighted Pair-Group Method with Arithmetic Averaging (UPGMAA)
+#### Unweighted Pair-Group Method with Arithmetic Averaging (UPGMA)
 This model is heavily based upon the assumption that there is an equal rate of evolution (resulting in all branch lengths being the same in the tree). **This is a VERY POOR assumption**, which makes this model rather unreliable.
 
 #### Neighbor-Joining (NJ)
