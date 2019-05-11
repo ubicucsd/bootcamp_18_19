@@ -95,7 +95,7 @@ Here's some documentation that may help you if you get stuck:
 
 ### Alignment
 
-The first step is to align the sequences. Because our sequences are all the same size, this is esentialy so that we can store our file's data in our program. **Use AlignIO to read in the data, and store it in a variable `aln`. Print `aln` to confirm this step worked correctly.**
+The first step is to import the (already aligned) sequences int our program. **Use AlignIO to read in the data, and store it in a variable `aln`. Print `aln` to confirm this step worked correctly.**
 
 ### Distance Matrix
 
@@ -131,7 +131,17 @@ How do we know which tree is the best? Let's look at an analogous example with p
 
 The first tree is a better prediction because it relies on less evolutionary events to happen independent of each other (less "parsimony"). *Think: If you and your roommate are both sitting on the couch eating stawberry popsicles with chia seeds, it's more likely that the popsicles came from the same source than two independent sources.*
 
-Looking at the different trees produced, do you have a favorite? (There's no real right answer here... we don't know how these sequences evolved! As long as your can justify your choice, you're good.)
+Looking at the different trees the algorithms produced, do you have a favorite? (There's no real right answer here... we don't know how these sequences evolved! As long as your can justify your choice, you're good.)
+
+So, what are these models we're switching between? Let's take a look:
+
+### Distance Tree Models
+#### Unweighted Pair-Group Method with Arithmetic Averaging (UPGMAA)
+This model is heavily based upon the assumption that there is an equal rate of evolution (resulting in all branch lengths being the same in the tree). **This is a VERY POOR assumption**, which makes this model rather unreliable.
+
+#### Neighbor-Joining (NJ)
+This model is an agglomerative (bottom-up, or merging) clustering method. We've done agglomerative clustering before [here](https://github.com/ubicucsd/development_curriculum/blob/master/7_Clustering.md), so take a look! Importantly, NJ allows for unequal rates of evolution, which generally improves the output tree.
+
 
 ## Challenge II: XML
 
