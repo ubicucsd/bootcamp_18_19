@@ -69,6 +69,10 @@ Epsilon   GAGATCTCCGCCC
 
 Copy and paste all of the data above (including the header file) into a new file called `msa.phy`. The `.phy` extension indicates that the file contains phylogenetic data.
 
+#### What kind of data goes into making trees?
+
+As with basically all other programs dealing with biological sequences, phylogenetics algorithms need you to align your sequences before you input them, so that they are easier to compare. If you are curious about different methods of alignment and their influence on the final alignment go over to our past lession [over here](https://github.com/sabeelmansuri/binf_crash_course/blob/master/5_Alignment.md)
+
 ### The Setup
 
 Now we're ready to start analyzing this data. Create a new python file and add the following to import everything we need:
