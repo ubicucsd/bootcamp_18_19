@@ -142,6 +142,16 @@ This model is heavily based upon the assumption that there is an equal rate of e
 #### Neighbor-Joining (NJ)
 This model is an agglomerative (bottom-up, or merging) clustering method. We've done agglomerative clustering before [here](https://github.com/ubicucsd/development_curriculum/blob/master/7_Clustering.md), so take a look! Importantly, NJ allows for unequal rates of evolution, which generally improves the output tree.
 
+### Distance Calculation Methods
+
+#### Identity
+Distance is equal to the proportion of non matching nucleotides, so lower distance = closer relationship.
+
+#### Blastn
+Matches are worth 5 points, while mismatches are worth -4 points. The formula to calculate the final score is 1 - (matches*5-mismatches*4)/(length*5). 
+
+#### Trans
+This scoring takes the difference in transitions(purine->purine or pyrimidine->purine) vs transversions(purine->pyrimidine and vice versa) into account. Transversions are less likely to occur, so they are scored -6 compared to the -1 for transitions. Matches are given a score of 6. 
 
 ## Challenge II: XML
 
