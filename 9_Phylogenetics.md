@@ -71,7 +71,7 @@ Copy and paste all of the data above (including the header file) into a new file
 
 #### What kind of data goes into making trees?
 
-As with basically all other programs dealing with biological sequences, phylogenetics algorithms need you to align your sequences before you input them, so that they are easier to compare. If you are curious about different methods of alignment and their influence on the final alignment go over to our past lession [over here](https://github.com/sabeelmansuri/binf_crash_course/blob/master/5_Alignment.md)
+As with basically all other programs dealing with biological sequences, phylogenetics algorithms need you to align your sequences before you input them, so that they are easier to compare. If you are curious about different methods of alignment and their influence on the final alignment go over to our lesson on alignment [over here](https://github.com/sabeelmansuri/binf_crash_course/blob/master/5_Alignment.md).
 
 ### The Setup
 
